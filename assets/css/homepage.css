@@ -8,14 +8,14 @@
   font-weight: 700;
   line-height: 48px;
   color: #125159;
-  -webkit-text-stroke: 1px #fff;
-  font-size: 12px;
+  -webkit-text-stroke: 1px #DFE5E6;
+  font-size: 32px;
 }
 
 /* Info Web Desa Section */
 #info-web {
   background: #125159;
-  color: #fff;
+  color: #DFE5E6;
   padding: 80px;
 }
 
@@ -53,7 +53,7 @@
 /* Peta Desa Karangnongko */
 #peta-desa {
   background: #125159;
-  color: #fff;
+  color: #DFE5E6;
 }
 
 #tulisan-petadesa {
