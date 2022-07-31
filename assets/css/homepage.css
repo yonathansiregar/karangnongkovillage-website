@@ -1,0 +1,64 @@
+/* ========= MAIN CONTENTS ========= */
+/* Header */
+#header {
+  margin: 70px;
+}
+
+.carousel-caption {
+  font-weight: 700;
+  line-height: 48px;
+  color: #125159;
+  -webkit-text-stroke: 1px #fff;
+  font-size: 12px;
+}
+
+/* Info Web Desa Section */
+#info-web {
+  background: #125159;
+  color: #fff;
+  padding: 80px;
+}
+
+.title-infoweb {
+  font-style: normal;
+  font-weight: 600;
+  line-height: 48px;
+}
+
+.list-infoweb {
+  list-style: none;
+  margin-left: -30px;
+}
+
+/* Berita Terkini Section */
+.left {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 48px;
+}
+
+.right {
+  color: #346A70;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.card-img-top {
+  border-radius: 20px;
+}
+
+/* Peta Desa Karangnongko */
+#peta-desa {
+  background: #125159;
+  color: #fff;
+}
+
+#tulisan-petadesa {
+  font-weight: 600;
+  line-height: 48px;
+}
+
+/* ========= End of MAIN CONTENTS ========= */
