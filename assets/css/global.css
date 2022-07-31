@@ -50,7 +50,7 @@ navbar-menu {
 }
 
 .nav-link {
-  color: rgb(42, 29, 29);
+  color: #DFE5E6;
   gap: 13px;
 }
 
@@ -117,7 +117,7 @@ footer {
 }
 
 .footer-bottom {
-  color: #fff;
+  color: #DFE5E6;
   font-weight: 400;
   font-size: 15px;
 }

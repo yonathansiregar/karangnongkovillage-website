@@ -153,7 +153,7 @@
       </div>
 
       <div class="card-currentnews">
-        <div class="responsive">
+        <div class="responsive mx-5">
           <!-- Card Loop -->
           <?php foreach ($data_berita as $row) : ?>
             <div>
@@ -326,7 +326,7 @@
         </div>
       </div>
 
-      <div class="responsive">
+      <div class="responsive mx-5">
         <!-- UMKM Loop -->
         <?php foreach ($data_umkm as $row) : ?>
           <div>
@@ -491,9 +491,7 @@
       </div>
     </div>
     <div class="lines"></div>
-    <div class="footer-bottom container">
-      <p class="text-center" id="copyright">Copyright &copy; 2022. Desa Karangnongko Poncokusumo Malang. All rights reserved.</p>
-    </div>
+    <div class="footer-bottom container text-center" id = "copyright">Copyright &copy; 2022. Desa Karangnongko Poncokusumo Malang. All rights reserved.</div>
   </footer>
   <!-- End of FOOTER -->
 
