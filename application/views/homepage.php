@@ -163,8 +163,16 @@
               <div class="card" style="width: 18rem;">
                 <img src="assets/images/homepage/sdn01karangnongko.png" class="card-img-top p-3" alt="Card Image">
                 <div class="card-body">
-                  <p class="card-title"><?= $row->judul ?></p>
-                  <p class="card-text"><?= $row->deskripsi ?></p>
+                  <?php if (strlen($row->judul)<=50): ?>
+                    <p class="card-title"><?= $row->judul ?></p>
+                  <?php else: ?>
+                    <p class="card-title"><?= substr($row->judul,0,50)." ..." ?></p>
+                  <?php endif;?>
+                  <?php if (strlen($row->deskripsi)<=150): ?>
+                    <p class="card-text"><?= $row->deskripsi ?></p>
+                  <?php else: ?>
+                    <p class="card-text"><?= substr($row->deskripsi,0,150)." ..." ?></p>
+                  <?php endif;?>
                   <button type="button" class="btn">
                     <a href="<?php echo base_url('dashboard/berita'); ?>">Baca Selengkapnya</a>
                   </button>
