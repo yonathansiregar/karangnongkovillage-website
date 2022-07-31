@@ -24,7 +24,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 |
 */
 // $config['base_url'] = 'https://karangnongko-poncokusumo.com/';
-$config['base_url'] = 'localhost/betatest/';
+$config['base_url'] = 'http://localhost/betatest/';
 
 /*
 |--------------------------------------------------------------------------
