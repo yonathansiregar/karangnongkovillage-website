@@ -60,8 +60,11 @@
         </ul>
 
         <!-- Search icon -->
-        <form class="d-flex mx-md-4" id="search">
-          <i class="bi bi-search text-white fs-5"></i>
+        <form action="" method="" class="d-flex mx-md-4" id="search">
+          <input type="text" name="search" id="" placeholder="CARI BERITA.." class="p-2">
+          <button type="submit" class="btn btn-search btn-light ms-1">
+            <i class="bi bi-search text-black"></i>
+          </button>
         </form>
       </div>
     </div>
@@ -491,7 +494,7 @@
       </div>
     </div>
     <div class="lines"></div>
-    <div class="footer-bottom container text-center" id = "copyright">Copyright &copy; 2022. Desa Karangnongko Poncokusumo Malang. All rights reserved.</div>
+    <div class="footer-bottom container text-center" id="copyright">Copyright &copy; 2022. Desa Karangnongko Poncokusumo Malang. All rights reserved.</div>
   </footer>
   <!-- End of FOOTER -->
 
