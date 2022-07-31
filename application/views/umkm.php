@@ -2,15 +2,21 @@
 <html lang="en">
 
 <head>
+  <!-- Required Meta tags -->
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="<?php echo $icon; ?>" type="images/png">
+
+  <!-- Icon -->
+  <link rel="icon" href="<?php echo base_url(); ?>assets/images/Logo.png" type="images/png">
+
+  <!-- Page title -->
   <title><?php echo $title; ?></title>
 
   <!-- CSS External Link -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <link rel="stylesheet" href="styl">
+  <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/global.css">
+  <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/umkm-page/umkm.css">
 
 </head>
 
@@ -19,7 +25,7 @@
   <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
       <a class="navbar-brand" href="">
-        <img src="" alt="Logo Pemkab Malang" class="brand-img">
+        <img src="<?php echo base_url(); ?>assets/images/Logo.png" alt="Logo Pemkab Malang" class="brand-img">
         <span class="navbar-title">PEMERINTAH DESA KARANGNONGKO</span>
       </a>
       <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -27,35 +33,80 @@
       </button>
       <div class="collapse navbar-collapse navbar-menu me-5" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          <!-- Menu Beranda -->
+          <!-- Homepage -->
           <li class="nav-item">
-            <a class="nav-link" href="">Beranda</a>
+            <a class="nav-link" href="<?php echo base_url(''); ?>">Beranda</a>
           </li>
 
-          <!-- Menu Berita -->
+          <!-- News -->
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="">Berita</a>
+            <a class="nav-link" href="<?php echo base_url('dashboard/berita'); ?>">Berita</a>
           </li>
 
-          <!-- Menu UMKM -->
+          <!-- UMKM -->
           <li class="nav-item">
-            <a href="" class="nav-link">UMKM</a>
+            <a aria-current="page" href="" class="nav-link">UMKM</a>
           </li>
 
-          <!-- Menu Profil -->
+          <!-- Profile -->
           <li class="nav-item">
-            <a href="" class="nav-link">Profil</a>
+            <a href="<?php echo base_url('dashboard/profil'); ?>" class="nav-link">Profil</a>
           </li>
         </ul>
 
         <!-- Search icon -->
-        <form class="d-flex" id="search">
-          <i class="bi bi-search text-white"></i>
+        <form action="" method="" class="d-flex mx-md-4" id="search">
+          <input type="text" name="search" id="" placeholder="CARI BERITA.." class="p-2">
+          <button type="submit" class="btn btn-search btn-light ms-1">
+            <i class="bi bi-search text-black"></i>
+          </button>
         </form>
       </div>
     </div>
   </nav>
   <!-- End of NAVBAR -->
+
+  <!-- MAIN CONTENTS -->
+  <div id="main-content">
+    <section class="my-5 products-list d-flex justify-content-center align-items-center">
+      <div class="card horizontal-card mb-3" style="max-width: 1040px;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="<?php echo base_url(); ?>assets/images/umkm-products/foto1.png" class="img-fluid p-5 rounded-start" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <p class="card-title">UMKM Damajati</p>
+              <div class="product-details">
+                <div class="product-name my-3">
+                  <table>
+                    <tr>
+                      <td>Nama Produk</td>
+                      <td>&ensp;:&ensp;</td>
+                      <td>Germany</td>
+                    </tr>
+                    <tr>
+                      <td>Jenis Produk</td>
+                      <td>&ensp;:&ensp;</td>
+                      <td>Mexico</td>
+                    </tr>
+                    <tr>
+                      <td>Alamat</td>
+                      <td>&ensp;:&ensp;</td>
+                      <td>Austria</td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+              <p class="card-text description">UMKM Damajati adalah UMKM yang didirikan oleh pak Fajar salah satu warga dari desa Karangnongko Poncokusumo Malang. UMKM Damajati menjual berbagai cemilan dan herbal instan. Untuk melihat berbagai macam makanan yang dijual oleh UMKM Damajati dapat dilihat pada link shopee dibawah ini.</small></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- End of MAIN CONTENTS -->
 
   <!-- FOOTER -->
   <footer>
@@ -65,7 +116,7 @@
           <!-- Logo Pemkab Malang -->
           <div id="footer-logo" class="col-lg-4 col-md-6 d-flex justify-content-start">
             <a href="">
-              <img src="assets/images/Logo.png" alt="Logo Kab Malang" class="img-fluid" id="">
+              <img src="<?php echo base_url(); ?>assets/images/Logo.png" alt="Logo Kab Malang" class="img-fluid" id="">
             </a>
           </div>
 
@@ -75,25 +126,25 @@
             <ul id="social-media">
               <li>
                 <a id="social-media-icons" href="https://wwww.facebook.com/" target="_blank">
-                  <i class="bi bi-facebook"></i>
+                  <i class="bi bi-facebook me-1"></i>
                   <span>Facebook</span>
                 </a>
               </li>
               <li>
                 <a id="social-media-icons" href="https://www.instagram.com/" target="_blank">
-                  <i class="bi bi-instagram"></i>
+                  <i class="bi bi-instagram me-1"></i>
                   <span>Instagram</span>
                 </a>
               </li>
               <li>
                 <a id="social-media-icons" href="https://twitter.com/" target="_blank">
-                  <i class="bi bi-twitter"></i>
+                  <i class="bi bi-twitter me-1"></i>
                   <span>Twitter</span>
                 </a>
               </li>
               <li>
                 <a id="social-media-icons" href="https://www.youtube.com/" target="_blank" style="color: #DFE5E6;">
-                  <i class="bi bi-youtube"></i>
+                  <i class="bi bi-youtube me-1"></i>
                   <span>YouTube</span>
                 </a>
               </li>
