@@ -33,24 +33,24 @@
       </button>
       <div class="collapse navbar-collapse navbar-menu me-5" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          <!-- Homepage -->
+          <!-- Menu Beranda -->
           <li class="nav-item">
-            <a class="nav-link" href="<?php echo base_url(''); ?>">Beranda</a>
+            <a class="nav-link fs-5" href="<?php echo base_url(''); ?>">Beranda</a>
           </li>
 
-          <!-- News -->
-          <li class="nav-item">
-            <a class="nav-link" href="<?php echo base_url('dashboard/berita'); ?>">Berita</a>
+          <!-- Menu Berita -->
+          <li class="nav-item mx-md-4">
+            <a class="nav-link fs-5" href="<?php echo base_url('dashboard/news'); ?>">Berita</a>
           </li>
 
-          <!-- UMKM -->
-          <li class="nav-item">
-            <a aria-current="page" href="" class="nav-link">UMKM</a>
+          <!-- Menu UMKM -->
+          <li class="nav-item me-md-4">
+            <a aria-current="page" href="<?php echo base_url('dashboard/umkm'); ?>" class="nav-link fs-5">UMKM</a>
           </li>
 
-          <!-- Profile -->
+          <!-- Menu Profil -->
           <li class="nav-item">
-            <a href="<?php echo base_url('dashboard/profil'); ?>" class="nav-link">Profil</a>
+            <a href="<?php echo base_url('dashboard/profile'); ?>" class="nav-link fs-5">Profil</a>
           </li>
         </ul>
 
