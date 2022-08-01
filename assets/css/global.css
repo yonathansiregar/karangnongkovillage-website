@@ -24,7 +24,7 @@ a:hover {
 
 .navbar-title {
   font-weight: 600;
-  color: #fff;
+  color: #DFE5E6;
   flex: none;
   order: 1;
   flex-grow: 0;
@@ -111,7 +111,7 @@ footer {
   font-size: 18px;
   line-height: 27px;
 }
-
+#DFE5E6
 .lines {
   border-bottom: 1px solid #1E2833;
 }

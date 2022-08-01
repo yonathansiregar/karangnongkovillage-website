@@ -40,7 +40,7 @@
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <!-- Menu Beranda -->
           <li class="nav-item">
-            <a class="nav-link fs-5" aria-current="page" href="">Beranda</a>
+            <a class="nav-link fs-5" aria-current="page" href="<?php echo base_url(''); ?>">Beranda</a>
           </li>
 
           <!-- Menu Berita -->
