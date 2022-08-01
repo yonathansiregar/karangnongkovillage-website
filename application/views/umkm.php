@@ -16,7 +16,7 @@
   <!-- CSS External Link -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/global.css">
-  <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/umkm-page/umkm.css">
+  <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/umkm.css">
 
 </head>
 
@@ -33,24 +33,24 @@
       </button>
       <div class="collapse navbar-collapse navbar-menu me-5" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          <!-- Homepage -->
+          <!-- Menu Beranda -->
           <li class="nav-item">
-            <a class="nav-link" href="<?php echo base_url(''); ?>">Beranda</a>
+            <a class="nav-link fs-5" href="<?php echo base_url(''); ?>">Beranda</a>
           </li>
 
-          <!-- News -->
-          <li class="nav-item">
-            <a class="nav-link" href="<?php echo base_url('dashboard/berita'); ?>">Berita</a>
+          <!-- Menu Berita -->
+          <li class="nav-item mx-md-4">
+            <a class="nav-link fs-5" href="<?php echo base_url('dashboard/news'); ?>">Berita</a>
           </li>
 
-          <!-- UMKM -->
-          <li class="nav-item">
-            <a aria-current="page" href="" class="nav-link">UMKM</a>
+          <!-- Menu UMKM -->
+          <li class="nav-item me-md-4">
+            <a aria-current="page" href="<?php echo base_url('dashboard/umkm'); ?>" class="nav-link fs-5">UMKM</a>
           </li>
 
-          <!-- Profile -->
+          <!-- Menu Profil -->
           <li class="nav-item">
-            <a href="<?php echo base_url('dashboard/profil'); ?>" class="nav-link">Profil</a>
+            <a href="<?php echo base_url('dashboard/profile'); ?>" class="nav-link fs-5">Profil</a>
           </li>
         </ul>
 
@@ -68,38 +68,34 @@
 
   <!-- MAIN CONTENTS -->
   <div id="main-content">
+    <section class="page-title container mt-5">
+      <p>UMKM DESA KARANGNONGKO</p>
+    </section>
+
+    <!-- UMKM List -->
     <section class="my-5 products-list d-flex justify-content-center align-items-center">
-      <div class="card horizontal-card mb-3" style="max-width: 1040px;">
+      <div class="card horizontal-card mb-3" style="max-width: 1100px;">
         <div class="row g-0">
           <div class="col-md-4">
-            <img src="<?php echo base_url(); ?>assets/images/umkm-products/foto1.png" class="img-fluid p-5 rounded-start" alt="...">
+            <img id="umkm-image" src="<?php echo base_url(); ?>assets/images/umkm-products/foto1.png" class="img-fluid p-5 rounded-start" alt="Foto Produk UMKM">
           </div>
           <div class="col-md-8">
-            <div class="card-body">
-              <p class="card-title">UMKM Damajati</p>
+            <div class="card-body mt-4 me-5">
+              <p class="card-title" id="umkm-name"><b>UMKM Damajati</b></p>
               <div class="product-details">
-                <div class="product-name my-3">
-                  <table>
-                    <tr>
-                      <td>Nama Produk</td>
-                      <td>&ensp;:&ensp;</td>
-                      <td>Germany</td>
-                    </tr>
-                    <tr>
-                      <td>Jenis Produk</td>
-                      <td>&ensp;:&ensp;</td>
-                      <td>Mexico</td>
-                    </tr>
-                    <tr>
-                      <td>Alamat</td>
-                      <td>&ensp;:&ensp;</td>
-                      <td>Austria</td>
-                    </tr>
-                  </table>
-                </div>
+                <p>Nama Produk&emsp;:&emsp;Kunir Asem</p>
+                <p>Jenis Produk&emsp;:&emsp;Herbal instan, Aneka cemilan</p>
+                <p>Alamat&emsp;:&emsp;Jl. Nongkosewu, RT. 17 RW. 04, Karangnongko, Poncokusumo , Malang</p>
               </div>
-              <p class="card-text description">UMKM Damajati adalah UMKM yang didirikan oleh pak Fajar salah satu warga dari desa Karangnongko Poncokusumo Malang. UMKM Damajati menjual berbagai cemilan dan herbal instan. Untuk melihat berbagai macam makanan yang dijual oleh UMKM Damajati dapat dilihat pada link shopee dibawah ini.</small></p>
+              <div class="umkm-description">
+                <p class="card-text p-3">UMKM Damajati adalah UMKM yang didirikan oleh pak Fajar salah satu warga dari desa Karangnongko Poncokusumo Malang. UMKM Damajati menjual berbagai cemilan dan herbal instan. Untuk melihat berbagai macam makanan yang dijual oleh UMKM Damajati dapat dilihat pada link shopee dibawah ini.</p>
+              </div>
             </div>
+          </div>
+
+          <div class="" id="btn-links">
+            <button class="p-3" id="shopee-link">Link Shopee</button>
+            <button class="p-3" id="whatsapp-link">Link Whatsapp</button>
           </div>
         </div>
       </div>
@@ -126,25 +122,25 @@
             <ul id="social-media">
               <li>
                 <a id="social-media-icons" href="https://wwww.facebook.com/" target="_blank">
-                  <i class="bi bi-facebook me-1"></i>
+                  <i class="bi bi-facebook"></i>
                   <span>Facebook</span>
                 </a>
               </li>
               <li>
                 <a id="social-media-icons" href="https://www.instagram.com/" target="_blank">
-                  <i class="bi bi-instagram me-1"></i>
+                  <i class="bi bi-instagram"></i>
                   <span>Instagram</span>
                 </a>
               </li>
               <li>
                 <a id="social-media-icons" href="https://twitter.com/" target="_blank">
-                  <i class="bi bi-twitter me-1"></i>
+                  <i class="bi bi-twitter"></i>
                   <span>Twitter</span>
                 </a>
               </li>
               <li>
                 <a id="social-media-icons" href="https://www.youtube.com/" target="_blank" style="color: #DFE5E6;">
-                  <i class="bi bi-youtube me-1"></i>
+                  <i class="bi bi-youtube"></i>
                   <span>YouTube</span>
                 </a>
               </li>
@@ -175,9 +171,7 @@
       </div>
     </div>
     <div class="lines"></div>
-    <div class="footer-bottom container">
-      <p class="text-center" id="copyright">Copyright &copy; 2022. Desa Karangnongko Poncokusumo Malang. All rights reserved.</p>
-    </div>
+    <div class="footer-bottom container text-center" id="copyright">Copyright &copy; 2022. Desa Karangnongko Poncokusumo Malang. All rights reserved.</div>
   </footer>
   <!-- End of FOOTER -->
 
