@@ -81,12 +81,11 @@
           </div>
           <div class="col-md-8">
             <div class="card-body mt-4 me-5">
-              <p class="card-title" id="umkm-name">UMKM Damajati</p>
+              <p class="card-title" id="umkm-name"><b>UMKM Damajati</b></p>
               <div class="product-details">
                 <p>Nama Produk&emsp;:&emsp;Kunir Asem</p>
                 <p>Jenis Produk&emsp;:&emsp;Herbal instan, Aneka cemilan</p>
                 <p>Alamat&emsp;:&emsp;Jl. Nongkosewu, RT. 17 RW. 04, Karangnongko, Poncokusumo , Malang</p>
-
               </div>
               <div class="umkm-description">
                 <p class="card-text p-3">UMKM Damajati adalah UMKM yang didirikan oleh pak Fajar salah satu warga dari desa Karangnongko Poncokusumo Malang. UMKM Damajati menjual berbagai cemilan dan herbal instan. Untuk melihat berbagai macam makanan yang dijual oleh UMKM Damajati dapat dilihat pada link shopee dibawah ini.</p>
