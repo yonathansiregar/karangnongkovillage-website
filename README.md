@@ -1,6 +1,9 @@
 Karangnongko Village Website
+<br>
 Link website: https://karangnongko-poncokusumo.com/
+<br>
 Link Figma: https://www.figma.com/file/WwPdmongDiCvmbm54bx2ZD/Untitled?node-id=1%3A2
+<br>
 Tech stack for frontend and backend: CodeIgniter (PHP Framework) with Bootstrap
 
 Developer:
