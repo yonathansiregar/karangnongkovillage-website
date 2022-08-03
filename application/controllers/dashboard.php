@@ -14,8 +14,6 @@ class dashboard extends CI_Controller
 
   public function index()
   {
-    $this->load->helper('url');
-
     $data["title"] = "Website Desa Karangnongko Poncokusumo";
     $data['navbarTitle'] = 'PEMERINTAH DESA KARANGNONGKO';
 

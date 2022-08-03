@@ -33,11 +33,11 @@ class umkm extends CI_Model
     $data = array(
       "namaUmkm" => $this->input->post('namaUmkm'),
       "pemilikUmkm" => $this->input->post('pemilikUmkm'),
+      "jenisProduk" => $this->input->post('jenisProduk'),
       "deskripsi" => $this->input->post('deskripsi'),
       "lokasi" => $this->input->post('lokasi'),
       "nomorWa" => $this->input->post('nomorWa'),
-      "instagram" => $this->input->post('instagram'),
-      "tokopedia" => $this->input->post('tokopedia')
+      "olshop" => $this->input->post('olshop')
     );
     return $this->db->insert(
       $this->table,
@@ -51,11 +51,11 @@ class umkm extends CI_Model
     $data = array(
       "namaUmkm" => $this->input->post('namaUmkm'),
       "pemilikUmkm" => $this->input->post('pemilikUmkm'),
+      "jenisProduk" => $this->input->post('jenisProduk'),
       "deskripsi" => $this->input->post('deskripsi'),
       "lokasi" => $this->input->post('lokasi'),
       "nomorWa" => $this->input->post('nomorWa'),
-      "instagram" => $this->input->post('instagram'),
-      "tokopedia" => $this->input->post('tokopedia')
+      "olshop" => $this->input->post('olshop')
     );
     return $this->db->update(
       $this->table,
