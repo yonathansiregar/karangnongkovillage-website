@@ -22,13 +22,13 @@ a:hover {
   border-bottom-left-radius: 15px;
 }
 
-.navbar-title {
+span.navbar-title {
   font-weight: 600;
   color: #DFE5E6;
   flex: none;
   order: 1;
   flex-grow: 0;
-  font-size: 24px;
+  font-size: 1.6vw;
   line-height: 36px;
 }
 
@@ -51,12 +51,23 @@ navbar-menu {
 
 .nav-link {
   color: #DFE5E6;
-  gap: 13px;
 }
 
-@media screen and (max-width: 300px) {
-  .navbar-title {
-    font-size: 10px;
+@media screen and (max-width: 500px) {
+  span.navbar-title {
+    font-size: 1.9vh;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  span.navbar-title {
+    font-size: 2.8vh;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  span.navbar-title {
+    font-size: 3vh;
   }
 }
 
@@ -110,10 +121,6 @@ footer {
   font-weight: 300;
   font-size: 18px;
   line-height: 27px;
-}
-#DFE5E6
-.lines {
-  border-bottom: 1px solid #1E2833;
 }
 
 .footer-bottom {

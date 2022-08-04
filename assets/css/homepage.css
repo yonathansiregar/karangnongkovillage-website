@@ -4,14 +4,50 @@
   margin: 70px;
 }
 
-.carousel-caption {
+#img-text {
   font-weight: 700;
   line-height: 48px;
   color: #125159;
   -webkit-text-stroke: 1px #DFE5E6;
-  font-size: 32px;
-  top: 40%;
-  bottom: 60%;
+}
+
+.card-img-overlay {
+  padding-top: 28vh;
+  font-size: 2vw;
+}
+
+.card-img-overlay .card-text {
+  font-weight: 700;
+  line-height: 48px;
+  color: #125159;
+  -webkit-text-stroke: 1px #DFE5E6;
+}
+
+@media only screen and (max-width: 720px) {
+  .card-img-overlay {
+    padding-top: 1vh;
+    font-size: 2vw;
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .card-img-overlay {
+    padding-top: 10vh;
+    font-size: 2vw;
+  }
+}
+
+@media only screen and (max-width: 1180px) {
+  .card-img-overlay {
+    padding-top: 15vh;
+    font-size: 2vw;
+  }
+}
+
+@media only screen and (max-width: 1310px) {
+  .card-img-overlay {
+    padding-top: 20vh;
+  }
 }
 
 /* Info Web Desa Section */

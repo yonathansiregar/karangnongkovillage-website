@@ -98,21 +98,30 @@
         </div>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="assets/images/homepage/KantorDesa.jpeg" class="d-block w-100" alt="Kantor Desa Karangnongko">
-            <div class="carousel-caption d-block d-md-block d-flex align-items-center justify-content-center">
-              <p>DESA KARANGNONGKO <br> Kec. Poncokusumo Kab. Malang Prov. Jawa Timur</p>
+            <div class="card">
+              <img src="assets/images/homepage/KantorDesa.jpeg" class="card-img d-block w-100" alt="Kantor Desa Karangnongko">
+              <div class="card-img-overlay">
+                <p class="card-text d-flex justify-content-center align-items-center" style="font-weight: 700; line-height: 48px; color: #125159; -webkit-text-stroke: 1px #DFE5E6;">DESA KARANGNONGKO</p>
+                <p class="card-text d-flex justify-content-center align-items-center" style="font-weight: 700; line-height: 48px; color: #125159; -webkit-text-stroke: 1px #DFE5E6;">Kec. Poncokusumo Kab. Malang Prov. Jawa Timur</p>
+              </div>
             </div>
           </div>
           <div class="carousel-item">
-            <img src="assets/images/homepage/KantorDesa.jpeg" class="d-block w-100" alt="Kantor Desa Karangnongko">
-            <div class="carousel-caption d-block d-md-block d-flex align-items-center justify-content-center">
-              <p>DESA KARANGNONGKO <br> Kec. Poncokusumo Kab. Malang Prov. Jawa Timur</p>
+            <div class="card">
+              <img src="assets/images/homepage/KantorDesa.jpeg" class="card-img d-block w-100" alt="Kantor Desa Karangnongko">
+              <div class="card-img-overlay">
+                <p class="card-text d-flex justify-content-center align-items-center">DESA KARANGNONGKO</p>
+                <p class="card-text d-flex justify-content-center align-items-center">Kec. Poncokusumo Kab. Malang Prov. Jawa Timur</p>
+              </div>
             </div>
           </div>
           <div class="carousel-item">
-            <img src="assets/images/homepage/KantorDesa.jpeg" class="d-block w-100" alt="Kantor Desa Karangnongko">
-            <div class="carousel-caption d-block d-md-block d-flex align-items-center justify-content-center">
-              <p>DESA KARANGNONGKO <br> Kec. Poncokusumo Kab. Malang Prov. Jawa Timur</p>
+            <div class="card">
+              <img src="assets/images/homepage/KantorDesa.jpeg" class="card-img d-block w-100" alt="Kantor Desa Karangnongko">
+              <div class="card-img-overlay">
+                <p class="card-text d-flex justify-content-center align-items-center" style="font-weight: 700; line-height: 48px; color: #125159; -webkit-text-stroke: 1px #DFE5E6;">DESA KARANGNONGKO</p>
+                <p class="card-text d-flex justify-content-center align-items-center" style="font-weight: 700; line-height: 48px; color: #125159; -webkit-text-stroke: 1px #DFE5E6;">Kec. Poncokusumo Kab. Malang Prov. Jawa Timur</p>
+              </div>
             </div>
           </div>
         </div>
@@ -390,25 +399,25 @@
                   <li>
                     <a id="social-media-icons" href="https://wwww.facebook.com/" target="_blank">
                       <i class="bi bi-facebook"></i>
-                      <span>Facebook</span>
+                      <span class="ms-1">Facebook</span>
                     </a>
                   </li>
-                  <li>
+                  <li class="my-3">
                     <a id="social-media-icons" href="https://www.instagram.com/" target="_blank">
                       <i class="bi bi-instagram"></i>
-                      <span>Instagram</span>
+                      <span class="ms-1">Instagram</span>
                     </a>
                   </li>
-                  <li>
+                  <li class="mb-3">
                     <a id="social-media-icons" href="https://twitter.com/" target="_blank">
                       <i class="bi bi-twitter"></i>
-                      <span>Twitter</span>
+                      <span class="ms-1">Twitter</span>
                     </a>
                   </li>
                   <li>
                     <a id="social-media-icons" href="https://www.youtube.com/" target="_blank" style="color: #DFE5E6;">
                       <i class="bi bi-youtube"></i>
-                      <span>YouTube</span>
+                      <span class="ms-1">YouTube</span>
                     </a>
                   </li>
                 </ul>
@@ -437,7 +446,7 @@
             </div>
           </div>
         </div>
-        <div class="lines"></div>
+        <div class="lines" style="border-bottom: 1px solid #1E2833;"></div>
         <div class="footer-bottom container text-center" id="copyright">Copyright &copy; 2022. Desa Karangnongko Poncokusumo Malang. All rights reserved.</div>
       </footer>
       <!-- End of FOOTER -->
