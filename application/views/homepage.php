@@ -195,7 +195,6 @@
               </div>
             </div>
           <?php endforeach; ?>
-<<<<<<< HEAD
 
           <!-- Card 1 -->
           <div>
@@ -318,10 +317,6 @@
       </div>
     </section>
     <!-- End of BERITA TERKINI -->
-=======
-          </section>
-          <!-- End of Berita Terkini -->
->>>>>>> d0ee5f77f39458f3ebd823cf0ce7107b9af50452
 
     <!-- Peta Desa Karangnongko-->
     <section id="peta-desa" class="" style="background: #125159; color: #fff;">
@@ -371,94 +366,94 @@
             </div>
           </div>
         <?php endforeach; ?>
-    <!-- End of UMKM Desa Karangnongko -->
-  </div>
+        <!-- End of UMKM Desa Karangnongko -->
+      </div>
 
-  <!-- End of MAIN CONTENTS -->
+      <!-- End of MAIN CONTENTS -->
 
-  <!-- FOOTER -->
-  <footer>
-    <div class="footer-top">
-      <div class="container">
-        <div class="row">
-          <!-- Logo Pemkab Malang -->
-          <div id="footer-logo" class="col-lg-4 col-md-6 d-flex justify-content-start">
-            <a href="">
-              <img src="assets/images/Logo.png" alt="Logo Kab Malang" class="img-fluid" id="">
-            </a>
-          </div>
+      <!-- FOOTER -->
+      <footer>
+        <div class="footer-top">
+          <div class="container">
+            <div class="row">
+              <!-- Logo Pemkab Malang -->
+              <div id="footer-logo" class="col-lg-4 col-md-6 d-flex justify-content-start">
+                <a href="">
+                  <img src="assets/images/Logo.png" alt="Logo Kab Malang" class="img-fluid" id="">
+                </a>
+              </div>
 
-          <!-- Social Media Links -->
-          <div id="footer-links" class="col-lg-4 col-md-6 p-5">
-            <p class="title-followus">Follow Us</p>
-            <ul id="social-media">
-              <li>
-                <a id="social-media-icons" href="https://wwww.facebook.com/" target="_blank">
-                  <i class="bi bi-facebook"></i>
-                  <span>Facebook</span>
-                </a>
-              </li>
-              <li>
-                <a id="social-media-icons" href="https://www.instagram.com/" target="_blank">
-                  <i class="bi bi-instagram"></i>
-                  <span>Instagram</span>
-                </a>
-              </li>
-              <li>
-                <a id="social-media-icons" href="https://twitter.com/" target="_blank">
-                  <i class="bi bi-twitter"></i>
-                  <span>Twitter</span>
-                </a>
-              </li>
-              <li>
-                <a id="social-media-icons" href="https://www.youtube.com/" target="_blank" style="color: #DFE5E6;">
-                  <i class="bi bi-youtube"></i>
-                  <span>YouTube</span>
-                </a>
-              </li>
-            </ul>
-          </div>
-          <!-- End of Social Media Links -->
+              <!-- Social Media Links -->
+              <div id="footer-links" class="col-lg-4 col-md-6 p-5">
+                <p class="title-followus">Follow Us</p>
+                <ul id="social-media">
+                  <li>
+                    <a id="social-media-icons" href="https://wwww.facebook.com/" target="_blank">
+                      <i class="bi bi-facebook"></i>
+                      <span>Facebook</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a id="social-media-icons" href="https://www.instagram.com/" target="_blank">
+                      <i class="bi bi-instagram"></i>
+                      <span>Instagram</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a id="social-media-icons" href="https://twitter.com/" target="_blank">
+                      <i class="bi bi-twitter"></i>
+                      <span>Twitter</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a id="social-media-icons" href="https://www.youtube.com/" target="_blank" style="color: #DFE5E6;">
+                      <i class="bi bi-youtube"></i>
+                      <span>YouTube</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <!-- End of Social Media Links -->
 
-          <!-- Contact Us -->
-          <div id="footer-contact" class="col-lg-4 col-md-6 p-5">
-            <p class="title-contacts">Hubungi Kami</p>
-            <div class="contacts">
-              <div class="nomor-telp">
-                <p>+62 822-4238-6861</p>
+              <!-- Contact Us -->
+              <div id="footer-contact" class="col-lg-4 col-md-6 p-5">
+                <p class="title-contacts">Hubungi Kami</p>
+                <div class="contacts">
+                  <div class="nomor-telp">
+                    <p>+62 822-4238-6861</p>
+                  </div>
+                  <div class="alamat">
+                    <p>Jl. Raya Nongkosewu, Karangnongko</p>
+                  </div>
+                  <div class="daerah">
+                    <p>Poncokusumo, Malang</p>
+                  </div>
+                  <div class="email">
+                    <p>support@karangnongko.id</p>
+                  </div>
+                </div>
               </div>
-              <div class="alamat">
-                <p>Jl. Raya Nongkosewu, Karangnongko</p>
-              </div>
-              <div class="daerah">
-                <p>Poncokusumo, Malang</p>
-              </div>
-              <div class="email">
-                <p>support@karangnongko.id</p>
-              </div>
+              <!-- End of Contact Us -->
             </div>
           </div>
-          <!-- End of Contact Us -->
         </div>
-      </div>
-    </div>
-    <div class="lines"></div>
-    <div class="footer-bottom container text-center" id="copyright">Copyright &copy; 2022. Desa Karangnongko Poncokusumo Malang. All rights reserved.</div>
-  </footer>
-  <!-- End of FOOTER -->
+        <div class="lines"></div>
+        <div class="footer-bottom container text-center" id="copyright">Copyright &copy; 2022. Desa Karangnongko Poncokusumo Malang. All rights reserved.</div>
+      </footer>
+      <!-- End of FOOTER -->
 
-  <!-- JQuery JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" type="text/javascript"></script>
+      <!-- JQuery JS -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" type="text/javascript"></script>
 
-  <!-- Separate Popper and Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+      <!-- Separate Popper and Bootstrap JS -->
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 
-  <!-- Slick JS -->
-  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+      <!-- Slick JS -->
+      <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
-  <!-- Homepage JS -->
-  <script src="<?php echo base_url(); ?>assets/js/homepage.js"></script>
+      <!-- Homepage JS -->
+      <script src="<?php echo base_url(); ?>assets/js/homepage.js"></script>
 </body>
 
 </html>
