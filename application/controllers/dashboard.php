@@ -8,7 +8,7 @@ class dashboard extends CI_Controller
     parent::__construct();
     $this->load->helper('url');
     $this->load->model("berita");
-    $this->load->model("gambar");
+    $this->load->model("perangkatDesa");
     $this->load->model("umkm");
   }
 
@@ -67,6 +67,7 @@ class dashboard extends CI_Controller
   public function profile()
   {
     $data["title"] = "Website Desa Karangnongko Poncokusumo - Profil";
+    $data["data_PD"] = $this->perangkatDesa->getAll();
     $this->load->view('profile', $data);
   }
 }

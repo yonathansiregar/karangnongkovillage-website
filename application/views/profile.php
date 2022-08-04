@@ -103,21 +103,23 @@
 
       <div class="container">
         <div class="row g-4">
+        <?php foreach ($data_PD as $row) : ?>
           <div class="col-12 col-md-6 col-lg-4">
             <div class="card mb-3" style="max-width: 540px;">
               <div class="row no-gutters">
                 <div class="col-md-4">
-                  <img src="<?php echo base_url(); ?>assets/images/village-profile/woman-img.png" height="200" width="150"s class="card-img" alt="...">
+                  <img src="<?php echo base_url(); ?>assets/images/village-profile/<?= $row->gambarPD ?>" height="200" width="150"s class="card-img" alt="...">
                 </div>
                 <div class="col-md-8">
                   <div class="card-body" style="padding-top: 60px;">
-                    <p class="nama"><b>KRISTIA NINGSIH</b></p>
-                    <p class="jabatan">KEPALA DESA</p>
+                    <p class="nama"><b><?= $row->namaPD ?></b></p>
+                    <p class="jabatan"><?= $row->jabatanPD ?></p>
                   </div>
                 </div>
               </div>
             </div>
         </div>
+        <?php endforeach; ?>
       </div>
 
     </section>

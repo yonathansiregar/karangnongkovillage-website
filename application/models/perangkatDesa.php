@@ -20,11 +20,11 @@ class perangkatDesa extends CI_Model
   public function getAll()
   {
     $this->db->from($this->table);
-    $this->db->order_by("idPD", "desc");
+    $this->db->order_by("idPD", "asc");
     $query = $this->db->get();
     return $query->result();
     //fungsi diatas seperti halnya query 
-    //select * from perangkatDesa order by idPD desc
+    //select * from perangkatDesa order by idPD asc
   }
 
   //Menampilkan jumlah data yang tersimpan
