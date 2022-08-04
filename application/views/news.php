@@ -67,6 +67,32 @@
     </section>
 
     <!-- NEWS LIST -->
+    <?php for ($x=0;$x<(count($data_berita)/3);$x++) : ?>
+      <section class="my-5 products-list d-flex justify-content-center align-items-center">
+        <?php for($y=0;3*$x+$y<(count($data_berita));$y++): ?>
+          <div class="mx-5">
+            <div class="card" style="width: 22rem;">
+              <img src="<?php echo base_url(''); ?>assets/images/homepage/sdn01karangnongko.png" height="225" class="card-img-top p-3" alt="Card Image">
+              <div class="card-body">
+                <?php if (strlen($data_berita[3*$x+$y]->judul)<=60): ?>
+                  <p class="card-title"><?= $data_berita[3*$x+$y]->judul?></p>
+                <?php else: ?>
+                  <p class="card-title"><?= substr($data_berita[3*$x+$y]->judul,0,60)." ..." ?></p>
+                <?php endif; ?>
+                <?php if (strlen($data_berita[3*$x+$y]->deskripsi)<=200): ?>
+                  <p class="card-text"><?= $data_berita[3*$x+$y]->deskripsi?></p>
+                <?php else: ?>
+                  <p class="card-text"><?= substr($data_berita[3*$x+$y]->deskripsi,0,200)." ..." ?></p>
+                <?php endif; ?>
+                <button type="button" class="btn">
+                  <a href="<?php echo base_url('dashboard/berita'); ?>">Baca Selengkapnya</a>
+                </button>
+              </div>
+            </div>
+          </div>
+        <?php endfor; ?>
+      </section>
+    <?php endfor; ?>
     <section class="my-5 products-list d-flex justify-content-center align-items-center">
       <div class="mx-5">
         <div class="card" style="width: 22rem;">
@@ -156,7 +182,7 @@
     <section class="my-5 products-list d-flex justify-content-center align-items-center">
       <div class="mx-5">
         <div class="card" style="width: 22rem;">
-          <img src="<?php echo base_url(''); ?>assets/images/homepage/sdn01karangnongko.png" height="225" class="card-img-top p-3" alt="Card Image">
+          <img src="<?php echo base_url(''); ?>assets/images/homepage/KantorDesa.jpeg" height="225" class="card-img-top p-3" alt="Card Image">
           <div class="card-body">
             <p class="card-title">SDN Karangnongko 1 Mendapat Kunjugan KKN ...</p>
             <p class="card-text">Sejumlah 30 Mahasiswa mengikuti porseni tingkat kabupaten malang selama 30 hari di kepanjen. selama 30 hari di kepanjen. ...</p>
