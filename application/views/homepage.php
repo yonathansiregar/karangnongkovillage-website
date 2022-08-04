@@ -22,6 +22,21 @@
   <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/homepage.css">
 
   <!-- TITLE PAGE -->
+  <title><?php echo $title; ?></title><!-- Icon -->
+  <link rel="icon" href="assets/images/Logo.png" type="images/png">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <!-- Slick CSS -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css">
+
+  <!-- Homepage CSS -->
+  <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/global.css">
+  <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/homepage.css">
+
+  <!-- TITLE PAGE -->
   <title><?php echo $title; ?></title>
 </head>
 
@@ -163,16 +178,16 @@
               <div class="card" style="width: 18rem;">
                 <img src="assets/images/homepage/sdn01karangnongko.png" class="card-img-top p-3" alt="Card Image">
                 <div class="card-body">
-                  <?php if (strlen($row->judul)<=50): ?>
+                  <?php if (strlen($row->judul) <= 50) : ?>
                     <p class="card-title"><?= $row->judul ?></p>
-                  <?php else: ?>
-                    <p class="card-title"><?= substr($row->judul,0,50)." ..." ?></p>
-                  <?php endif;?>
-                  <?php if (strlen($row->deskripsi)<=150): ?>
+                  <?php else : ?>
+                    <p class="card-title"><?= substr($row->judul, 0, 50) . " ..." ?></p>
+                  <?php endif; ?>
+                  <?php if (strlen($row->deskripsi) <= 150) : ?>
                     <p class="card-text"><?= $row->deskripsi ?></p>
-                  <?php else: ?>
-                    <p class="card-text"><?= substr($row->deskripsi,0,150)." ..." ?></p>
-                  <?php endif;?>
+                  <?php else : ?>
+                    <p class="card-text"><?= substr($row->deskripsi, 0, 150) . " ..." ?></p>
+                  <?php endif; ?>
                   <button type="button" class="btn">
                     <a href="<?php echo base_url('dashboard/berita'); ?>">Baca Selengkapnya</a>
                   </button>
