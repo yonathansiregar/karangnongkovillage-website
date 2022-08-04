@@ -13,7 +13,7 @@
   <!-- CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/global.css">
-  <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/news-page/berita.css">
+  <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/berita.css">
 
   <!-- TITLE PAGE -->
   <title><?php echo $title; ?></title>
@@ -72,7 +72,7 @@
     <!-- NEWS LIST -->
     <?php for ($x=0;$x<(count($data_berita)/3);$x++) : ?>
       <section class="my-5 products-list d-flex justify-content-center align-items-center">
-        <?php for($y=0;3*$x+$y<(count($data_berita));$y++): ?>
+        <?php for($y=0;$y<(count($data_berita))%3;$y++): ?>
           <div class="mx-5">
             <div class="card" style="width: 22rem;">
               <img src="<?php echo base_url(''); ?>assets/images/homepage/sdn01karangnongko.png" height="225" class="card-img-top p-3" alt="Card Image">
