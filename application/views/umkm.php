@@ -73,7 +73,9 @@
     </section>
 
     <!-- UMKM Loop -->
-    <?php foreach ($data_umkm as $row) : ?>
+    <?php 
+    $alternative = $this->umkm->getAll();
+    foreach ($alternative as $row) : ?>
     <section class="my-5 products-list d-flex justify-content-center align-items-center">
       <div class="card horizontal-card mb-3" style="max-width: 1100px;">
         <div class="row g-0">
