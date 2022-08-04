@@ -21,7 +21,7 @@
 
 <body>
   <!-- NAVBAR -->
-  <nav class="navbar navbar-expand-lg position-absolute" style="z-index: 1; width: 100%;">
+  <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
       <a class="navbar-brand" href="">
         <img src="<?php echo base_url(); ?>assets/images/Logo.png" alt="Logo Pemkab Malang" class="brand-img">
