@@ -64,7 +64,7 @@
     </div>
   </nav>
   <!-- MAIN CONTENTS -->
-  <div id="main-content">
+  <div id="main-content" style="margin-bottom:65px;">
     <section class="page-title container mt-5">
       <p>BERITA DESA KARANGNONGKO</p>
     </section>
@@ -96,6 +96,7 @@
         <?php endforeach; ?>
       </div>
     </div>
+  </div>
   <!-- End of MAIN CONTENTS -->
 
   <!-- FOOTER -->
