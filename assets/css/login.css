@@ -55,3 +55,36 @@
     line-height: 48px;
     font-size: 32px;
   }
+
+  .horizontal-card {
+    border: 2px dashed #909A9B;
+    border-radius: 20px;
+    width: 80vw;
+    background-color: #DFE5E6;
+  }
+
+  .form-label{
+    font-size: 2vw;
+    font-weight: 500;
+  }
+
+  .form-field{
+    padding-left: 20px;
+    font-size: 2vw;
+    font-weight: 400;
+    border-radius: 30px;
+    width: 40vw;
+    height: 4vw;
+    border-width: 1px;
+    border-color: #CCCCCC;
+  }
+
+  .form-btn{
+    position: absolute;
+    right: 10vw;
+    color: #FFFFFF;
+    width: 144px;
+    height: 61px;
+    border-radius: 15px;
+    background-color: #125159;
+  }
