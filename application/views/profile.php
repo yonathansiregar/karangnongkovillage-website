@@ -105,10 +105,10 @@
         <div class="row g-4">
         <?php foreach ($data_PD as $row) : ?>
           <div class="col-12 col-md-6 col-lg-4">
-            <div class="card mb-3" style="max-width: 540px;">
+            <div class="card mb-3">
               <div class="row no-gutters">
                 <div class="col-md-4">
-                  <img src="<?php echo base_url(); ?>assets/images/village-profile/<?= $row->gambarPD ?>" height="200" width="150"s class="card-img" alt="...">
+                  <img src="<?php echo base_url(); ?>assets/images/village-profile/<?= $row->gambarPD ?>" class="card-img" alt="...">
                 </div>
                 <div class="col-md-8">
                   <div class="card-body" style="padding-top: 60px;">
