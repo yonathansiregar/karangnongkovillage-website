@@ -72,34 +72,43 @@
       <p>UMKM DESA KARANGNONGKO</p>
     </section>
 
-    <!-- UMKM List -->
+    <!-- UMKM Loop -->
+    <?php 
+    $alternative = $this->umkm->getAll();
+    foreach ($alternative as $row) : ?>
     <section class="my-5 products-list d-flex justify-content-center align-items-center">
       <div class="card horizontal-card mb-3" style="max-width: 1100px;">
         <div class="row g-0">
           <div class="col-md-4">
-            <img id="umkm-image" src="<?php echo base_url(); ?>assets/images/umkm-products/foto1.png" class="img-fluid p-5 rounded-start" alt="Foto Produk UMKM">
+            <img id="umkm-image" src="<?php echo base_url(); ?>assets/images/umkm-products/<?= $row->gambarUmkm ?>" class="img-fluid p-5 rounded-start" alt="Foto Produk UMKM">
           </div>
           <div class="col-md-8">
             <div class="card-body mt-4 me-5">
-              <p class="card-title" id="umkm-name"><b>UMKM Damajati</b></p>
+              <p class="card-title" id="umkm-name"><b><?= $row->namaUmkm ?></b></p>
               <div class="product-details">
-                <p>Nama Produk&emsp;:&emsp;Kunir Asem</p>
-                <p>Jenis Produk&emsp;:&emsp;Herbal instan, Aneka cemilan</p>
-                <p>Alamat&emsp;:&emsp;Jl. Nongkosewu, RT. 17 RW. 04, Karangnongko, Poncokusumo , Malang</p>
+                <p>Nama Produk&emsp;:&emsp;<?= $row->namaUmkm ?></p>
+                <p>Jenis Produk&emsp;:&emsp;<?= $row->jenisProduk ?></p>
+                <p>Alamat&emsp;:&emsp;<?= $row->lokasi ?></p>
               </div>
               <div class="umkm-description">
-                <p class="card-text p-3">UMKM Damajati adalah UMKM yang didirikan oleh pak Fajar salah satu warga dari desa Karangnongko Poncokusumo Malang. UMKM Damajati menjual berbagai cemilan dan herbal instan. Untuk melihat berbagai macam makanan yang dijual oleh UMKM Damajati dapat dilihat pada link shopee dibawah ini.</p>
+                <p class="card-text p-3"><?= $row->deskripsi ?></p>
               </div>
             </div>
           </div>
 
           <div class="" id="btn-links">
-            <button class="p-3" id="shopee-link">Link Shopee</button>
-            <button class="p-3" id="whatsapp-link">Link Whatsapp</button>
+            <form target="_blank" action="">
+              <button class="p-3" id="shopee-link">Link Shopee</button>
+            </form>
+            <form target="_blank" action="https://wa.me/62<?= $row->nomorWa ?>">
+              <button class="p-3" id="whatsapp-link">Link Whatsapp</button>
+            </form>
           </div>
         </div>
       </div>
     </section>
+    <?php endforeach; ?>
+
   </div>
 
   <!-- End of MAIN CONTENTS -->
