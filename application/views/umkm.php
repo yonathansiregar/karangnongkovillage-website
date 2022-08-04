@@ -98,7 +98,7 @@
             <form action="">
               <button class="p-3" id="shopee-link">Link Shopee</button>
             </form>
-            <form action="https://api.whatsapp.com/send?phone=<?= $row->nomorWa ?>">
+            <form action="https://wa.me/62<?= $row->nomorWa ?>">
               <button class="p-3" id="whatsapp-link">Link Whatsapp</button>
             </form>
           </div>

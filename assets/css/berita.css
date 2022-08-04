@@ -1,0 +1,30 @@
+.page-title {
+    color: #125159;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 48px;
+    font-size: 32px;
+  }
+
+  .left {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 48px;
+  }
+  
+  .right {
+    color: #346A70;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  
+  .card-img-top {
+    border-radius: 20px;
+  }
+
+  .card-header{
+    height:225px;
+  }
