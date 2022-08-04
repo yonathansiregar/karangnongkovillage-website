@@ -89,8 +89,8 @@
                 <?php else : ?>
                   <p class="card-text"><?= substr($row->deskripsi, 0, 200) . " ..." ?></p>
                 <?php endif; ?>
-                <button type="button" class="btn">
-                  <a href="<?php echo base_url('dashboard/berita'); ?>">Baca Selengkapnya</a>
+                <button type="button" class="btn" style="background: #125159; border-radius: 30px;">
+                  <a class="text-decoration-none" href="<?php echo base_url('dashboard/berita'); ?>" style="color: #fff;">Baca Selengkapnya</a>
                 </button>
               </div>
             </div>
