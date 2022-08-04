@@ -34,34 +34,35 @@
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <!-- Menu Beranda -->
           <li class="nav-item">
-            <a class="nav-link" href="<?php base_url('dashboard/index'); ?>">Beranda</a>
+            <a class="nav-link fs-5" href="<?php echo base_url(''); ?>">Beranda</a>
           </li>
 
           <!-- Menu Berita -->
-          <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="">Berita</a>
+          <li class="nav-item mx-md-4">
+            <a class="nav-link fs-5" href="<?php echo base_url('dashboard/news'); ?>">Berita</a>
           </li>
 
           <!-- Menu UMKM -->
-          <li class="nav-item">
-            <a href="<?php echo base_url('dashboard/umkm'); ?>" class="nav-link">UMKM</a>
+          <li class="nav-item me-md-4">
+            <a aria-current="page" href="<?php echo base_url('dashboard/umkm'); ?>" class="nav-link fs-5">UMKM</a>
           </li>
 
           <!-- Menu Profil -->
           <li class="nav-item">
-            <a href="<?php echo base_url('dashboard/profile'); ?>" class="nav-link">Profil</a>
+            <a href="<?php echo base_url('dashboard/profile'); ?>" class="nav-link fs-5">Profil</a>
           </li>
         </ul>
 
         <!-- Search icon -->
-        <form class="d-flex" id="search">
-          <i class="bi bi-search text-white"></i>
+        <form action="" method="" class="d-flex mx-md-4" id="search">
+          <input type="text" name="search" id="" placeholder="CARI BERITA.." class="p-2">
+          <button type="submit" class="btn btn-search btn-light ms-1">
+            <i class="bi bi-search text-black"></i>
+          </button>
         </form>
       </div>
     </div>
   </nav>
-  <!-- End of NAVBAR -->
-
   <!-- MAIN CONTENTS -->
   <div id="main-contents" class="main">
     <!-- Background Article -->

@@ -14,8 +14,6 @@ class dashboard extends CI_Controller
 
   public function index()
   {
-    $this->load->helper('url');
-
     $data["title"] = "Website Desa Karangnongko Poncokusumo";
     $data['navbarTitle'] = 'PEMERINTAH DESA KARANGNONGKO';
 
@@ -42,6 +40,7 @@ class dashboard extends CI_Controller
   public function news()
   {
     $data["title"] = "Website Desa Karangnongko Poncokusumo - Berita";
+    $data["data_berita"] = $this->berita->getAll();
     $this->load->view('news', $data);
   }
 
@@ -55,6 +54,7 @@ class dashboard extends CI_Controller
   {
     $data["title"] = "Website Desa Karangnongko Poncokusumo - UMKM";
     $data['icon'] = "assets/images/Logo.png";
+    // $data['data_umkm'] = $this->umkm->getAll();
     $this->load->view('umkm', $data);
   }
 

@@ -27,6 +27,16 @@ class umkm extends CI_Model
     //select * from umkm order by idUmkm desc
   }
 
+  //Menampilkan jumlah data yang tersimpan
+  public function count()
+  {
+    $this->db->count_all($this->table);
+    $query = $this->db->get();
+    return $query->result();
+    //fungsi diatas seperti halnya query 
+    //select count * from umkm
+  }
+
   //Menyimpan umkm baru
   public function save()
   {
