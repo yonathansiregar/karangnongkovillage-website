@@ -78,9 +78,9 @@
               <img src="<?php echo base_url(); ?>assets/images/homepage/sdn01karangnongko.png" height="250px" class="card-img-top p-3" alt="Card Image">
               <div class="card-body">
                 <?php if (strlen($row->judul) <= 75) : ?>
-                  <p class="card-title"><?= $row->judul ?></p>
+                  <p class="card-title" style="text-align: center;"><b><?= $row->judul ?></b></p>
                 <?php else : ?>
-                  <p class="card-title"><?= substr($row->judul, 0, 75) . " ..." ?></p>
+                  <p class="card-title" style="text-align: center;"><b><?= substr($row->judul, 0, 75) . " ..." ?></b></p>
                 <?php endif; ?>
                 <?php if (strlen($row->deskripsi) <= 200) : ?>
                   <p class="card-text"><?= $row->deskripsi ?></p>

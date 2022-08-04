@@ -17,23 +17,8 @@
 
   <!-- Homepage CSS -->
   <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/global.css">
+  <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/profile.css">
 
-  <style>
-    .sub-title {
-      font-style: normal;
-      font-weight: 700;
-      font-size: 24px;
-      line-height: 36px;
-      color: #000;
-    }
-
-    .card-text {
-      font-style: normal;
-      font-weight: 700;
-      line-height: 48px;
-      color: #125159;
-    }
-  </style>
 
   <!-- TITLE PAGE -->
   <title><?php echo $title; ?></title>
@@ -87,8 +72,8 @@
 
   <!-- MAIN CONTENTS -->
   <main>
-    <section id="page-title">
-      <p class="my-5 fs-5 d-flex justify-content-center justify-content-md-start ms-md-5" style="color: #125159; font-style: normal; font-weight: 600; line-height: 48px;">PROFILE DESA KARANGNONGKO</p>
+    <section class="page-title container mt-5">
+      <p>PROFILE DESA KARANGNONGKO</p>
     </section>
 
     <section id="header-img">
@@ -96,9 +81,9 @@
         <div>
           <div class="card">
             <img style="border-radius: 30px; border: 1px solid #D9D9D9;" src="<?php echo base_url(); ?>assets/images/village-profile/kantor-desa.png" class="card-img" alt="header image">
-            <div class="card-img-overlay">
-              <p class="card-text d-flex justify-content-center align-items-center">STRUKTURAL PERANGKAT DESA</p>
-              <p class="card-text d-flex justify-content-center align-items-center">DESA KARANGNONGKO, KECAMATAN PONCOKUSUMO</p>
+            <div class="card-img-overlay" style="padding-top:100px;">
+              <p class="card-text d-flex justify-content-center align-items-center title-text">STRUKTURAL PERANGKAT DESA</p>
+              <p class="card-text d-flex justify-content-center align-items-center title-text">DESA KARANGNONGKO, KECAMATAN PONCOKUSUMO</p>
             </div>
           </div>
         </div>
@@ -116,8 +101,25 @@
         <p class="sub-title">PERANGKAT DESA</p>
       </div>
 
-      <div class="d-flex justify-content-center">
-
+      <div class="container">
+        <div class="row g-4">
+        <?php foreach ($data_PD as $row) : ?>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card mb-3">
+              <div class="row no-gutters">
+                <div class="col-md-4">
+                  <img src="<?php echo base_url(); ?>assets/images/village-profile/<?= $row->gambarPD ?>" class="card-img" alt="...">
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body" style="padding-top: 60px;">
+                    <p class="nama"><b><?= $row->namaPD ?></b></p>
+                    <p class="jabatan"><?= $row->jabatanPD ?></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+        <?php endforeach; ?>
       </div>
 
     </section>
