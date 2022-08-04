@@ -342,7 +342,7 @@
         <?php foreach ($data_umkm as $row) : ?>
           <div>
             <div class="card" style="width: 18rem; border-style: none;">
-              <img src="assets/images/homepage/umkm-products/foto1.png" class="card-img-top" alt="...">
+              <img src="assets/images/umkm-products/<?= $row->gambarUmkm ?>" class="card-img-top" alt="...">
               <div class="card-body text-center">
                 <h5 class="card-title"><?= $row->namaUmkm ?></h5>
                 <p class="card-text"><?= $row->pemilikUmkm ?></p>
