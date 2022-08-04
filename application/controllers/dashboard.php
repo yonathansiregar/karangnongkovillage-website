@@ -65,6 +65,7 @@ class dashboard extends CI_Controller
   public function login()
   {
     $data["title"] = "Website Desa Karangnongko Poncokusumo - Profil";
+    $data['navbarTitle'] = 'PEMERINTAH DESA KARANGNONGKO';
     $this->load->view('login', $data);
   }
 }
