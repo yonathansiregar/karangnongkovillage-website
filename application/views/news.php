@@ -70,22 +70,22 @@
     </section>
 
     <!-- NEWS LIST -->
-    <?php for ($x=0;$x<(count($data_berita)/3);$x++) : ?>
-      <section class="my-5 products-list d-flex justify-content-center align-items-center">
-        <?php for($y=0;$y<(count($data_berita))%3;$y++): ?>
-          <div class="mx-5">
-            <div class="card" style="width: 22rem;">
-              <img src="<?php echo base_url(''); ?>assets/images/homepage/sdn01karangnongko.png" height="225" class="card-img-top p-3" alt="Card Image">
+    <div class="container">
+      <div class="row g-3">
+        <?php foreach ($data_berita as $row) : ?>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card">
+              <img src="<?php echo base_url(); ?>assets/images/homepage/sdn01karangnongko.png" height="250px" class="card-img-top p-3" alt="Card Image">
               <div class="card-body">
-                <?php if (strlen($data_berita[3*$x+$y]->judul)<=60): ?>
-                  <p class="card-title"><?= $data_berita[3*$x+$y]->judul?></p>
-                <?php else: ?>
-                  <p class="card-title"><?= substr($data_berita[3*$x+$y]->judul,0,60)." ..." ?></p>
+                <?php if (strlen($row->judul) <= 75) : ?>
+                  <p class="card-title"><?= $row->judul ?></p>
+                <?php else : ?>
+                  <p class="card-title"><?= substr($row->judul, 0, 75) . " ..." ?></p>
                 <?php endif; ?>
-                <?php if (strlen($data_berita[3*$x+$y]->deskripsi)<=200): ?>
-                  <p class="card-text"><?= $data_berita[3*$x+$y]->deskripsi?></p>
-                <?php else: ?>
-                  <p class="card-text"><?= substr($data_berita[3*$x+$y]->deskripsi,0,200)." ..." ?></p>
+                <?php if (strlen($row->deskripsi) <= 200) : ?>
+                  <p class="card-text"><?= $row->deskripsi ?></p>
+                <?php else : ?>
+                  <p class="card-text"><?= substr($row->deskripsi, 0, 200) . " ..." ?></p>
                 <?php endif; ?>
                 <button type="button" class="btn">
                   <a href="<?php echo base_url('dashboard/berita'); ?>">Baca Selengkapnya</a>
@@ -93,9 +93,9 @@
               </div>
             </div>
           </div>
-        <?php endfor; ?>
-      </section>
-    <?php endfor; ?>
+        <?php endforeach; ?>
+      </div>
+    </div>
   <!-- End of MAIN CONTENTS -->
 
   <!-- FOOTER -->
