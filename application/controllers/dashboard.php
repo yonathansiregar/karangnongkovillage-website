@@ -17,20 +17,6 @@ class dashboard extends CI_Controller
     $data["title"] = "Website Desa Karangnongko Poncokusumo";
     $data['navbarTitle'] = 'PEMERINTAH DESA KARANGNONGKO';
 
-    $data['navMenu'] = array(
-      'index' => 'Beranda',
-      'newsPage' => 'Berita',
-      'umkmPage' => 'UMKM',
-      'profilePage' => 'Profil'
-    );
-
-    $data['informasiWebsite'] = array(
-      'pertama' => 'Profile mengenai Desa Karangnongko',
-      'kedua' => 'Kegiatan terkini yang dilaksanakan di desa',
-      'ketiga' => 'Produk unggulan UMKM Desa Karangnongko',
-      'keempat' => 'Produk unggulan UMKM Desa Karangnongko'
-    );
-
     $data["data_umkm"] = $this->umkm->getAll();
     $data["data_berita"] = $this->berita->getAll();
 
@@ -40,6 +26,7 @@ class dashboard extends CI_Controller
   public function news()
   {
     $data["title"] = "Website Desa Karangnongko Poncokusumo - Berita";
+    $data['navbarTitle'] = 'PEMERINTAH DESA KARANGNONGKO';
     $data["data_berita"] = $this->berita->getAll();
     $this->load->view('news', $data);
   }
@@ -47,12 +34,14 @@ class dashboard extends CI_Controller
   public function newsDetails()
   {
     $data["title"] = "Website Desa Karangnongko Poncokusumo - Detail Berita";
+    $data['navbarTitle'] = 'PEMERINTAH DESA KARANGNONGKO';
     $this->load->view('news-details', $data);
   }
 
   public function umkm()
   {
     $data["title"] = "Website Desa Karangnongko Poncokusumo - UMKM";
+    $data['navbarTitle'] = 'PEMERINTAH DESA KARANGNONGKO';
     $data['icon'] = "assets/images/Logo.png";
     // $data['data_umkm'] = $this->umkm->getAll();
     $this->load->view('umkm', $data);
@@ -61,12 +50,14 @@ class dashboard extends CI_Controller
   public function umkmDetails()
   {
     $data["title"] = "Website Desa Karangnongko Poncokusumo - Detail UMKM";
+    $data['navbarTitle'] = 'PEMERINTAH DESA KARANGNONGKO';
     $this->load->view('umkm-details', $data);
   }
 
   public function profile()
   {
     $data["title"] = "Website Desa Karangnongko Poncokusumo - Profil";
+    $data['navbarTitle'] = 'PEMERINTAH DESA KARANGNONGKO';
     $data["data_PD"] = $this->perangkatDesa->getAll();
     $this->load->view('profile', $data);
   }
