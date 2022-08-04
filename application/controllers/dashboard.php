@@ -68,4 +68,28 @@ class dashboard extends CI_Controller
     $data['navbarTitle'] = 'PEMERINTAH DESA KARANGNONGKO';
     $this->load->view('login', $data);
   }
+
+  public function login_process()
+  {
+    $username_login = "u1584330_admin";
+    $password_login = "bucinlivematter";
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+    if ($username == $username_login && $password == $password_login) {
+        session_start();
+        $_SESSION['username'] = $username;
+        redirect('dashboard/modification');
+    } 
+    else {
+      redirect('dashboard/login');
+   }
+  }
+
+  public function modification()
+  {
+    $data["title"] = "Website Desa Karangnongko Poncokusumo - Profil";
+    $data['navbarTitle'] = 'PEMERINTAH DESA KARANGNONGKO';
+    $this->load->view('modification', $data);
+  }
+
 }

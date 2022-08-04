@@ -124,13 +124,13 @@
     </section>
     <section class="my-5 products-list d-flex justify-content-center align-items-center">
       <div class="card horizontal-card mb-3 p-5" style="max-width: 1100px;">
-        <form action="">
+        <form action="<?php echo base_url('dashboard/login_process'); ?>" method="post">
           <div class="row g-3 align-items-center" style="margin-bottom:40px;">
             <div class="col-3">
                 <label for="username" class="form-label">USERNAME</label>
             </div>
             <div  class="col-3">
-                <input type="text" class="form-field" id="username">
+                <input type="text" class="form-field" name="username" id="username" placeholder="username" required>
             </div>
           </div>
           <div class="row g-3 align-items-center"  style="margin-bottom:60px;">
@@ -138,11 +138,11 @@
                 <label for="password" class="form-label">PASSWORD</label>
             </div>
             <div  class="col-3">
-                <input type="password" class="form-field" id="password">
+                <input type="password" class="form-field" name="password" id="password" placeholder="password" required>
             </div>
           </div>
           <div style="margin-bottom:100px;">
-            <input type="button" value="LOGIN" class="form-btn">
+            <input type="submit" value="LOGIN" class="form-btn">
           </div>
         </form>
       </div>
