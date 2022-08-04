@@ -70,4 +70,10 @@ class dashboard extends CI_Controller
     $data["data_PD"] = $this->perangkatDesa->getAll();
     $this->load->view('profile', $data);
   }
+
+  public function login()
+  {
+    $data["title"] = "Website Desa Karangnongko Poncokusumo - Profil";
+    $this->load->view('login', $data);
+  }
 }
