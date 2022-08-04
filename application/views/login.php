@@ -2,11 +2,13 @@
 <html lang="en">
 
 <head>
+  <!-- Required meta tags -->
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <!-- Icon -->
-  <link rel="icon" href="<?php echo base_url(); ?>assets/images/Logo.png" type="images/png">
+  <link rel="icon" href="assets/images/Logo.png" type="images/png">
 
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -17,8 +19,22 @@
 
   <!-- Homepage CSS -->
   <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/global.css">
-  <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/profile.css">
+  <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/homepage.css">
 
+  <!-- TITLE PAGE -->
+  <title><?php echo $title; ?></title><!-- Icon -->
+  <link rel="icon" href="assets/images/Logo.png" type="images/png">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <!-- Slick CSS -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css">
+
+  <!-- Homepage CSS -->
+  <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/global.css">
+  <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/login.css">
 
   <!-- TITLE PAGE -->
   <title><?php echo $title; ?></title>
@@ -71,59 +87,58 @@
   <!-- End of NAVBAR -->
 
   <!-- MAIN CONTENTS -->
-  <main>
-    <section class="page-title container mt-5">
-      <p>PROFILE DESA KARANGNONGKO</p>
-    </section>
-
-    <section id="header-img">
-      <div class="d-flex justify-content-center align-items-center">
-        <div>
-          <div class="card">
-            <img style="border-radius: 30px; border: 1px solid #D9D9D9;" src="<?php echo base_url(); ?>assets/images/village-profile/kantor-desa.png" class="card-img" alt="header image">
-            <div class="card-img-overlay" style="padding-top:100px;">
-              <p class="card-text d-flex justify-content-center align-items-center title-text">STRUKTURAL PERANGKAT DESA</p>
-              <p class="card-text d-flex justify-content-center align-items-center title-text">DESA KARANGNONGKO, KECAMATAN PONCOKUSUMO</p>
+  <!-- Header -->
+  <div id="main-contents">
+    <section id="header">
+      <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="card">
+              <img src="<?php echo base_url(); ?>assets/images/homepage/KantorDesa.jpeg" class="card-img d-block w-100" alt="Kantor Desa Karangnongko">
+              <div class="card-img-overlay">
+                <p class="card-text d-flex justify-content-center align-items-center" style="font-weight: 700; line-height: 48px; color: #125159; -webkit-text-stroke: 1px #DFE5E6;">DESA KARANGNONGKO</p>
+                <p class="card-text d-flex justify-content-center align-items-center" style="font-weight: 700; line-height: 48px; color: #125159; -webkit-text-stroke: 1px #DFE5E6;">Kec. Poncokusumo Kab. Malang Prov. Jawa Timur</p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="card">
+              <img src="<?php echo base_url(); ?>assets/images/homepage/KantorDesa.jpeg" class="card-img d-block w-100" alt="Kantor Desa Karangnongko">
+              <div class="card-img-overlay">
+                <p class="card-text d-flex justify-content-center align-items-center">DESA KARANGNONGKO</p>
+                <p class="card-text d-flex justify-content-center align-items-center">Kec. Poncokusumo Kab. Malang Prov. Jawa Timur</p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="card">
+              <img src="<?php echo base_url(); ?>assets/images/homepage/KantorDesa.jpeg" class="card-img d-block w-100" alt="Kantor Desa Karangnongko">
+              <div class="card-img-overlay">
+                <p class="card-text d-flex justify-content-center align-items-center" style="font-weight: 700; line-height: 48px; color: #125159; -webkit-text-stroke: 1px #DFE5E6;">DESA KARANGNONGKO</p>
+                <p class="card-text d-flex justify-content-center align-items-center" style="font-weight: 700; line-height: 48px; color: #125159; -webkit-text-stroke: 1px #DFE5E6;">Kec. Poncokusumo Kab. Malang Prov. Jawa Timur</p>
+              </div>
             </div>
           </div>
         </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>
     </section>
-
-    <section id="structural">
-      <div class="d-flex justify-content-center">
-        <img class="my-5 img-fluid" src="<?php echo base_url(); ?>assets/images/village-profile/jabatan-strukturaldesa.png" alt="Jabatan Struktural Desa">
-      </div>
+    <section class="page-title container mt-5">
+      <p>LOGIN</p>
     </section>
-
-    <section id="village-apparatus">
-      <div class="my-5 fs-5 d-flex justify-content-center justify-content-md-start ms-md-5">
-        <p class="sub-title">PERANGKAT DESA</p>
-      </div>
-
-      <div class="container">
-        <div class="row g-4">
-        <?php foreach ($data_PD as $row) : ?>
-          <div class="col-12 col-lg-6">
-            <div class="card mb-3">
-              <div class="row no-gutters">
-                <div class="col-md-4">
-                  <img src="<?php echo base_url(); ?>assets/images/village-profile/<?= $row->gambarPD ?>" class="card-img" alt="...">
-                </div>
-                <div class="col-md-8">
-                  <div class="card-body" style="padding-top: 60px;">
-                    <p class="nama"><b><?= $row->namaPD ?></b></p>
-                    <p class="jabatan"><?= $row->jabatanPD ?></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-        </div>
-        <?php endforeach; ?>
-      </div>
-
-    </section>
-  </main>
+  </div>
   <!-- End of MAIN CONTENTS -->
 
   <!-- FOOTER -->
