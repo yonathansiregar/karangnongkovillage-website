@@ -34,7 +34,6 @@
 .left {
   font-style: normal;
   font-weight: 600;
-  font-size: 32px;
   line-height: 48px;
 }
 
@@ -42,8 +41,11 @@
   color: #346A70;
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
   line-height: 24px;
+}
+
+.right:hover {
+  color: #346a70;
 }
 
 .card-img-top {

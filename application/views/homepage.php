@@ -135,20 +135,20 @@
             <img src="assets/images/homepage/Group-infoweb.png" class="justify-content-start img-fluid d-none d-md-block" alt="">
           </div>
           <div class="col-md-6 pt-5 ps-5">
-            <p class="title-infoweb">Informasi Website</p>
+            <p class="title-infoweb fs-2">Informasi Website</p>
             <ul class="">
-              <li class="list-infoweb">
+              <li class="list-infoweb pb-3">
                 <i class="bi bi-check-circle-fill me-2"></i>
                 <span>Profile mengenai Desa Karangnongko</span>
               </li>
-              <li class="list-infoweb">
+              <li class="list-infoweb pb-3">
                 <i class="bi bi-check-circle-fill me-2"></i>
                 <span>Kegiatan terkini yang dilaksanakan di desa</span>
               </li>
-              <li class="list-infoweb">
+              <li class="list-infoweb pb-3">
                 <i class="bi bi-check-circle-fill me-2"></i>
                 <span>Produk unggulan UMKM Desa Karangnongko</span>
-              <li class="list-infoweb">
+              <li class="list-infoweb pb-3">
                 <i class="bi bi-check-circle-fill me-2"></i>
                 <span>Produk unggulan UMKM Desa Karangnongko</span>
               </li>
@@ -162,11 +162,11 @@
     <section id="current-news mb-5">
       <div class="d-flex mx-5 mt-5">
         <div class="me-auto">
-          <p class="left">BERITA TERKINI</p>
+          <p class="left fs-3">BERITA TERKINI</p>
         </div>
 
         <div class="ms-auto">
-          <p class="text-decoration-underline right">LIHAT SEMUA</p>
+          <p class="text-decoration-underline right fs-6 mt-2">LIHAT SEMUA</p>
         </div>
       </div>
 
@@ -188,8 +188,8 @@
                   <?php else : ?>
                     <p class="card-text"><?= substr($row->deskripsi, 0, 150) . " ..." ?></p>
                   <?php endif; ?>
-                  <button type="button" class="btn">
-                    <a href="<?php echo base_url('dashboard/berita'); ?>">Baca Selengkapnya</a>
+                  <button type="button" class="btn" style="background: #125159; border-radius: 30px;">
+                    <a class="text-decoration-none" href="<?php echo base_url('dashboard/berita'); ?>" style="color: #fff;">Baca Selengkapnya</a>
                   </button>
                 </div>
               </div>
@@ -203,8 +203,8 @@
               <div class="card-body">
                 <p class="card-title">SDN Karangnongko 1 Mendapat Kunjugan KKN ...</p>
                 <p class="card-text">Sejumlah 30 Mahasiswa mengikuti porseni tingkat kabupaten malang selama 30 hari di kepanjen. selama 30 hari di kepanjen. ...</p>
-                <button type="button" class="btn">
-                  <a href="<?php echo base_url('dashboard/berita'); ?>">Baca Selengkapnya</a>
+                <button type="button" class="btn" style="background: #125159; border-radius: 30px;">
+                  <a class="text-decoration-none" href="<?php echo base_url('dashboard/berita'); ?>" style="color: #fff;">Baca Selengkapnya</a>
                 </button>
               </div>
             </div>
@@ -217,8 +217,8 @@
               <div class="card-body">
                 <p class="card-title">SDN Karangnongko 1 Mendapat Kunjugan KKN ...</p>
                 <p class="card-text">Sejumlah 30 Mahasiswa mengikuti porseni tingkat kabupaten malang selama 30 hari di kepanjen. selama 30 hari di kepanjen. ...</p>
-                <button type="button" class="btn">
-                  <a href="<?php echo base_url('dashboard/berita'); ?>">Baca Selengkapnya</a>
+                <button type="button" class="btn" style="background: #125159; border-radius: 30px;">
+                  <a class="text-decoration-none" href="<?php echo base_url('dashboard/berita'); ?>" style="color: #fff;">Baca Selengkapnya</a>
                 </button>
               </div>
             </div>
@@ -231,8 +231,8 @@
               <div class="card-body">
                 <p class="card-title">SDN Karangnongko 1 Mendapat Kunjugan KKN ...</p>
                 <p class="card-text">Sejumlah 30 Mahasiswa mengikuti porseni tingkat kabupaten malang selama 30 hari di kepanjen. selama 30 hari di kepanjen. ...</p>
-                <button type="button" class="btn">
-                  <a href="<?php echo base_url('dashboard/berita'); ?>">Baca Selengkapnya</a>
+                <button type="button" class="btn" style="background: #125159; border-radius: 30px;">
+                  <a class="text-decoration-none" href="<?php echo base_url('dashboard/berita'); ?>" style="color: #fff;">Baca Selengkapnya</a>
                 </button>
               </div>
             </div>
@@ -245,8 +245,8 @@
               <div class="card-body">
                 <p class="card-title">SDN Karangnongko 1 Mendapat Kunjugan KKN ...</p>
                 <p class="card-text">Sejumlah 30 Mahasiswa mengikuti porseni tingkat kabupaten malang selama 30 hari di kepanjen. selama 30 hari di kepanjen. ...</p>
-                <button type="button" class="btn">
-                  <a href="<?php echo base_url('dashboard/berita'); ?>">Baca Selengkapnya</a>
+                <button type="button" class="btn" style="background: #125159; border-radius: 30px;">
+                  <a class="text-decoration-none" href="<?php echo base_url('dashboard/berita'); ?>" style="color: #fff;">Baca Selengkapnya</a>
                 </button>
               </div>
             </div>
@@ -259,8 +259,8 @@
               <div class="card-body">
                 <p class="card-title">SDN Karangnongko 1 Mendapat Kunjugan KKN ...</p>
                 <p class="card-text">Sejumlah 30 Mahasiswa mengikuti porseni tingkat kabupaten malang selama 30 hari di kepanjen. selama 30 hari di kepanjen. ...</p>
-                <button type="button" class="btn">
-                  <a href="<?php echo base_url('dashboard/berita'); ?>">Baca Selengkapnya</a>
+                <button type="button" class="btn" style="background: #125159; border-radius: 30px;">
+                  <a class="text-decoration-none" href="<?php echo base_url('dashboard/berita'); ?>" style="color: #fff;">Baca Selengkapnya</a>
                 </button>
               </div>
             </div>
@@ -271,8 +271,8 @@
               <div class="card-body">
                 <p class="card-title">SDN Karangnongko 1 Mendapat Kunjugan KKN ...</p>
                 <p class="card-text">Sejumlah 30 Mahasiswa mengikuti porseni tingkat kabupaten malang selama 30 hari di kepanjen. selama 30 hari di kepanjen. ...</p>
-                <button type="button" class="btn">
-                  <a href="<?php echo base_url('dashboard/berita'); ?>">Baca Selengkapnya</a>
+                <button type="button" class="btn" style="background: #125159; border-radius: 30px;">
+                  <a class="text-decoration-none" href="<?php echo base_url('dashboard/berita'); ?>" style="color: #fff;">Baca Selengkapnya</a>
                 </button>
               </div>
             </div>
@@ -283,8 +283,8 @@
               <div class="card-body">
                 <p class="card-title">SDN Karangnongko 1 Mendapat Kunjugan KKN ...</p>
                 <p class="card-text">Sejumlah 30 Mahasiswa mengikuti porseni tingkat kabupaten malang selama 30 hari di kepanjen. selama 30 hari di kepanjen. ...</p>
-                <button type="button" class="btn">
-                  <a href="<?php echo base_url('dashboard/berita'); ?>">Baca Selengkapnya</a>
+                <button type="button" class="btn" style="background: #125159; border-radius: 30px;">
+                  <a class="text-decoration-none" href="<?php echo base_url('dashboard/berita'); ?>" style="color: #fff;">Baca Selengkapnya</a>
                 </button>
               </div>
             </div>
@@ -295,8 +295,8 @@
               <div class="card-body">
                 <p class="card-title">SDN Karangnongko 1 Mendapat Kunjugan KKN ...</p>
                 <p class="card-text">Sejumlah 30 Mahasiswa mengikuti porseni tingkat kabupaten malang selama 30 hari di kepanjen. selama 30 hari di kepanjen. ...</p>
-                <button type="button" class="btn">
-                  <a href="<?php echo base_url('dashboard/berita'); ?>">Baca Selengkapnya</a>
+                <button type="button" class="btn" style="background: #125159; border-radius: 30px;">
+                  <a class="text-decoration-none" href="<?php echo base_url('dashboard/berita'); ?>" style="color: #fff;">Baca Selengkapnya</a>
                 </button>
               </div>
             </div>
@@ -307,8 +307,8 @@
               <div class="card-body">
                 <p class="card-title">SDN Karangnongko 1 Mendapat Kunjugan KKN ...</p>
                 <p class="card-text">Sejumlah 30 Mahasiswa mengikuti porseni tingkat kabupaten malang selama 30 hari di kepanjen. selama 30 hari di kepanjen. ...</p>
-                <button type="button" class="btn">
-                  <a href="<?php echo base_url('dashboard/berita'); ?>">Baca Selengkapnya</a>
+                <button type="button" class="btn" style="background: #125159; border-radius: 30px;">
+                  <a class="text-decoration-none" href="<?php echo base_url('dashboard/berita'); ?>" style="color: #fff;">Baca Selengkapnya</a>
                 </button>
               </div>
             </div>
@@ -316,6 +316,7 @@
         </div>
       </div>
     </section>
+    <!-- End of BERITA TERKINI -->
 
     <!-- Peta Desa Karangnongko-->
     <section id="peta-desa" class="" style="background: #125159; color: #fff;">
@@ -348,7 +349,7 @@
         </div>
 
         <div class="ms-auto">
-          <p class="text-decoration-underline right">LIHAT SEMUA</p>
+          <a href="<?php echo site_url('dashboard/umkm'); ?>" class="text-decoration-underline right">LIHAT SEMUA</a>
         </div>
       </div>
 
@@ -444,8 +445,6 @@
       </div>
     </section>
     <!-- End of UMKM Desa Karangnongko -->
-
-    <!-- End of BERITA TERKINI -->
   </div>
 
   <!-- End of MAIN CONTENTS -->
