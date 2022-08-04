@@ -70,7 +70,7 @@
     <section class="my-5 products-list d-flex justify-content-center align-items-center">
       <div class="mx-5">
         <div class="card" style="width: 22rem;">
-          <img src="<?php echo base_url(''); ?>assets/images/homepage/sdn01karangnongko.png" class="card-img-top p-3" alt="Card Image">
+          <img src="<?php echo base_url(''); ?>assets/images/homepage/sdn01karangnongko.png" height="225" class="card-img-top p-3" alt="Card Image">
           <div class="card-body">
             <p class="card-title">SDN Karangnongko 1 Mendapat Kunjugan KKN ...</p>
             <p class="card-text">Sejumlah 30 Mahasiswa mengikuti porseni tingkat kabupaten malang selama 30 hari di kepanjen. selama 30 hari di kepanjen. ...</p>
@@ -84,8 +84,7 @@
       <!-- Card 2 -->
       <div class="mx-5">
         <div class="card" style="width: 22rem;">
-        <img src="<?php echo base_url(''); ?>assets/images/homepage/KantorDesa.jpeg" class="card-img-top p-3" alt="Card Image">
-
+          <img src="<?php echo base_url(''); ?>assets/images/homepage/sdn01karangnongko.png" height="225" class="card-img-top p-3" alt="Card Image">
           <div class="card-body">
             <p class="card-title">SDN Karangnongko 1 Mendapat Kunjugan KKN ...</p>
             <p class="card-text">Sejumlah 30 Mahasiswa mengikuti porseni tingkat kabupaten malang selama 30 hari di kepanjen. selama 30 hari di kepanjen. ...</p>
@@ -99,7 +98,7 @@
       <!-- Card 3 -->
       <div class="mx-5">
         <div class="card" style="width: 22rem;">
-          <img src="assets/images/homepage/sdn01karangnongko.png" class="card-img-top p-3" alt="Card Image">
+          <img src="<?php echo base_url(''); ?>assets/images/homepage/sdn01karangnongko.png" height="225" class="card-img-top p-3" alt="Card Image">
           <div class="card-body">
             <p class="card-title">SDN Karangnongko 1 Mendapat Kunjugan KKN ...</p>
             <p class="card-text">Sejumlah 30 Mahasiswa mengikuti porseni tingkat kabupaten malang selama 30 hari di kepanjen. selama 30 hari di kepanjen. ...</p>
@@ -112,9 +111,9 @@
     </section>
     
     <section class="my-5 products-list d-flex justify-content-center align-items-center">
-    <div class="mx-5">
-        <div class="card" style="width: 18rem;">
-          <img src="assets/images/homepage/sdn01karangnongko.png" class="card-img-top p-3" alt="Card Image">
+      <div class="mx-5">
+        <div class="card" style="width: 22rem;">
+          <img src="<?php echo base_url(''); ?>assets/images/homepage/sdn01karangnongko.png" height="225" class="card-img-top p-3" alt="Card Image">
           <div class="card-body">
             <p class="card-title">SDN Karangnongko 1 Mendapat Kunjugan KKN ...</p>
             <p class="card-text">Sejumlah 30 Mahasiswa mengikuti porseni tingkat kabupaten malang selama 30 hari di kepanjen. selama 30 hari di kepanjen. ...</p>
@@ -127,8 +126,8 @@
 
       <!-- Card 2 -->
       <div class="mx-5">
-        <div class="card" style="width: 18rem;">
-          <img src="assets/images/homepage/sdn01karangnongko.png" class="card-img-top p-3" alt="Card Image">
+        <div class="card" style="width: 22rem;">
+          <img src="<?php echo base_url(''); ?>assets/images/homepage/sdn01karangnongko.png" height="225" class="card-img-top p-3" alt="Card Image">
           <div class="card-body">
             <p class="card-title">SDN Karangnongko 1 Mendapat Kunjugan KKN ...</p>
             <p class="card-text">Sejumlah 30 Mahasiswa mengikuti porseni tingkat kabupaten malang selama 30 hari di kepanjen. selama 30 hari di kepanjen. ...</p>
@@ -141,8 +140,8 @@
 
       <!-- Card 3 -->
       <div class="mx-5">
-        <div class="card" style="width: 18rem;">
-          <img src="assets/images/homepage/sdn01karangnongko.png" class="card-img-top p-3" alt="Card Image">
+        <div class="card" style="width: 22rem;">
+          <img src="<?php echo base_url(''); ?>assets/images/homepage/sdn01karangnongko.png" height="225" class="card-img-top p-3" alt="Card Image">
           <div class="card-body">
             <p class="card-title">SDN Karangnongko 1 Mendapat Kunjugan KKN ...</p>
             <p class="card-text">Sejumlah 30 Mahasiswa mengikuti porseni tingkat kabupaten malang selama 30 hari di kepanjen. selama 30 hari di kepanjen. ...</p>
@@ -156,8 +155,8 @@
 
     <section class="my-5 products-list d-flex justify-content-center align-items-center">
       <div class="mx-5">
-        <div class="card" style="width: 18rem;">
-          <img src="<?php echo base_url(''); ?>assets/images/homepage/sdn01karangnongko.png" class="card-img-top p-3" alt="Card Image">
+        <div class="card" style="width: 22rem;">
+          <img src="<?php echo base_url(''); ?>assets/images/homepage/sdn01karangnongko.png" height="225" class="card-img-top p-3" alt="Card Image">
           <div class="card-body">
             <p class="card-title">SDN Karangnongko 1 Mendapat Kunjugan KKN ...</p>
             <p class="card-text">Sejumlah 30 Mahasiswa mengikuti porseni tingkat kabupaten malang selama 30 hari di kepanjen. selama 30 hari di kepanjen. ...</p>
@@ -170,8 +169,8 @@
 
       <!-- Card 2 -->
       <div class="mx-5">
-        <div class="card" style="width: 18rem;">
-          <img src="assets/images/homepage/sdn01karangnongko.png" class="card-img-top p-3" alt="Card Image">
+        <div class="card" style="width: 22rem;">
+          <img src="<?php echo base_url(''); ?>assets/images/homepage/sdn01karangnongko.png" height="225" class="card-img-top p-3" alt="Card Image">
           <div class="card-body">
             <p class="card-title">SDN Karangnongko 1 Mendapat Kunjugan KKN ...</p>
             <p class="card-text">Sejumlah 30 Mahasiswa mengikuti porseni tingkat kabupaten malang selama 30 hari di kepanjen. selama 30 hari di kepanjen. ...</p>
@@ -184,8 +183,8 @@
 
       <!-- Card 3 -->
       <div class="mx-5">
-        <div class="card" style="width: 18rem;">
-          <img src="assets/images/homepage/sdn01karangnongko.png" class="card-img-top p-3" alt="Card Image">
+        <div class="card" style="width: 22rem;">
+          <img src="<?php echo base_url(''); ?>assets/images/homepage/sdn01karangnongko.png" height="225" class="card-img-top p-3" alt="Card Image">
           <div class="card-body">
             <p class="card-title">SDN Karangnongko 1 Mendapat Kunjugan KKN ...</p>
             <p class="card-text">Sejumlah 30 Mahasiswa mengikuti porseni tingkat kabupaten malang selama 30 hari di kepanjen. selama 30 hari di kepanjen. ...</p>
@@ -196,8 +195,6 @@
         </div>
       </div>
     </section>
-  </div>
-
   <!-- End of MAIN CONTENTS -->
 
   <!-- FOOTER -->
