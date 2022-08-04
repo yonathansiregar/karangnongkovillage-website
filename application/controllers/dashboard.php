@@ -53,7 +53,6 @@ class dashboard extends CI_Controller
   {
     $data["title"] = "Website Desa Karangnongko Poncokusumo - UMKM";
     $data['icon'] = "assets/images/Logo.png";
-    $data["data_umkm"] = $this->umkm->getAll();
     $this->load->view('umkm', $data);
   }
 
