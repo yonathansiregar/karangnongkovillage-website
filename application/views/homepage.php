@@ -195,6 +195,8 @@
               </div>
             </div>
           <?php endforeach; ?>
+          </section>
+          <!-- End of Berita Terkini -->
 
     <!-- Peta Desa Karangnongko-->
     <section id="peta-desa" class="" style="background: #125159; color: #fff;">
