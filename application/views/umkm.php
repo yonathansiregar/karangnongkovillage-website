@@ -97,10 +97,10 @@
           </div>
 
           <div class="" id="btn-links">
-            <form action="">
+            <form target="_blank" action="">
               <button class="p-3" id="shopee-link">Link Shopee</button>
             </form>
-            <form action="https://wa.me/62<?= $row->nomorWa ?>">
+            <form target="_blank" action="https://wa.me/62<?= $row->nomorWa ?>">
               <button class="p-3" id="whatsapp-link">Link Whatsapp</button>
             </form>
           </div>
