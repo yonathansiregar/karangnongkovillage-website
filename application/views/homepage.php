@@ -178,10 +178,10 @@
               <div class="card" style="width: 18rem;">
                 <img src="assets/images/homepage/sdn01karangnongko.png" class="card-img-top p-3" alt="Card Image">
                 <div class="card-body">
-                  <?php if (strlen($row->judul) <= 50) : ?>
-                    <p class="card-title"><?= $row->judul ?></p>
+                  <?php if (strlen($row->judul) <= 45) : ?>
+                    <p class="card-title" style="text-align: center;"><b><?= $row->judul ?></b></p>
                   <?php else : ?>
-                    <p class="card-title"><?= substr($row->judul, 0, 50) . " ..." ?></p>
+                    <p class="card-title" style="text-align: center;"><b><?= substr($row->judul, 0, 45) . " ..." ?></b></p>
                   <?php endif; ?>
                   <?php if (strlen($row->deskripsi) <= 150) : ?>
                     <p class="card-text"><?= $row->deskripsi ?></p>
