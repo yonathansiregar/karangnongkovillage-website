@@ -67,6 +67,14 @@
     </section>
 
     <!-- NEWS LIST -->
+    <?php 
+    $alternative = $this->berita->count();
+    if ($alternative % 3 != 0) {
+      
+    }
+    foreach ($alternative as $row) : ?>
+    <!-- Masukan Berita Disini -->
+    <?php endforeach; ?>
     <section class="my-5 products-list d-flex justify-content-center align-items-center">
       <div class="mx-5">
         <div class="card" style="width: 22rem;">
