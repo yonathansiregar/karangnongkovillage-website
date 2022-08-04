@@ -195,6 +195,7 @@
               </div>
             </div>
           <?php endforeach; ?>
+<<<<<<< HEAD
 
           <!-- Card 1 -->
           <div>
@@ -317,6 +318,10 @@
       </div>
     </section>
     <!-- End of BERITA TERKINI -->
+=======
+          </section>
+          <!-- End of Berita Terkini -->
+>>>>>>> d0ee5f77f39458f3ebd823cf0ce7107b9af50452
 
     <!-- Peta Desa Karangnongko-->
     <section id="peta-desa" class="" style="background: #125159; color: #fff;">
@@ -366,84 +371,6 @@
             </div>
           </div>
         <?php endforeach; ?>
-
-        <!-- UMKM 1 -->
-        <div>
-          <div class="card" style="width: 18rem; border-style: none;">
-            <img src="assets/images/homepage/umkm-products/foto1.png" class="card-img-top" alt="...">
-            <div class="card-body text-center">
-              <h5 class="card-title">Kunir Asem Herbal Instan</h5>
-              <p class="card-text">UMKM Damajati</p>
-            </div>
-          </div>
-        </div>
-        <!-- UMKM 2 -->
-        <div>
-          <div class="card" style="width: 18rem; border-style: none;">
-            <img src="assets/images/homepage/umkm-products/foto1.png" class="card-img-top" alt="...">
-            <div class="card-body text-center">
-              <h5 class="card-title">Kunir Asem Herbal Instan</h5>
-              <p class="card-text">UMKM Damajati</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- UMKM 3 -->
-        <div>
-          <div class="card" style="width: 18rem; border-style: none;">
-            <img src="assets/images/homepage/umkm-products/foto1.png" class="card-img-top" alt="...">
-            <div class="card-body text-center">
-              <h5 class="card-title">Kunir Asem Herbal Instan</h5>
-              <p class="card-text">UMKM Damajati</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- UMKM 4 -->
-        <div>
-          <div class="card" style="width: 18rem; border-style: none;">
-            <img src="assets/images/homepage/umkm-products/foto1.png" class="card-img-top" alt="...">
-            <div class="card-body text-center">
-              <h5 class="card-title">Kunir Asem Herbal Instan</h5>
-              <p class="card-text">UMKM Damajati</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- UMKM 5 -->
-        <div>
-          <div class="card" style="width: 18rem; border-style: none;">
-            <img src="assets/images/homepage/umkm-products/foto1.png" class="card-img-top" alt="...">
-            <div class="card-body text-center">
-              <h5 class="card-title">Kunir Asem Herbal Instan</h5>
-              <p class="card-text">UMKM Damajati</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- UMKM 6 -->
-        <div>
-          <div class="card" style="width: 18rem; border-style: none;">
-            <img src="assets/images/homepage/umkm-products/foto1.png" class="card-img-top" alt="...">
-            <div class="card-body text-center">
-              <h5 class="card-title">Kunir Asem Herbal Instan</h5>
-              <p class="card-text">UMKM Damajati</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- UMKM 7 -->
-        <div>
-          <div class="card" style="width: 18rem; border-style: none;">
-            <img src="assets/images/homepage/umkm-products/foto1.png" class="card-img-top" alt="...">
-            <div class="card-body text-center">
-              <h5 class="card-title">Kunir Asem Herbal Instan</h5>
-              <p class="card-text">UMKM Damajati</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
     <!-- End of UMKM Desa Karangnongko -->
   </div>
 

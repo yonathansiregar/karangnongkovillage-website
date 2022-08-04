@@ -27,6 +27,16 @@ class berita extends CI_Model
     //select * from berita order by idBerita desc
   }
 
+  //Menampilkan jumlah data yang tersimpan
+  public function count()
+  {
+    $this->db->count_all($this->table);
+    $query = $this->db->get();
+    return $query->result();
+    //fungsi diatas seperti halnya query 
+    //select count * from berita
+  }
+
   //Menyimpan berita baru
   public function simpan()
   {

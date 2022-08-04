@@ -40,6 +40,7 @@ class dashboard extends CI_Controller
   public function news()
   {
     $data["title"] = "Website Desa Karangnongko Poncokusumo - Berita";
+    $data["data_berita"] = $this->berita->getAll();
     $this->load->view('news', $data);
   }
 
