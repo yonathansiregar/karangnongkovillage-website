@@ -104,7 +104,6 @@
       <div class="container">
         <div class="row g-4">
         <?php
-        $data_pd = $this->perangkatDesa->getAll(); //alternative
         foreach ($data_pd as $row) : ?>
           <div class="col-12 col-lg-6">
             <div class="card mb-3">
