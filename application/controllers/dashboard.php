@@ -59,7 +59,7 @@ class dashboard extends CI_Controller
     $data["title"] = "Website Desa Karangnongko Poncokusumo - Profil";
     $data['navbarTitle'] = 'PEMERINTAH DESA KARANGNONGKO';
     $data['icon'] = "assets/images/Logo.png";
-    $data['dataPD'] = $this->perangkatDesa->getAll();
+    $data['data_pd'] = $this->perangkatDesa->getAll();
     $this->load->view('profile', $data);
   }
 
