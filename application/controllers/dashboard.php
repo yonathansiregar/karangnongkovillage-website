@@ -59,13 +59,13 @@ class dashboard extends CI_Controller
     $data["title"] = "Website Desa Karangnongko Poncokusumo - Profil";
     $data['navbarTitle'] = 'PEMERINTAH DESA KARANGNONGKO';
     $data['icon'] = "assets/images/Logo.png";
-    $data['data_PD'] = $this->perangkatDesa->getAll();
+    $data['dataPD'] = $this->perangkatDesa->getAll();
     $this->load->view('profile', $data);
   }
 
   public function login()
   {
-    $data["title"] = "Website Desa Karangnongko Poncokusumo - Profil";
+    $data["title"] = "Website Desa Karangnongko Poncokusumo - Login";
     $data['navbarTitle'] = 'PEMERINTAH DESA KARANGNONGKO';
     $this->load->view('login', $data);
   }
@@ -88,7 +88,7 @@ class dashboard extends CI_Controller
 
   public function modification()
   {
-    $data["title"] = "Website Desa Karangnongko Poncokusumo - Profil";
+    $data["title"] = "Website Desa Karangnongko Poncokusumo - Modification";
     $data['navbarTitle'] = 'PEMERINTAH DESA KARANGNONGKO';
     $this->load->view('modification', $data);
   }
