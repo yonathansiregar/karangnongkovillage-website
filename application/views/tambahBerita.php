@@ -63,7 +63,7 @@ if (empty($_SESSION["username"])) {
                 <div class="col-md-12">
                     <div class="card">
                         <div class="card-body">
-                            <form enctype="multipart/form-data" action="<?php echo base_url('dashboard/simpanBerita'); ?>" method="post">
+                            <form enctype="multipart/form-data" action="<?php echo base_url('simpanBerita'); ?>" method="post">
                                 <div class="form-group row">
                                     <label for="judul" class="col-sm-2 col-form-label">Judul</label>
                                     <div class="col-sm-10">

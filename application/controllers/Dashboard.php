@@ -125,7 +125,7 @@ class Dashboard extends CI_Controller
   public function hapusBerita($idBerita)
   {
     $this->berita->hapus($idBerita);
-    unlink("assets/images/news/" . $this->berita->gambarById($idBerita));
+    unlink("assets/images/news/". $this->berita->gambarById($idBerita));
     redirect("daftarBerita");
   }
 
@@ -135,6 +135,15 @@ class Dashboard extends CI_Controller
     $filename = $_FILES["gambar"]["name"];
     move_uploaded_file($_FILES["gambar"]["tmp_name"],$upload_path . $filename);
     $this->berita->simpan();
+    redirect('daftarBerita');
+  }
+  
+  public function simpanEditBerita()
+  {
+    $upload_path = 'assets/images/news/';
+    $filename = $_FILES["gambar"]["name"];
+    move_uploaded_file($_FILES["gambar"]["tmp_name"],$upload_path . $filename);
+    $this->berita->edit();
     redirect('daftarBerita');
   }
 
