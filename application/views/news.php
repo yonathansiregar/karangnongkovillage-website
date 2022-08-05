@@ -25,7 +25,7 @@
     <div class="container-fluid">
       <a class="navbar-brand" href="">
         <img src="<?php echo base_url(); ?>assets/images/Logo.png" alt="Logo Pemkab Malang" class="brand-img">
-        <span class="navbar-title"><?php echo $navbarTitle; ?></span>
+        <span class="navbar-title">PEMERINTAH DESA KARANGNONGKO</span>
       </a>
       <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -74,7 +74,9 @@
     <!-- NEWS LIST -->
     <div class="container">
       <div class="row g-3">
-        <?php foreach ($data_berita as $row) : ?>
+        <?php 
+        $alternative = $this->berita->getAll();
+        foreach ($alternative as $row) : ?>
           <div class="col-12 col-md-6 col-lg-4">
             <div class="card">
               <img src="<?php echo base_url(); ?>assets/images/homepage/sdn01karangnongko.png" height="250px" class="card-img-top p-3" alt="Card Image">

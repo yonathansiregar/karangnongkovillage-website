@@ -16,10 +16,8 @@ class dashboard extends CI_Controller
   {
     $data["title"] = "Website Desa Karangnongko Poncokusumo";
     $data['navbarTitle'] = 'PEMERINTAH DESA KARANGNONGKO';
-
     $data["data_umkm"] = $this->umkm->getAll();
     $data["data_berita"] = $this->berita->getAll();
-
     $this->load->view('homepage', $data);
   }
 
@@ -27,14 +25,15 @@ class dashboard extends CI_Controller
   {
     $data["title"] = "Website Desa Karangnongko Poncokusumo - Berita";
     $data['navbarTitle'] = 'PEMERINTAH DESA KARANGNONGKO';
-    $data["data_berita"] = $this->berita->getAll();
-    $this->load->view('news', $data);
+    $data['icon'] = "assets/images/Logo.png";
+    $this->load->view('news');
   }
 
   public function newsDetails()
   {
     $data["title"] = "Website Desa Karangnongko Poncokusumo - Detail Berita";
     $data['navbarTitle'] = 'PEMERINTAH DESA KARANGNONGKO';
+    $data['icon'] = "assets/images/Logo.png";
     $this->load->view('news-details', $data);
   }
 
@@ -51,14 +50,15 @@ class dashboard extends CI_Controller
   {
     $data["title"] = "Website Desa Karangnongko Poncokusumo - Detail UMKM";
     $data['navbarTitle'] = 'PEMERINTAH DESA KARANGNONGKO';
+    $data['icon'] = "assets/images/Logo.png";
     $this->load->view('umkm-details', $data);
   }
 
   public function profile()
   {
     $data["title"] = "Website Desa Karangnongko Poncokusumo - Profil";
-    $data['navbarTitle'] = 'PEMERINTAH DESA KARANGNONGKO';
-    $data["data_PD"] = $this->perangkatDesa->getAll();
+    $data2['navbarTitle'] = 'PEMERINTAH DESA KARANGNONGKO';
+    $data3['icon'] = "assets/images/Logo.png";
     $this->load->view('profile', $data);
   }
 

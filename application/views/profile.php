@@ -103,7 +103,9 @@
 
       <div class="container">
         <div class="row g-4">
-        <?php foreach ($data_PD as $row) : ?>
+        <?php 
+        $alternative = $this->perangkatDesa->getAll();
+        foreach ($alternative as $row) : ?>
           <div class="col-12 col-lg-6">
             <div class="card mb-3">
               <div class="row no-gutters">
