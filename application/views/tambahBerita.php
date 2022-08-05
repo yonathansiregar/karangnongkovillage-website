@@ -64,7 +64,7 @@ if (empty($_SESSION["username"])) {
                     <div class="card">
                         <div class="card-body">
                             <form enctype="multipart/form-data" action="<?php echo base_url('simpanBerita'); ?>" method="post">
-                                <div class="form-group row">
+                                <div class="form-group row mb-1">
                                     <label for="judul" class="col-sm-2 col-form-label">Judul</label>
                                     <div class="col-sm-10">
                                         <input type="hidden" class="form-control" id="tanggal" name="tanggal" required value="<?= set_value('tanggal'); ?><?=date('Y-m-d'); ?>">
@@ -76,7 +76,7 @@ if (empty($_SESSION["username"])) {
                                     </div>
                                 </div>
 
-                                <div class="form-group row">
+                                <div class="form-group row mb-1">
                                     <label for="deskripsi" class="col-sm-2 col-form-label">Deskripsi</label>
                                     <div class="col-sm-10">
                                         <textarea class="form-control" id="deskripsi" name="deskripsi" required rows="10"><?= set_value('deskripsi'); ?></textarea>
@@ -86,7 +86,7 @@ if (empty($_SESSION["username"])) {
                                     </div>
                                 </div>
 
-                                <div class="form-group row">
+                                <div class="form-group row mb-1">
                                     <label for="gambar" class="col-sm-2 col-form-label">Gambar</label>
                                     <div class="col-sm-10">
                                         <input type="file" class="form-control" id="gambar" name="gambar" accept=".jpg,.png" onChange='getoutput()'>
@@ -96,7 +96,7 @@ if (empty($_SESSION["username"])) {
                                     </div>
                                 </div>
 
-                                <div class="form-group row">
+                                <div class="form-group row mb-1">
                                     <div class="col-sm-10 offset-md-2">
                                         <button type="submit" class="btn btn-primary">Simpan</button>
                                         <a class="btn btn-secondary" href="javascript:history.back()">Kembali</a>
