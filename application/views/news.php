@@ -25,7 +25,7 @@
     <div class="container-fluid">
       <a class="navbar-brand" href="">
         <img src="<?php echo base_url(); ?>assets/images/Logo.png" alt="Logo Pemkab Malang" class="brand-img">
-        <span class="navbar-title"><?php echo $navbarTitle; ?></span>
+        <span class="navbar-title">PEMERINTAH DESA KARANGNONGKO</span>
       </a>
       <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -39,17 +39,17 @@
 
           <!-- Menu Berita -->
           <li class="nav-item mx-md-4">
-            <a class="nav-link fs-5" href="<?php echo base_url('dashboard/news'); ?>">Berita</a>
+            <a class="nav-link fs-5" href="<?php echo base_url('news'); ?>">Berita</a>
           </li>
 
           <!-- Menu UMKM -->
           <li class="nav-item me-md-4">
-            <a href="<?php echo base_url('dashboard/umkm'); ?>" class="nav-link fs-5">UMKM</a>
+            <a href="<?php echo base_url('umkm'); ?>" class="nav-link fs-5">UMKM</a>
           </li>
 
           <!-- Menu Profil -->
           <li class="nav-item">
-            <a href="<?php echo base_url('dashboard/profile'); ?>" class="nav-link fs-5">Profil</a>
+            <a href="<?php echo base_url('profile'); ?>" class="nav-link fs-5">Profil</a>
           </li>
         </ul>
 
@@ -74,7 +74,9 @@
     <!-- NEWS LIST -->
     <div class="container">
       <div class="row g-3">
-        <?php foreach ($data_berita as $row) : ?>
+        <?php 
+        $alternative = $this->berita->getAll();
+        foreach ($alternative as $row) : ?>
           <div class="col-12 col-md-6 col-lg-4">
             <div class="card">
               <img src="<?php echo base_url(); ?>assets/images/homepage/sdn01karangnongko.png" height="250px" class="card-img-top p-3" alt="Card Image">
@@ -89,8 +91,8 @@
                 <?php else : ?>
                   <p class="card-text"><?= substr($row->deskripsi, 0, 200) . " ..." ?></p>
                 <?php endif; ?>
-                <button type="button" class="btn">
-                  <a href="<?php echo base_url('dashboard/berita'); ?>">Baca Selengkapnya</a>
+                <button type="button" class="btn" style="background: #125159; border-radius: 30px;">
+                  <a class="text-decoration-none" href="<?php echo base_url('berita'); ?>" style="color: #fff;">Baca Selengkapnya</a>
                 </button>
               </div>
             </div>
