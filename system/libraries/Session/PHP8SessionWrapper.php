@@ -1,4 +1,5 @@
 <?php
+
 /**
  * CodeIgniter
  *
@@ -34,7 +35,7 @@
  * @since	Version 3.0.0
  * @filesource
  */
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
 /**
  * PHP8SessionWrapper
@@ -47,7 +48,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * @author	Andrey Andreev
  * @link	https://codeigniter.com/userguide3/libraries/sessions.html
  */
-class CI_SessionWrapper implements SessionHandlerInterface, SessionUpdateTimestampHandlerInterface {
+class CI_SessionWrapper implements SessionHandlerInterface, SessionUpdateTimestampHandlerInterface
+{
 
 	protected CI_Session_driver_interface $driver;
 
@@ -66,7 +68,6 @@ class CI_SessionWrapper implements SessionHandlerInterface, SessionUpdateTimesta
 		return $this->driver->close();
 	}
 
-	#[\ReturnTypeWillChange]
 	public function read(string $id): mixed
 	{
 		return $this->driver->read($id);
@@ -82,13 +83,12 @@ class CI_SessionWrapper implements SessionHandlerInterface, SessionUpdateTimesta
 		return $this->driver->destroy($id);
 	}
 
-	#[\ReturnTypeWillChange]
 	public function gc(int $maxlifetime): mixed
 	{
 		return $this->driver->gc($maxlifetime);
 	}
 
-	public function updateTimestamp(string $id, string$data): bool
+	public function updateTimestamp(string $id, string $data): bool
 	{
 		return $this->driver->updateTimestamp($id, $data);
 	}
