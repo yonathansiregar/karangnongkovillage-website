@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class perangkatDesa extends CI_Model
+class PerangkatDesa extends CI_Model
 {
   protected $table = 'perangkatDesa';
 
@@ -55,9 +55,9 @@ class perangkatDesa extends CI_Model
   public function edit()
   {
     $data = array(
-        "namaPD" => $this->input->post('namaPD'),
-        "jabatanPD" => $this->input->post('jabatanPD'),
-        "gambarPD" => $this->input->post('gambarPD')
+      "namaPD" => $this->input->post('namaPD'),
+      "jabatanPD" => $this->input->post('jabatanPD'),
+      "gambarPD" => $this->input->post('gambarPD')
     );
     return $this->db->update(
       $this->table,
