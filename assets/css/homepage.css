@@ -1,7 +1,7 @@
 /* ========= MAIN CONTENTS ========= */
 /* Header */
 #header {
-  margin: 70px;
+  margin: 20px;
 }
 
 #img-text {
@@ -26,7 +26,7 @@
 @media only screen and (max-width: 720px) {
   .card-img-overlay {
     padding-top: 1vh;
-    font-size: 2vw;
+    font-size: 3px;
   }
 }
 
@@ -47,6 +47,7 @@
 @media only screen and (max-width: 1310px) {
   .card-img-overlay {
     padding-top: 20vh;
+    font-size: 2vw;
   }
 }
 
@@ -88,6 +89,10 @@
 
 .card-img-top {
   border-radius: 20px;
+}
+
+button.slick-prev .slick-next {
+  background: #000;
 }
 
 /* Peta Desa Karangnongko */

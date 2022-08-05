@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class umkm extends CI_Model
+class Umkm extends CI_Model
 {
   private $table = 'umkm';
 

@@ -155,7 +155,7 @@
                 <span>Kegiatan terkini yang dilaksanakan di desa</span>
               </li>
               <li class="list-infoweb pb-3">
-                <i class="bi bi-check-circle-fill me-2"></i>
+                <i class="bi bi-check-circle-fill me-2"></i>x
                 <span>Produk unggulan UMKM Desa Karangnongko</span>
               <li class="list-infoweb pb-3">
                 <i class="bi bi-check-circle-fill me-2"></i>
@@ -180,7 +180,7 @@
       </div>
 
       <div class="card-currentnews">
-        <div class="responsive mx-5">
+        <div class="responsive mx-5" style="padding-bottom: 50px;margin-bottom: 100px;">
           <!-- Card Loop -->
           <?php foreach ($data_berita as $row) : ?>
             <div>
@@ -362,7 +362,7 @@
         </div>
       </div>
 
-      <div class="responsive mx-5">
+      <div class="responsive mx-5" style="margin-bottom: 100px; padding-bottom: 50px;">
         <!-- UMKM Loop -->
         <?php foreach ($data_umkm as $row) : ?>
           <div>
