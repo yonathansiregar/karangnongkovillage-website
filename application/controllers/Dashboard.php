@@ -29,12 +29,13 @@ class Dashboard extends CI_Controller
     $this->load->view('news', $data);
   }
 
-  public function newsDetails()
+  public function newsDetails($idBerita)
   {
     $data["title"] = "Website Desa Karangnongko Poncokusumo - Detail Berita";
     $data['navbarTitle'] = 'PEMERINTAH DESA KARANGNONGKO';
     $data['icon'] = "assets/images/Logo.png";
-    $this->load->view('news-details', $data);
+    $data['detail_berita'] = $this->berita->getById($idBerita);
+    $this->load->view('news-detail', $data);
   }
 
   public function umkm()

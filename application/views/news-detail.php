@@ -1,3 +1,29 @@
+<?php 
+function tgl_indo($tanggal){
+	$bulan = array (
+		1 =>   'Januari',
+		'Februari',
+		'Maret',
+		'April',
+		'Mei',
+		'Juni',
+		'Juli',
+		'Agustus',
+		'September',
+		'Oktober',
+		'November',
+		'Desember'
+	);
+	$pecahkan = explode('-', $tanggal);
+	
+	// variabel pecahkan 0 = tanggal
+	// variabel pecahkan 1 = bulan
+	// variabel pecahkan 2 = tahun
+ 
+	return $pecahkan[2] . ' ' . $bulan[ (int)$pecahkan[1] ] . ' ' . $pecahkan[0];
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -39,17 +65,17 @@
 
           <!-- Menu Berita -->
           <li class="nav-item mx-md-4">
-            <a class="nav-link fs-5" href="<?php echo base_url('dashboard/news'); ?>">Berita</a>
+            <a class="nav-link fs-5" href="<?php echo base_url('news'); ?>">Berita</a>
           </li>
 
           <!-- Menu UMKM -->
           <li class="nav-item me-md-4">
-            <a aria-current="page" href="<?php echo base_url('dashboard/umkm'); ?>" class="nav-link fs-5">UMKM</a>
+            <a aria-current="page" href="<?php echo base_url('umkm'); ?>" class="nav-link fs-5">UMKM</a>
           </li>
 
           <!-- Menu Profil -->
           <li class="nav-item">
-            <a href="<?php echo base_url('dashboard/profile'); ?>" class="nav-link fs-5">Profil</a>
+            <a href="<?php echo base_url('profile'); ?>" class="nav-link fs-5">Profil</a>
           </li>
         </ul>
 
@@ -67,47 +93,13 @@
   <div id="main-contents" class="main">
     <!-- Background Article -->
     <div class="background-picture" style="padding-top: 10vh;">
-      <img src="<?= base_url(); ?>assets/images/homepage/sdn1.png" alt="" class="w-100 position-absolute">
+      <img src="<?= base_url(); ?>assets/images/homepage/<?= $detail_berita->gambarBerita;?>" alt="" class="w-100 position-absolute">
     </div>
     <div class="container">
       <div class="article position-relative">
-        <p class="fs-1 news-title">SDN Karangnongko 1 Mendapat Kunjugan KKN Fakultas Ilmu Komputer Universitas Brawijaya</h1>
-        <p>Selasa, 02 Agustus 2022</h5>
-        <p>Desa Mengglobal: Dengan Warga Memahami IT Maka Kehidupannya Diharapkan Akan Lebih Baik<br><br>
-          MALANG -- Desa sudah mengglobal. Hal ini ditandai dengan penetrasi Teknologi Internet (IT) yang kini sudah menjadi kebutuhan baru
-          masyarakat di seluruh pelosok kampung. Apalagi jaringan Wi-Fi sudah merambah ke desa-desa sehingga mereka terkoneksi dengan seluruh
-          warga dunia. Masyarakat tak lagi sekadar dapat mengakses teknologi komunikasi (IT) hanya melalui telepon selularnya saja. Akan
-          tetapi, sudah menggunakan jaringan Wi-Fi yang tersambung melalui kabel ke rumah-rumah mereka.<br><br>
-          Maka sangat tepat bila pada 18 Juli sampai 13 Agustus 2022 mahasiswa Fakutas Ilmu Komputer (Filkom) Univeritas Brawijaya
-          melakanakan KKN (Kuliah Kerja Nyata) ke berbagai wilayah yang ada di seputaran kampus mereka yang berada di Kota Malang, Jawa Timur.
-          Tema KKN mereka kali ini bertajuk ‘IT For Better Life’ (Teknologi IT untuk Hidup yang Lebih Baik).<br><br>
-          “KKN di Desa Karanongko tidak hanya dilaksanakan hanya mahasiswa FILKOM saja, ada juga mahasiswa dari Fakultas Ekonomi dan Bisnis
-          (FEB) Universitas Brawijaya. Kedua fakultas nantinya akan berkerjasama dalam satu program kerja (Proker). Program kerja tersebut
-          adalah Proker Pujasera," kata Attar Syifa Kamal, mahasiswa FILKOM Univertas Brawijaya yang menjadi peserta KKN, Selasa (2/8/2022).<br><br>
-          Menurut Attar, pada hari pertama kedatangan mahasiswa KKN FILKOM Univeritas Brawijaya, mereka bertemu dengan perangkat desa guna
-          melakukan koordinasi awal para mahasiswa mengenai jenis Proker apa saja yang akan dijalankan. “Kami kemudian menjelaskan bahwa akan
-          melaksanakan tiga Proker yaitu pembuatan website desa, pembuatan logo dan desain kemasan UMKM, dan pelatihan IT kepada murid–murid SD
-          dari kelas 4–6," ujarnya.<br><br>
-          “Proker pelatihan IT ini dilakasnakan dari tanggal 26 - 28 Juli 2022. Proker itu dilaksanakan di SDN Karangnongko 1. Pelatihan IT
-          dibuat dengan harapan agar anak-anak bisa bijak dalam menggunakan internet,’’ tegas Attar lagi.<br><br>
-          Mengenai Proker pembuatan website itu dilakukan karena sebelumnya desa tidak mempunyai website yang mendukung aktivitas bekerja.
-          Padahal sebelumnya pihak kecamatan setempat dahulu sudah pernah memberikan website kepada Desa Karanongko. Namun, ternyata server
-          website tersebut mati. Dengan demikian, adanya pembuatan website desa dari mahasiswa FILKOM Universitas Brawijaya diharapakan dapat
-          mempermudah warga desa, baik mereka yang berada dalam maupun di luar desa, agar dapat mengetahui segala informasi mengenai desanya
-          dengan mudah.<br><br>
-          Tujuan lainnya adalah dengan adanya Proker pembuatan logo dan desain UMKM, para mahasiswa KKN itu berharap agar Desa Karangnongko
-          memiliki laman dengan desain yang menarik. Selain itu, warga desa itu dapat memanfaatkan sarana sosial untuk meningkatkan penjualan
-          produk UMKM secara maksimal. <br><br>
-          “Dalam pelaksanaan Proker ini mahasiswa KKN FILKOM Univeritas Brawijaya melakukan koordinasi dengan Ibu Rismiati selaku koordinator
-          UMKM di Kecamatan Poncokusumo. Koordinasi dilakukan agar mahasiswa KKN FILKOM Univeritas Brawijaya mengetahui apa saja kebutuhan dan
-          produk UMKM yang dipasarkan di kecamatan tersebut," kata Attar lagi.<br><br>
-          Selain tiga Proker dari Mahasiswa FILKOM Univeritas Brawijaya, masih ada satu proker tambahan lainnya, yaitu Proker Pujasera. Proker
-          tersebut dilakukan bersama – sama dengan Mahasiswa dari FEB Univeritas Brawijaya. Para mahasiswa dari kedua fakultas ini saling
-          bekerja sama membantu menyiapkan Pujasera mulai dari meja, kursi, photobooth, dan masih banyak lagi lainnya. <br><br>
-          Puncak Proker Pujasera adalah pada tanggal 28 Juli 2022. Pada hari itu diadakan acara grand opening Pujasera. <br><br>
-          “Acara itu dihadiri oleh banyak orang mulai dari para pelaku UMKM, perwakilan camat, ibu kepala desa, warga desa, bahkan mahasiswa
-          KKN dari desa lain yang juga turut meramaikan acara. Acara berlangsung meriah. Semua pengunjung di sana bergantian untuk menari dan
-          bernyanyi. Berkahirnya acara tersebut juga menandakan bahwa kegiatan KKN FEB UB sudah selesai," tandas Attas mengisahkan.</p>
+        <p class="fs-1 news-title"><?= $detail_berita->judul;?></h1>
+        <p><?= tgl_indo($detail_berita->tanggal);?></h5>
+        <p><?= $detail_berita->deskripsi;?></p>
       </div>
     </div>
 

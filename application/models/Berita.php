@@ -8,12 +8,12 @@ class Berita extends CI_Model
   //Menampilkan data Berita berdasarkan idBerita
   public function getById($idBerita)
   {
-    return $this->db->where(
+    return $this->db->get_where(
       $this->table,
       ["idBerita" => $idBerita]
     )->row();
     //query diatas seperti halnya query pada mysql 
-    //select * from berita where idBerita='$idUmkm'
+    //select * from berita where idBerita='$idBerita'
   }
 
   //Menampilkan semua data berita yang tersimpan
