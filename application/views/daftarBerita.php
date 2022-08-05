@@ -3,6 +3,29 @@ session_start();
 if (empty($_SESSION["username"])) {
 echo "Maaf, anda belum login";
 } else {
+    function tgl_indo($tanggal){
+        $bulan = array (
+            1 =>   'Januari',
+            'Februari',
+            'Maret',
+            'April',
+            'Mei',
+            'Juni',
+            'Juli',
+            'Agustus',
+            'September',
+            'Oktober',
+            'November',
+            'Desember'
+        );
+        $pecahkan = explode('-', $tanggal);
+        
+        // variabel pecahkan 0 = tanggal
+        // variabel pecahkan 1 = bulan
+        // variabel pecahkan 2 = tahun
+     
+        return $pecahkan[2] . ' ' . $bulan[ (int)$pecahkan[1] ] . ' ' . $pecahkan[0];
+    }
 ?>
 
 <!DOCTYPE html>
@@ -31,8 +54,8 @@ echo "Maaf, anda belum login";
         <div class="row">
             <div class="col-md-12">
                 <div>
-                    <a class="btn btn-danger mb-2" href="<?= base_url('dashboard/modification'); ?>">Kembali</a>
-                    <a class="btn btn-success mb-2" href="<?= base_url('dashboard/tambahBerita'); ?>">Tambah</a>
+                    <a class="btn btn-danger mb-2" href="<?= base_url('modification'); ?>">Kembali</a>
+                    <a class="btn btn-success mb-2" href="<?= base_url('tambahBerita'); ?>">Tambah</a>
                 </div>
                 <div class="card">
                     <div class="card-body">
@@ -40,7 +63,7 @@ echo "Maaf, anda belum login";
                             <table class="table table-striped table-bordered table-hover" id="tablePesanan">
                                 <thead>
                                     <tr class="table-success">
-                                        <th>NO</th>
+                                        <th>ID</th>
                                         <th>GAMBAR</th>
                                         <th>BERITA</th>
                                         <th>MODIFIKASI</th>
@@ -51,12 +74,12 @@ echo "Maaf, anda belum login";
                                         <tr>
                                             <td><?= $row->idBerita ?></td>
                                             <td width="300">
-                                                <img src="<?php echo base_url(); ?>assets/images/homepage/<?= $row->gambarBerita;?>" class="card-img-top p-3" alt="Card Image">
+                                                <img src="<?php echo base_url(); ?>assets/images/news/<?= $row->gambarBerita;?>" class="card-img-top p-3" alt="Card Image">
                                             </td>
-                                            <td><b><?= $row->judul ?></b><br><?= $row->tanggal ?><br><br><?= substr($row->deskripsi,0,99) ?>...</td>
+                                            <td><b><?= $row->judul ?></b><br><?= tgl_indo($row->tanggal) ?><br><br><?= substr($row->deskripsi,0,99) ?>...</td>
                                             <td>
-                                                <a href="<?= site_url('dashboard/editBerita/' . $row->idBerita) ?>" class="btn btn-success btn-sm">Edit </a>
-                                                <a href="<?= site_url('dashboard/hapusBerita/' . $row->idBerita) ?>" class="btn btn-danger btn-sm item-delete">Delete </a>
+                                                <a href="<?= site_url('editBerita/' . $row->idBerita) ?>" class="btn btn-success btn-sm">Edit </a>
+                                                <a href="<?= site_url('hapusBerita/' . $row->idBerita) ?>" class="btn btn-danger btn-sm item-delete">Delete </a>
                                             </td>
                                         </tr>
                                     <?php endforeach; ?>

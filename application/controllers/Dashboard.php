@@ -109,12 +109,14 @@ class Dashboard extends CI_Controller
   
   public function tambahBerita()
   {
+    $this->load->helper('form');
     $data["title"] = "BUAT BERITA BARU";
     $this->load->view('tambahBerita', $data);
   }
 
   public function editBerita($idBerita)
   {
+    $this->load->helper('form');
     $data["title"] = "EDIT BERITA";
     $data['pilih_berita'] = $this->berita->getById($idBerita);
     $this->load->view('editBerita', $data);
@@ -123,12 +125,17 @@ class Dashboard extends CI_Controller
   public function hapusBerita($idBerita)
   {
     $this->berita->hapus($idBerita);
+    unlink("assets/images/news/" . $this->berita->gambarById($idBerita));
     redirect("daftarBerita");
   }
 
   public function simpanBerita()
   {
+    $upload_path = 'assets/images/news/';
+    $filename = $_FILES["gambar"]["name"];
+    move_uploaded_file($_FILES["gambar"]["tmp_name"],$upload_path . $filename);
     $this->berita->simpan();
+    redirect('daftarBerita');
   }
 
   public function daftarUmkm()
@@ -140,12 +147,14 @@ class Dashboard extends CI_Controller
   
   public function tambahUmkm()
   {
+    $this->load->helper('form');
     $data["title"] = "BUAT UMKM BARU";
     $this->load->view('tambahUmkm', $data);
   }
 
   public function editUmkm($idUmkm)
   {
+    $this->load->helper('form');
     $data["title"] = "EDIT UMKM";
     $data['pilih_umkm'] = $this->umkm->getById($idUmkm);
     $this->load->view('editUmkm', $data);
@@ -160,6 +169,5 @@ class Dashboard extends CI_Controller
   {
     $this->umkm->simpan();
   }
-
 
 }
