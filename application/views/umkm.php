@@ -40,17 +40,17 @@
 
           <!-- Menu Berita -->
           <li class="nav-item mx-md-4">
-            <a class="nav-link fs-5" href="<?php echo base_url('dashboard/news'); ?>">Berita</a>
+            <a class="nav-link fs-5" href="<?php echo base_url('news'); ?>">Berita</a>
           </li>
 
           <!-- Menu UMKM -->
           <li class="nav-item me-md-4">
-            <a aria-current="page" href="<?php echo base_url('dashboard/umkm'); ?>" class="nav-link fs-5">UMKM</a>
+            <a aria-current="page" href="<?php echo base_url('umkm'); ?>" class="nav-link fs-5">UMKM</a>
           </li>
 
           <!-- Menu Profil -->
           <li class="nav-item">
-            <a href="<?php echo base_url('dashboard/profile'); ?>" class="nav-link fs-5">Profil</a>
+            <a href="<?php echo base_url('profile'); ?>" class="nav-link fs-5">Profil</a>
           </li>
         </ul>
 

@@ -39,17 +39,17 @@
 
           <!-- Menu Berita -->
           <li class="nav-item mx-md-4">
-            <a class="nav-link fs-5" href="<?php echo base_url('dashboard/news'); ?>">Berita</a>
+            <a class="nav-link fs-5" href="<?php echo base_url('news'); ?>">Berita</a>
           </li>
 
           <!-- Menu UMKM -->
           <li class="nav-item me-md-4">
-            <a href="<?php echo base_url('dashboard/umkm'); ?>" class="nav-link fs-5">UMKM</a>
+            <a href="<?php echo base_url('umkm'); ?>" class="nav-link fs-5">UMKM</a>
           </li>
 
           <!-- Menu Profil -->
           <li class="nav-item">
-            <a href="<?php echo base_url('dashboard/profile'); ?>" class="nav-link fs-5">Profil</a>
+            <a href="<?php echo base_url('profile'); ?>" class="nav-link fs-5">Profil</a>
           </li>
         </ul>
 
@@ -90,7 +90,7 @@
                   <p class="card-text"><?= substr($row->deskripsi, 0, 200) . " ..." ?></p>
                 <?php endif; ?>
                 <button type="button" class="btn" style="background: #125159; border-radius: 30px;">
-                  <a class="text-decoration-none" href="<?php echo base_url('dashboard/berita'); ?>" style="color: #fff;">Baca Selengkapnya</a>
+                  <a class="text-decoration-none" href="<?php echo base_url('berita'); ?>" style="color: #fff;">Baca Selengkapnya</a>
                 </button>
               </div>
             </div>
