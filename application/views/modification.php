@@ -1,3 +1,10 @@
+<?php
+session_start();
+if (empty($_SESSION["username"])) {
+echo "Maaf, anda belum login";
+} else {
+    ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,3 +29,7 @@
     
 </body>
 </html>
+
+<?php
+}
+?>
