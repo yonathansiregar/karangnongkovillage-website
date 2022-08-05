@@ -73,40 +73,40 @@
     </section>
 
     <!-- UMKM Loop -->
-    <?php 
+    <?php
     $alternative = $this->umkm->getAll();
     foreach ($alternative as $row) : ?>
-    <section class="my-5 products-list d-flex justify-content-center align-items-center">
-      <div class="card horizontal-card mb-3" style="max-width: 1100px;">
-        <div class="row g-0">
-          <div class="col-md-4">
-            <img id="umkm-image" src="<?php echo base_url(); ?>assets/images/umkm-products/<?= $row->gambarUmkm ?>" class="img-fluid p-5 rounded-start" alt="Foto Produk UMKM">
-          </div>
-          <div class="col-md-8">
-            <div class="card-body mt-4 me-5">
-              <p class="card-title" id="umkm-name"><b><?= $row->namaUmkm ?></b></p>
-              <div class="product-details">
-                <p>Nama Produk&emsp;:&emsp;<?= $row->namaUmkm ?></p>
-                <p>Jenis Produk&emsp;:&emsp;<?= $row->jenisProduk ?></p>
-                <p>Alamat&emsp;:&emsp;<?= $row->lokasi ?></p>
-              </div>
-              <div class="umkm-description">
-                <p class="card-text p-3"><?= $row->deskripsi ?></p>
+      <section class="my-5 products-list d-flex justify-content-center align-items-center">
+        <div class="card horizontal-card mb-3" style="max-width: 1100px;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img id="umkm-image" src="<?php echo base_url(); ?>assets/images/umkm-products/<?= $row->gambarUmkm ?>" class="img-fluid p-5 rounded-start" alt="Foto Produk UMKM">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body mt-4 me-5">
+                <p class="card-title" id="umkm-name"><b><?= $row->namaUmkm ?></b></p>
+                <div class="product-details">
+                  <p>Nama Produk&emsp;:&emsp;<?= $row->namaUmkm ?></p>
+                  <p>Jenis Produk&emsp;:&emsp;<?= $row->jenisProduk ?></p>
+                  <p>Alamat&emsp;:&emsp;<?= $row->lokasi ?></p>
+                </div>
+                <div class="umkm-description">
+                  <p class="card-text p-3"><?= $row->deskripsi ?></p>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div class="" id="btn-links">
-            <form target="_blank" action="">
-              <button class="p-3" id="shopee-link">Link Shopee</button>
-            </form>
-            <form target="_blank" action="https://wa.me/62<?= $row->nomorWa ?>">
-              <button class="p-3" id="whatsapp-link">Link Whatsapp</button>
-            </form>
+            <div class="" id="btn-links">
+              <form target="_blank" action="">
+                <button class="p-3" id="shopee-link">Link Shopee</button>
+              </form>
+              <form target="_blank" action="https://wa.me/62<?= $row->nomorWa ?>">
+                <button class="p-3" id="whatsapp-link">Link Whatsapp</button>
+              </form>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
     <?php endforeach; ?>
 
   </div>
@@ -120,8 +120,8 @@
         <div class="row">
           <!-- Logo Pemkab Malang -->
           <div id="footer-logo" class="col-lg-4 col-md-6 d-flex justify-content-start">
-            <a href="">
-              <img src="<?php echo base_url(); ?>assets/images/Logo.png" alt="Logo Kab Malang" class="img-fluid" id="">
+            <a href="<?php echo base_url(''); ?>">
+              <img src="assets/images/Logo.png" alt="Logo Kab Malang" class="img-fluid" id="">
             </a>
           </div>
 
@@ -132,25 +132,25 @@
               <li>
                 <a id="social-media-icons" href="https://wwww.facebook.com/" target="_blank">
                   <i class="bi bi-facebook"></i>
-                  <span>Facebook</span>
+                  <span class="ms-1">Facebook</span>
                 </a>
               </li>
-              <li>
+              <li class="my-3">
                 <a id="social-media-icons" href="https://www.instagram.com/" target="_blank">
                   <i class="bi bi-instagram"></i>
-                  <span>Instagram</span>
+                  <span class="ms-1">Instagram</span>
                 </a>
               </li>
-              <li>
+              <li class="mb-3">
                 <a id="social-media-icons" href="https://twitter.com/" target="_blank">
                   <i class="bi bi-twitter"></i>
-                  <span>Twitter</span>
+                  <span class="ms-1">Twitter</span>
                 </a>
               </li>
               <li>
                 <a id="social-media-icons" href="https://www.youtube.com/" target="_blank" style="color: #DFE5E6;">
                   <i class="bi bi-youtube"></i>
-                  <span>YouTube</span>
+                  <span class="ms-1">YouTube</span>
                 </a>
               </li>
             </ul>
@@ -179,7 +179,7 @@
         </div>
       </div>
     </div>
-    <div class="lines"></div>
+    <div class="lines" style="border-bottom: 1px solid #1E2833;"></div>
     <div class="footer-bottom container text-center" id="copyright">Copyright &copy; 2022. Desa Karangnongko Poncokusumo Malang. All rights reserved.</div>
   </footer>
   <!-- End of FOOTER -->

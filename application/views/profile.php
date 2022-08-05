@@ -103,25 +103,25 @@
 
       <div class="container">
         <div class="row g-4">
-        <?php
-        foreach ($data_pd as $row) : ?>
-          <div class="col-12 col-lg-6">
-            <div class="card mb-3">
-              <div class="row no-gutters">
-                <div class="col-md-4">
-                  <img src="<?php echo base_url(); ?>assets/images/village-profile/<?= $row->gambarPD ?>" class="card-img" alt="...">
-                </div>
-                <div class="col-md-8">
-                  <div class="card-body" style="padding-top: 60px;">
-                    <p class="nama"><b><?= $row->namaPD ?></b></p>
-                    <p class="jabatan"><?= $row->jabatanPD ?></p>
+          <?php
+          foreach ($data_pd as $row) : ?>
+            <div class="col-12 col-lg-6">
+              <div class="card mb-3">
+                <div class="row no-gutters">
+                  <div class="col-md-4">
+                    <img src="<?php echo base_url(); ?>assets/images/village-profile/<?= $row->gambarPD ?>" class="card-img" alt="...">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body" style="padding-top: 60px;">
+                      <p class="nama"><b><?= $row->namaPD ?></b></p>
+                      <p class="jabatan"><?= $row->jabatanPD ?></p>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
+          <?php endforeach; ?>
         </div>
-        <?php endforeach; ?>
-      </div>
 
     </section>
   </main>
@@ -134,8 +134,8 @@
         <div class="row">
           <!-- Logo Pemkab Malang -->
           <div id="footer-logo" class="col-lg-4 col-md-6 d-flex justify-content-start">
-            <a href="">
-              <img src="<?php echo base_url(); ?>assets/images/Logo.png" alt="Logo Kab Malang" class="img-fluid" id="">
+            <a href="<?php echo base_url(''); ?>">
+              <img src="assets/images/Logo.png" alt="Logo Kab Malang" class="img-fluid" id="">
             </a>
           </div>
 
@@ -146,25 +146,25 @@
               <li>
                 <a id="social-media-icons" href="https://wwww.facebook.com/" target="_blank">
                   <i class="bi bi-facebook"></i>
-                  <span>Facebook</span>
+                  <span class="ms-1">Facebook</span>
                 </a>
               </li>
-              <li>
+              <li class="my-3">
                 <a id="social-media-icons" href="https://www.instagram.com/" target="_blank">
                   <i class="bi bi-instagram"></i>
-                  <span>Instagram</span>
+                  <span class="ms-1">Instagram</span>
                 </a>
               </li>
-              <li>
+              <li class="mb-3">
                 <a id="social-media-icons" href="https://twitter.com/" target="_blank">
                   <i class="bi bi-twitter"></i>
-                  <span>Twitter</span>
+                  <span class="ms-1">Twitter</span>
                 </a>
               </li>
               <li>
                 <a id="social-media-icons" href="https://www.youtube.com/" target="_blank" style="color: #DFE5E6;">
                   <i class="bi bi-youtube"></i>
-                  <span>YouTube</span>
+                  <span class="ms-1">YouTube</span>
                 </a>
               </li>
             </ul>
@@ -193,7 +193,7 @@
         </div>
       </div>
     </div>
-    <div class="lines"></div>
+    <div class="lines" style="border-bottom: 1px solid #1E2833;"></div>
     <div class="footer-bottom container text-center" id="copyright">Copyright &copy; 2022. Desa Karangnongko Poncokusumo Malang. All rights reserved.</div>
   </footer>
   <!-- End of FOOTER -->
@@ -201,9 +201,6 @@
   <!-- Separate Popper and Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-
-  <!-- Homepage JS -->
-  <script src="<?php echo base_url(); ?>assets/js/homepage.js"></script>
 </body>
 
 </html>
