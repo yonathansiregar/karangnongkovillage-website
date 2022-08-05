@@ -38,7 +38,7 @@ class Umkm extends CI_Model
   }
 
   //Menyimpan umkm baru
-  public function save()
+  public function simpan()
   {
     $data = array(
       "namaUmkm" => $this->input->post('namaUmkm'),
@@ -79,7 +79,7 @@ class Umkm extends CI_Model
   }
 
   //Menghapus data umkm
-  public function delete($idUmkm)
+  public function hapus($idUmkm)
   {
     return $this->db->delete(
       $this->table,

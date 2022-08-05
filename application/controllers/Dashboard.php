@@ -80,11 +80,17 @@ class Dashboard extends CI_Controller
     if ($username == $username_login && $password == $password_login) {
         session_start();
         $_SESSION['username'] = $username;
-        redirect('dashboard/modification');
+        redirect('modification');
     } 
     else {
-      redirect('dashboard/login');
+      redirect('login');
    }
+  }
+
+  public function logout_process()
+  {
+    session_destroy();
+    redirect('index');
   }
 
   public function modification()
@@ -94,4 +100,51 @@ class Dashboard extends CI_Controller
     $this->load->view('modification', $data);
   }
 
+  public function beritaBaru()
+  {
+    $data["title"] = "BUAT BERITA BARU";
+    $data['semua_berita'] = $this->berita->getAll();
+    $this->load->view('editBerita', $data);
+  }
+
+  public function editBerita($idBerita)
+  {
+    $data["title"] = "EDIT BERITA";
+    $data['pilih_berita'] = $this->berita->getById($idBerita);
+    $this->load->view('editBerita', $data);
+  }
+
+  public function hapusBerita($idBerita)
+  {
+    $this->berita->hapus($idBerita);
+  }
+
+  public function simpanBerita()
+  {
+    $this->berita->simpan();
+  }
+
+  public function umkmBaru()
+  {
+    $data["title"] = "BUAT UMKM BARU";
+    $data['semua_umkm'] = $this->umkm->getAll();
+    $this->load->view('editUmkm', $data);
+  }
+
+  public function editUmkm($idUmkm)
+  {
+    $data["title"] = "EDIT UMKM";
+    $data['pilih_umkm'] = $this->umkm->getById($idUmkm);
+    $this->load->view('editUmkm', $data);
+  }
+
+  public function hapusUmkm($idUmkm)
+  {
+    $this->umkm->hapus($idUmkm);
+  }
+
+  public function simpanUmkm()
+  {
+    $this->umkm->simpan();
+  }
 }
