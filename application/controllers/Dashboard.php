@@ -100,11 +100,17 @@ class Dashboard extends CI_Controller
     $this->load->view('modification', $data);
   }
 
-  public function beritaBaru()
+  public function daftarBerita()
+  {
+    $data["title"] = "DAFTAR BERITA";
+    $data['semua_berita'] = $this->berita->getAll();
+    $this->load->view('daftarBerita', $data);
+  }
+  
+  public function tambahBerita()
   {
     $data["title"] = "BUAT BERITA BARU";
-    $data['semua_berita'] = $this->berita->getAll();
-    $this->load->view('editBerita', $data);
+    $this->load->view('tambahBerita', $data);
   }
 
   public function editBerita($idBerita)
@@ -124,11 +130,17 @@ class Dashboard extends CI_Controller
     $this->berita->simpan();
   }
 
-  public function umkmBaru()
+  public function daftarUmkm()
+  {
+    $data["title"] = "DAFTAR UMKM";
+    $data['semua_umkm'] = $this->umkm->getAll();
+    $this->load->view('daftarUmkm', $data);
+  }
+  
+  public function tambahUmkm()
   {
     $data["title"] = "BUAT UMKM BARU";
-    $data['semua_umkm'] = $this->umkm->getAll();
-    $this->load->view('editUmkm', $data);
+    $this->load->view('tambahUmkm', $data);
   }
 
   public function editUmkm($idUmkm)
@@ -147,4 +159,6 @@ class Dashboard extends CI_Controller
   {
     $this->umkm->simpan();
   }
+
+
 }
