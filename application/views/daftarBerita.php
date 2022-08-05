@@ -55,8 +55,8 @@ echo "Maaf, anda belum login";
                                             </td>
                                             <td><b><?= $row->judul ?></b><br><?= $row->tanggal ?><br><br><?= substr($row->deskripsi,0,99) ?>...</td>
                                             <td>
-                                                <a href="<?= site_url('dashboard/edit/' . $row->idBerita) ?>" class="btn btn-success btn-sm">Edit </a>
-                                                <a href="<?= site_url('dashboard/hapus/' . $row->idBerita) ?>" class="btn btn-danger btn-sm item-delete">Delete </a>
+                                                <a href="<?= site_url('dashboard/editBerita/' . $row->idBerita) ?>" class="btn btn-success btn-sm">Edit </a>
+                                                <a href="<?= site_url('dashboard/hapusBerita/' . $row->idBerita) ?>" class="btn btn-danger btn-sm item-delete">Delete </a>
                                             </td>
                                         </tr>
                                     <?php endforeach; ?>

@@ -123,6 +123,7 @@ class Dashboard extends CI_Controller
   public function hapusBerita($idBerita)
   {
     $this->berita->hapus($idBerita);
+    redirect("daftarBerita");
   }
 
   public function simpanBerita()
