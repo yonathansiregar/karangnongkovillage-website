@@ -75,6 +75,7 @@ echo "Maaf, anda belum login";
                                             <td><?= $row->idBerita ?></td>
                                             <td width="300">
                                                 <img src="<?php echo base_url(); ?>assets/images/news/<?= $row->gambarBerita;?>" class="card-img-top p-3" alt="Card Image">
+                                                <p style="text-align:center;"><?= $row->gambarBerita;?></p>
                                             </td>
                                             <td><b><?= $row->judul ?></b><br><?= tgl_indo($row->tanggal) ?><br><br><?= substr($row->deskripsi,0,99) ?>...</td>
                                             <td>
