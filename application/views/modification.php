@@ -33,13 +33,13 @@ echo "Maaf, anda belum login";
             <p>DASHBOARD</p>
         </section>
         <button type="button" class="dashboard-btn" style="background: #125159; border-radius: 30px; margin-bottom: 20px;">
-            <a class="text-decoration-none" href="<?php echo base_url('berita'); ?>" style="color: #fff;">Profil</a>
+            <a class="text-decoration-none" href="<?php echo base_url('daftarProfil'); ?>" style="color: #fff;">Profil</a>
         </button>
         <button type="button" class="dashboard-btn" style="background: #125159; border-radius: 30px; margin-bottom: 20px;">
-            <a class="text-decoration-none" href="<?php echo base_url('berita'); ?>" style="color: #fff;">Berita</a>
+            <a class="text-decoration-none" href="<?php echo base_url('daftarBerita'); ?>" style="color: #fff;">Berita</a>
         </button>
         <button type="button" class="dashboard-btn" style="background: #125159; border-radius: 30px; margin-bottom: 20px;">
-            <a class="text-decoration-none" href="<?php echo base_url('berita'); ?>" style="color: #fff;">UMKM</a>
+            <a class="text-decoration-none" href="<?php echo base_url('daftarUmkm'); ?>" style="color: #fff;">UMKM</a>
         </button>
         <a class="text-decoration-none logout-btn" href="<?php echo base_url('berita'); ?>">Logout</a>
     </div>
