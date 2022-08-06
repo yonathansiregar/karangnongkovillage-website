@@ -50,7 +50,7 @@ echo "Maaf, anda belum login";
                                         <tr>
                                             <td><?= $row->idPD ?></td>
                                             <td width="300">
-                                                <img src="<?php echo base_url(); ?>assets/images/news/<?= $row->gambarPD;?>" class="card-img-top p-3" alt="Card Image">
+                                                <img src="<?php echo base_url(); ?>assets/images/village-profile/<?= $row->gambarPD;?>" class="card-img-top p-3" alt="Card Image">
                                                 <p style="text-align:center;"><?= $row->gambarPD;?></p>
                                             </td>
                                             <td><b><?= $row->namaPD ?></b><br><?= $row->jabatanPD ?></td>

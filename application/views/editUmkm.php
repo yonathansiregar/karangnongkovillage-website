@@ -63,16 +63,65 @@ if (empty($_SESSION["username"])) {
                 <div class="col-md-12">
                     <div class="card">
                         <div class="card-body">
-                            <form enctype="multipart/form-data" action="<?php echo base_url('simpanEditBerita'); ?>" method="post">
+                            <form enctype="multipart/form-data" action="<?php echo base_url('simpanUmkm'); ?>" method="post">
                                 <div class="form-group row mb-2">
-                                    <label for="judul" class="col-sm-2 col-form-label">Judul</label>
+                                    <label for="namaUmkm" class="col-sm-2 col-form-label">Nama UMKM</label>
                                     <div class="col-sm-10">
-                                    <input type="hidden" class="form-control" id="idBerita" name="idBerita" value=" <?= $pilih_berita->idBerita; ?>">
-                                        <input type="hidden" class="form-control" id="tanggal" name="tanggal" required value="<?= $pilih_berita->tanggal;?>">
-                                        <input type="hidden" class="form-control" id="gambarBerita" name="gambarBerita" required value="<?= $pilih_berita->gambarBerita; ?>">
-                                        <input type="text" class="form-control" id="judul" name="judul" required value="<?= $pilih_berita->judul; ?>">
+                                        <input type="hidden" class="form-control" id="idUmkm" name="idUmkm" required value="<?= $pilih_umkm->idUmkm; ?>">
+                                        <input type="hidden" class="form-control" id="gambarUmkm" name="gambarUmkm" required value="<?= $pilih_umkm->gambarUmkm; ?>">
+                                        <input type="text" class="form-control" id="namaUmkm" name="namaUmkm" required value="<?= $pilih_umkm->namaUmkm; ?>">
                                         <small class="text-danger">
-                                            <?php echo form_error('judul') ?>
+                                            <?php echo form_error('namaUmkm') ?>
+                                        </small>
+                                    </div>
+                                </div>
+
+                                <div class="form-group row mb-2">
+                                    <label for="pemilikUmkm" class="col-sm-2 col-form-label">Pemilik UMKM</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="pemilikUmkm" name="pemilikUmkm" required value="<?= $pilih_umkm->pemilikUmkm; ?>">
+                                        <small class="text-danger">
+                                            <?php echo form_error('pemilikUmkm') ?>
+                                        </small>
+                                    </div>
+                                </div>
+
+                                <div class="form-group row mb-2">
+                                    <label for="jenisProduk" class="col-sm-2 col-form-label">Jenis Produk</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="jenisProduk" name="jenisProduk" required value="<?= $pilih_umkm->jenisProduk; ?>">
+                                        <small class="text-danger">
+                                            <?php echo form_error('jenisProduk') ?>
+                                        </small>
+                                    </div>
+                                </div>
+
+                                <div class="form-group row mb-2">
+                                    <label for="lokasi" class="col-sm-2 col-form-label">Alamat</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="lokasi" name="lokasi" required value="<?= $pilih_umkm->lokasi; ?>">
+                                        <small class="text-danger">
+                                            <?php echo form_error('lokasi') ?>
+                                        </small>
+                                    </div>
+                                </div>
+
+                                <div class="form-group row mb-2">
+                                    <label for="nomorWa" class="col-sm-2 col-form-label">Nomor WA (+62) - </label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="nomorWa" name="nomorWa" required value="<?= $pilih_umkm->nomorWa; ?>">
+                                        <small class="text-danger">
+                                            <?php echo form_error('nomorWa') ?>
+                                        </small>
+                                    </div>
+                                </div>
+
+                                <div class="form-group row mb-2">
+                                    <label for="olshop" class="col-sm-2 col-form-label">Tautan Online Shop</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="olshop" name="olshop" required value="<?= $pilih_umkm->olshop; ?>">
+                                        <small class="text-danger">
+                                            <?php echo form_error('olshop') ?>
                                         </small>
                                     </div>
                                 </div>
@@ -80,7 +129,7 @@ if (empty($_SESSION["username"])) {
                                 <div class="form-group row mb-2">
                                     <label for="deskripsi" class="col-sm-2 col-form-label">Deskripsi</label>
                                     <div class="col-sm-10">
-                                        <textarea class="form-control" id="deskripsi" name="deskripsi" required rows="10"><?= $pilih_berita->deskripsi; ?></textarea>
+                                        <textarea class="form-control" id="deskripsi" name="deskripsi" required rows="10"><?= $pilih_umkm->deskripsi; ?></textarea>
                                         <small class="text-danger">
                                             <?php echo form_error('deskripsi') ?>
                                         </small>

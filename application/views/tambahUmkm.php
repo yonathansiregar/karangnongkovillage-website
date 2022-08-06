@@ -96,7 +96,7 @@ if (empty($_SESSION["username"])) {
                                 </div>
 
                                 <div class="form-group row mb-2">
-                                    <label for="lokasi" class="col-sm-2 col-form-label">Lokasi</label>
+                                    <label for="lokasi" class="col-sm-2 col-form-label">Alamat</label>
                                     <div class="col-sm-10">
                                         <input type="text" class="form-control" id="lokasi" name="lokasi" required value="<?= set_value('lokasi'); ?>">
                                         <small class="text-danger">
@@ -106,7 +106,7 @@ if (empty($_SESSION["username"])) {
                                 </div>
 
                                 <div class="form-group row mb-2">
-                                    <label for="nomorWa" class="col-sm-2 col-form-label">Nomor WA</label>
+                                    <label for="nomorWa" class="col-sm-2 col-form-label">Nomor WA (+62) - </label>
                                     <div class="col-sm-10">
                                         <input type="text" class="form-control" id="nomorWa" name="nomorWa" required value="<?= set_value('nomorWa'); ?>">
                                         <small class="text-danger">
@@ -116,7 +116,7 @@ if (empty($_SESSION["username"])) {
                                 </div>
 
                                 <div class="form-group row mb-2">
-                                    <label for="olshop" class="col-sm-2 col-form-label">Olshop</label>
+                                    <label for="olshop" class="col-sm-2 col-form-label">Tautan Online Shop</label>
                                     <div class="col-sm-10">
                                         <input type="text" class="form-control" id="olshop" name="olshop" required value="<?= set_value('olshop'); ?>">
                                         <small class="text-danger">

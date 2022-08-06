@@ -199,7 +199,7 @@ class Dashboard extends CI_Controller
   public function daftarPD()
   {
     $data["title"] = "DAFTAR PERANGKAT DESA";
-    $data['semua_PD'] = $this->perangkatdesa->getAll();
+    $data['semua_PD'] = $this->perangkatDesa->getAll();
     $this->load->view('daftarPD', $data);
   }
   
@@ -214,14 +214,14 @@ class Dashboard extends CI_Controller
   {
     $this->load->helper('form');
     $data["title"] = "EDIT PERANGKAT DESA";
-    $data['pilih_PD'] = $this->perangkatdesa->getById($idPD);
+    $data['pilih_PD'] = $this->perangkatDesa->getById($idPD);
     $this->load->view('editPD', $data);
   }
 
   public function hapusPD($idPD)
   {
-    $this->perangkatdesa->hapus($idPD);
-    unlink("assets/images/village-profile/". $this->perangkatdesa->gambarById($idPD));
+    $this->perangkatDesa->hapus($idPD);
+    unlink("assets/images/village-profile/". $this->perangkatDesa->gambarById($idPD));
     redirect("daftarPD");
   }
 
@@ -230,7 +230,7 @@ class Dashboard extends CI_Controller
     $upload_path = 'assets/images/village-profile/';
     $filename = $_FILES["gambar"]["name"];
     move_uploaded_file($_FILES["gambar"]["tmp_name"],$upload_path . $filename);
-    $this->perangkatdesa->simpan();
+    $this->perangkatDesa->simpan();
     redirect('daftarUmkm');
   }
 
@@ -239,7 +239,7 @@ class Dashboard extends CI_Controller
     $upload_path = 'assets/images/village-profile/';
     $filename = $_FILES["gambar"]["name"];
     move_uploaded_file($_FILES["gambar"]["tmp_name"],$upload_path . $filename);
-    $this->perangkatdesa->edit();
+    $this->perangkatDesa->edit();
     redirect('daftarPD');
   }
 

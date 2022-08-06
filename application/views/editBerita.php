@@ -67,7 +67,7 @@ if (empty($_SESSION["username"])) {
                                 <div class="form-group row mb-2">
                                     <label for="judul" class="col-sm-2 col-form-label">Judul</label>
                                     <div class="col-sm-10">
-                                    <input type="hidden" class="form-control" id="idBerita" name="idBerita" value=" <?= $pilih_berita->idBerita; ?>">
+                                    <input type="hidden" class="form-control" id="idBerita" name="idBerita" value="<?= $pilih_berita->idBerita; ?>">
                                         <input type="hidden" class="form-control" id="tanggal" name="tanggal" required value="<?= $pilih_berita->tanggal;?>">
                                         <input type="hidden" class="form-control" id="gambarBerita" name="gambarBerita" required value="<?= $pilih_berita->gambarBerita; ?>">
                                         <input type="text" class="form-control" id="judul" name="judul" required value="<?= $pilih_berita->judul; ?>">
