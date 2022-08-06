@@ -8,7 +8,7 @@ class PerangkatDesa extends CI_Model
   //Menampilkan data perangkatDesa berdasarkan idPD
   public function getById($idPD)
   {
-    return $this->db->where(
+    return $this->db->get_where(
       $this->table,
       ["idPD" => $idPD]
     )->row();
@@ -33,6 +33,17 @@ class PerangkatDesa extends CI_Model
   {
     $this->db->from($this->table);
     $this->db->order_by("idPD", "asc");
+    $query = $this->db->get();
+    return $query->result();
+    //fungsi diatas seperti halnya query 
+    //select * from perangkatDesa order by idPD asc
+  }
+
+  //Menampilkan semua data perangkatDesa yang tersimpan
+  public function getAllDesc()
+  {
+    $this->db->from($this->table);
+    $this->db->order_by("idPD", "desc");
     $query = $this->db->get();
     return $query->result();
     //fungsi diatas seperti halnya query 

@@ -78,7 +78,7 @@ echo "Maaf, anda belum login";
                                                     <tr>
                                                         <td><b>Nomor WA</b></td>
                                                         <td>&nbsp; : &nbsp;&nbsp;</td>
-                                                        <td>(+62) <?= $row->nomorWa;?></td>
+                                                        <td>(+62)<?= $row->nomorWa;?></td>
                                                     </tr>
                                                     <tr>
                                                         <td><b>Olshop</b></td>
@@ -88,7 +88,7 @@ echo "Maaf, anda belum login";
                                                     <tr>
                                                         <td><b>Deskripsi</b></td>
                                                         <td>&nbsp; : &nbsp;&nbsp;</td>
-                                                        <td><?= $row->deskripsi;?></td>
+                                                        <td width="600px"><?= $row->deskripsi;?></td>
                                                     </tr>
                                                 </table>
                                             </td>

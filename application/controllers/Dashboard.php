@@ -199,7 +199,7 @@ class Dashboard extends CI_Controller
   public function daftarPD()
   {
     $data["title"] = "DAFTAR PERANGKAT DESA";
-    $data['semua_PD'] = $this->perangkatDesa->getAll();
+    $data['semua_PD'] = $this->perangkatDesa->getAllDesc();
     $this->load->view('daftarPD', $data);
   }
   
@@ -231,7 +231,7 @@ class Dashboard extends CI_Controller
     $filename = $_FILES["gambar"]["name"];
     move_uploaded_file($_FILES["gambar"]["tmp_name"],$upload_path . $filename);
     $this->perangkatDesa->simpan();
-    redirect('daftarUmkm');
+    redirect('daftarPD');
   }
 
   public function simpanEditPD()
