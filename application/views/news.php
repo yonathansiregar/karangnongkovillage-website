@@ -79,7 +79,7 @@
         foreach ($alternative as $row) : ?>
           <div class="col-12 col-md-6 col-lg-4">
             <div class="card">
-              <img src="<?php echo base_url(); ?>assets/images/homepage/<?= $row->gambarBerita;?>" height="250px" class="card-img-top p-3" alt="Card Image">
+              <img src="<?php echo base_url(); ?>assets/images/news/<?= $row->gambarBerita;?>" height="250px" class="card-img-top p-3" alt="Card Image">
               <div class="card-body">
                 <?php if (strlen($row->judul) <= 75) : ?>
                   <p class="card-title" style="text-align: center;"><b><?= $row->judul ?></b></p>
