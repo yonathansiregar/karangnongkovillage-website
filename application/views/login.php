@@ -127,18 +127,18 @@
         <form action="<?php echo base_url('dashboard/login_process'); ?>" method="post">
           <div class="row g-3 align-items-center" style="margin-bottom:40px;">
             <div class="col-3">
-                <label for="username" class="form-label">USERNAME</label>
+              <label for="username" class="form-label">USERNAME</label>
             </div>
-            <div  class="col-3">
-                <input type="text" class="form-field" name="username" id="username" placeholder="username" required>
+            <div class="col-3">
+              <input type="text" class="form-field" name="username" id="username" placeholder="username" required>
             </div>
           </div>
-          <div class="row g-3 align-items-center"  style="margin-bottom:60px;">
+          <div class="row g-3 align-items-center" style="margin-bottom:60px;">
             <div class="col-3">
-                <label for="password" class="form-label">PASSWORD</label>
+              <label for="password" class="form-label">PASSWORD</label>
             </div>
-            <div  class="col-3">
-                <input type="password" class="form-field" name="password" id="password" placeholder="password" required>
+            <div class="col-3">
+              <input type="password" class="form-field" name="password" id="password" placeholder="password" required>
             </div>
           </div>
           <div style="margin-bottom:100px;">
@@ -158,7 +158,7 @@
           <!-- Logo Pemkab Malang -->
           <div id="footer-logo" class="col-lg-4 col-md-6 d-flex justify-content-start">
             <a href="">
-              <img src="<?php echo base_url(); ?>assets/images/Logo.png" alt="Logo Kab Malang" class="img-fluid" id="">
+              <img src="<?= base_url(); ?>assets/images/Logo.png" alt="Logo Kab Malang" class="img-fluid" id="">
             </a>
           </div>
 
