@@ -93,7 +93,7 @@ function tgl_indo($tanggal){
   <div id="main-contents" class="main">
     <!-- Background Article -->
     <div class="background-picture" style="padding-top: 10vh;">
-      <img src="<?= base_url(); ?>assets/images/homepage/<?= $detail_berita->news;?>" alt="" class="w-100 position-absolute">
+      <img src="<?= base_url(); ?>assets/images/news/<?= $detail_berita->news;?>" alt="" class="w-100 position-absolute">
     </div>
     <div class="container">
       <div class="article position-relative">
