@@ -3,29 +3,6 @@ session_start();
 if (empty($_SESSION["username"])) {
 echo "Maaf, anda belum login";
 } else {
-    function tgl_indo($tanggal){
-        $bulan = array (
-            1 =>   'Januari',
-            'Februari',
-            'Maret',
-            'April',
-            'Mei',
-            'Juni',
-            'Juli',
-            'Agustus',
-            'September',
-            'Oktober',
-            'November',
-            'Desember'
-        );
-        $pecahkan = explode('-', $tanggal);
-        
-        // variabel pecahkan 0 = tanggal
-        // variabel pecahkan 1 = bulan
-        // variabel pecahkan 2 = tahun
-     
-        return $pecahkan[2] . ' ' . $bulan[ (int)$pecahkan[1] ] . ' ' . $pecahkan[0];
-    }
 ?>
 
 <!DOCTYPE html>
@@ -43,7 +20,6 @@ echo "Maaf, anda belum login";
   <!-- CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/global.css">
-  <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/umkm.css">
 
   <!-- TITLE PAGE -->
   <title><?php echo $title; ?></title>
