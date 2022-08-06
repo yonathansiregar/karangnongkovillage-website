@@ -50,7 +50,7 @@ if (empty($_SESSION["username"])) {
             }
 
             function getoutput() {
-                gambarBerita.value = getFile(gambar.value);
+                gambarUmkm.value = getFile(gambar.value);
                 extension.value = gambar.value.split('.')[1];
             }
         </script>

@@ -16,6 +16,18 @@ class Umkm extends CI_Model
     //select * from umkm where idUmkm='$idUmkm'
   }
 
+  //Menampilkan gambarBerita berdasarkan idUmkm
+  public function gambarById($idUmkm)
+  {
+    $this->db->select('gambarUmkm');
+    $this->db->from($this->table);
+    $this->db->where(["idUmkm" => $idUmkm]);
+    $query = $this->db->get();
+    return $query->result();
+    //query diatas seperti halnya query pada mysql 
+    //select gambarUmkm from umkm where idUmkm='$idUmkm'
+  }
+
   //Menampilkan semua data umkm yang tersimpan
   public function getAll()
   {

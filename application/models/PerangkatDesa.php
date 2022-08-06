@@ -5,7 +5,7 @@ class PerangkatDesa extends CI_Model
 {
   protected $table = 'perangkatDesa';
 
-  //Menampilkan data perangkatDesa berdasarkan idBerita
+  //Menampilkan data perangkatDesa berdasarkan idPD
   public function getById($idPD)
   {
     return $this->db->where(
@@ -13,7 +13,19 @@ class PerangkatDesa extends CI_Model
       ["idPD" => $idPD]
     )->row();
     //query diatas seperti halnya query pada mysql 
-    //select * from perangkatDesa where idPD='$idUmkm'
+    //select * from perangkatDesa where idPD='$idPD'
+  }
+
+  //Menampilkan gambarBerita berdasarkan idPD
+  public function gambarById($idPD)
+  {
+    $this->db->select('gambarPD');
+    $this->db->from($this->table);
+    $this->db->where(["idPD" => $idPD]);
+    $query = $this->db->get();
+    return $query->result();
+    //query diatas seperti halnya query pada mysql 
+    //select gambarPD from perangkatDesa where idPD='$idPD'
   }
 
   //Menampilkan semua data perangkatDesa yang tersimpan

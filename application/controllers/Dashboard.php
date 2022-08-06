@@ -89,8 +89,10 @@ class Dashboard extends CI_Controller
 
   public function logout_process()
   {
+    session_start();
+    unset($_SESSION["username"]);
     session_destroy();
-    redirect('index');
+    redirect('login');
   }
 
   public function modification()
@@ -172,11 +174,73 @@ class Dashboard extends CI_Controller
   public function hapusUmkm($idUmkm)
   {
     $this->umkm->hapus($idUmkm);
+    unlink("assets/images/umkm-products/". $this->umkm->gambarById($idUmkm));
+    redirect("daftarUmkm");
   }
 
   public function simpanUmkm()
   {
+    $upload_path = 'assets/images/umkm-products/';
+    $filename = $_FILES["gambar"]["name"];
+    move_uploaded_file($_FILES["gambar"]["tmp_name"],$upload_path . $filename);
     $this->umkm->simpan();
+    redirect('daftarUmkm');
+  }
+
+  public function simpanEditUmkm()
+  {
+    $upload_path = 'assets/images/umkm-products/';
+    $filename = $_FILES["gambar"]["name"];
+    move_uploaded_file($_FILES["gambar"]["tmp_name"],$upload_path . $filename);
+    $this->umkm->edit();
+    redirect('daftarUmkm');
+  }
+
+  public function daftarPD()
+  {
+    $data["title"] = "DAFTAR PERANGKAT DESA";
+    $data['semua_PD'] = $this->perangkatdesa->getAll();
+    $this->load->view('daftarPD', $data);
+  }
+  
+  public function tambahPD()
+  {
+    $this->load->helper('form');
+    $data["title"] = "BUAT PERANGKAT DESA BARU";
+    $this->load->view('tambahPD', $data);
+  }
+
+  public function editPD($idPD)
+  {
+    $this->load->helper('form');
+    $data["title"] = "EDIT PERANGKAT DESA";
+    $data['pilih_PD'] = $this->perangkatdesa->getById($idPD);
+    $this->load->view('editPD', $data);
+  }
+
+  public function hapusPD($idPD)
+  {
+    $this->perangkatdesa->hapus($idPD);
+    unlink("assets/images/village-profile/". $this->perangkatdesa->gambarById($idPD));
+    redirect("daftarPD");
+  }
+
+  public function simpanPD()
+  {
+    $upload_path = 'assets/images/village-profile/';
+    $filename = $_FILES["gambar"]["name"];
+    move_uploaded_file($_FILES["gambar"]["tmp_name"],$upload_path . $filename);
+    $this->perangkatdesa->simpan();
+    redirect('daftarUmkm');
+  }
+
+  public function simpanEditPD()
+  {
+    $upload_path = 'assets/images/village-profile/';
+    $filename = $_FILES["gambar"]["name"];
+    move_uploaded_file($_FILES["gambar"]["tmp_name"],$upload_path . $filename);
+    $this->perangkatdesa->edit();
+    redirect('daftarPD');
   }
 
 }

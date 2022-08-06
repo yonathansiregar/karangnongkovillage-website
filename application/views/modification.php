@@ -41,7 +41,7 @@ echo "Maaf, anda belum login";
         <button type="button" class="dashboard-btn" style="background: #125159; border-radius: 30px; margin-bottom: 20px;">
             <a class="text-decoration-none" href="<?php echo base_url('daftarUmkm'); ?>" style="color: #fff;">UMKM</a>
         </button>
-        <a class="text-decoration-none logout-btn" href="<?php echo base_url('berita'); ?>">Logout</a>
+        <a class="text-decoration-none logout-btn" href="<?php echo base_url('logout_process'); ?>">Logout</a>
     </div>
 </body>
 </html>
