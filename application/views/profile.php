@@ -112,7 +112,7 @@
                     <img src="<?php echo base_url(); ?>assets/images/village-profile/<?= $row->gambarPD ?>" class="card-img" style="aspect-ratio: 86 / 107;" alt="...">
                   </div>
                   <div class="col-md-8">
-                    <div class="card-body" style="padding: 75px 0;">
+                    <div class="card-body" style="padding: 75px 0px 0px 25px;">
                       <p class="nama"><b><?= $row->namaPD ?></b></p>
                       <p class="jabatan"><?= $row->jabatanPD ?></p>
                     </div>
