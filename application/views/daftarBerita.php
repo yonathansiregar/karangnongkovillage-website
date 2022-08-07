@@ -53,8 +53,8 @@ echo "Maaf, anda belum login";
         <div class="row">
             <div class="col-md-12">
                 <div>
-                    <a class="btn btn-danger mb-2" href="<?= base_url('modification'); ?>">Kembali</a>
-                    <a class="btn btn-success mb-2" href="<?= base_url('tambahBerita'); ?>">Tambah</a>
+                    <a class="btn btn-secondary mb-2" style="margin-right: 10px;" href="<?= base_url('modification'); ?>">Kembali</a>
+                    <a class="btn btn-primary mb-2" href="<?= base_url('tambahBerita'); ?>">Tambah</a>
                 </div>
                 <div class="card">
                     <div class="card-body">
@@ -62,10 +62,10 @@ echo "Maaf, anda belum login";
                             <table class="table table-striped table-bordered table-hover" id="tablePesanan">
                                 <thead>
                                     <tr class="table-success">
-                                        <th>ID</th>
+                                        <th style="width: 50px;">ID</th>
                                         <th>GAMBAR</th>
                                         <th>BERITA</th>
-                                        <th>MODIFIKASI</th>
+                                        <th style="width: 150px;">MODIFIKASI</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -79,7 +79,7 @@ echo "Maaf, anda belum login";
                                             <td><b><?= $row->judul ?></b><br><?= tgl_indo($row->tanggal) ?><br><br><?= substr($row->deskripsi,0,99) ?>...</td>
                                             <td>
                                                 <a href="<?= site_url('editBerita/' . $row->idBerita) ?>" class="btn btn-success btn-sm">Edit </a>
-                                                <a href="<?= site_url('hapusBerita/' . $row->idBerita) ?>" class="btn btn-danger btn-sm item-delete">Delete </a>
+                                                <a href="<?= site_url('hapusBerita/' . $row->idBerita) ?>" class="btn btn-danger btn-sm item-delete">Hapus </a>
                                             </td>
                                         </tr>
                                     <?php endforeach; ?>
