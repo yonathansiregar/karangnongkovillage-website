@@ -97,9 +97,9 @@ function tgl_indo($tanggal){
     </div>
     <div class="container">
       <div class="article position-relative">
-        <p class="fs-1 news-title"><?= $detail_berita->judul;?></h1>
+        <p class="fs-1 news-title" style="text-align:justify ;"><?= $detail_berita->judul;?></h1>
         <p><?= tgl_indo($detail_berita->tanggal);?></h5>
-        <p><?= $detail_berita->deskripsi;?></p>
+        <p style="text-align:justify ;"><?= $detail_berita->deskripsi;?></p>
       </div>
     </div>
 
