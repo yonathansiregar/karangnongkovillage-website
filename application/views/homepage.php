@@ -185,7 +185,7 @@
     </section>
 
     <!-- Berita Terkini -->
-    <section id="container current-news mb-5">
+    <section class="container"  id="current-news mb-5">
       <div class="d-flex mx-5 mt-5">
         <div class="me-auto">
           <p class="left fs-3 mb-5">BERITA TERKINI</p>
@@ -250,7 +250,7 @@
     <!-- End of Peta Desa Karangnongko -->
 
     <!-- UMKM Desa Karangnongko -->
-    <section id="container umkm-desa">
+    <section class="container" id="umkm-desa">
       <div class="d-flex mx-5 mt-5">
         <div class="me-auto">
           <p class="left fs-3 mb-5">UMKM DESA KARANGNONGKO</p>
