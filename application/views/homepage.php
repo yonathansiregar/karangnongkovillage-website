@@ -228,7 +228,7 @@
 
     <!-- Peta Desa Karangnongko-->
     <section id="peta-desa" class="" style="background: #125159; color: #fff;">
-      <div class="container" style="padding-left: 50px; padding-right: 50px;">
+      <div class="container">
         <div class="fs-5 d-flex justify-content-center justify-content-md-start pt-3" style="font-weight: 600; line-height: 48px;">
           <p id="tulisan-petadesa">PETA DESA KARANGNONGKO</p>
         </div>
