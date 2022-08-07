@@ -259,7 +259,7 @@ class Dashboard extends CI_Controller
   }
 
   public function cariUmkm($kunciKata){
-    $data["title"] = "Hasil Pencarian Berita";
+    $data["title"] = "Hasil Pencarian UMKM";
     $data['cari_umkm'] = $this->search->searchUmkm($kunciKata);
     $this->load->view('cariUmkm', $data);
   }
