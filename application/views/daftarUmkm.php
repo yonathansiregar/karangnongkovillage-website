@@ -30,8 +30,8 @@ echo "Maaf, anda belum login";
         <div class="row">
             <div class="col-md-12">
                 <div>
-                    <a class="btn btn-danger mb-2" href="<?= base_url('modification'); ?>">Kembali</a>
-                    <a class="btn btn-success mb-2" href="<?= base_url('tambahUmkm'); ?>">Tambah</a>
+                    <a class="btn btn-secondary mb-2" style="margin-right: 10px;" href="<?= base_url('modification'); ?>">Kembali</a>
+                    <a class="btn btn-primary mb-2" href="<?= base_url('tambahUmkm'); ?>">Tambah</a>
                 </div>
                 <div class="card">
                     <div class="card-body">
@@ -39,10 +39,10 @@ echo "Maaf, anda belum login";
                             <table class="table table-striped table-bordered table-hover" id="tablePesanan">
                                 <thead>
                                     <tr class="table-success">
-                                        <th>ID</th>
+                                        <th style="width: 50px;">ID</th>
                                         <th>GAMBAR</th>
                                         <th>UMKM</th>
-                                        <th>MODIFIKASI</th>
+                                        <th style="width: 150px;">MODIFIKASI</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -94,7 +94,7 @@ echo "Maaf, anda belum login";
                                             </td>
                                             <td>
                                                 <a href="<?= site_url('editUmkm/' . $row->idUmkm) ?>" class="btn btn-success btn-sm">Edit </a>
-                                                <a href="<?= site_url('hapusUmkm/' . $row->idUmkm) ?>" class="btn btn-danger btn-sm item-delete">Delete </a>
+                                                <a href="<?= site_url('hapusUmkm/' . $row->idUmkm) ?>" class="btn btn-danger btn-sm item-delete">Hapus </a>
                                             </td>
                                         </tr>
                                     <?php endforeach; ?>
