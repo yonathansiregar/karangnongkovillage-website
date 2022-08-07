@@ -10,6 +10,7 @@ class Dashboard extends CI_Controller
     $this->load->model("berita");
     $this->load->model("perangkatDesa");
     $this->load->model("umkm");
+    $this->load->model("search");
   }
 
   public function index()
@@ -241,6 +242,32 @@ class Dashboard extends CI_Controller
     move_uploaded_file($_FILES["gambar"]["tmp_name"],$upload_path . $filename);
     $this->perangkatDesa->edit();
     redirect('daftarPD');
+  }
+
+  public function cariSemua($kunciKata){
+    $data["title"] = "Hasil Pencarian";
+    $data['cari_berita'] = $this->search->searchBerita($kunciKata);
+    $data['cari_Umkm'] = $this->search->searchUmkm($kunciKata);
+    $data['cari_PD'] = $this->search->searchPD($kunciKata);
+    $this->load->view('cariSemua', $data);
+  }
+
+  public function cariBerita($kunciKata){
+    $data["title"] = "Hasil Pencarian Berita";
+    $data['cari_berita'] = $this->search->searchBerita($kunciKata);
+    $this->load->view('cariSemua', $data);
+  }
+
+  public function cariUmkm($kunciKata){
+    $data["title"] = "Hasil Pencarian Berita";
+    $data['cari_umkm'] = $this->search->searchUmkm($kunciKata);
+    $this->load->view('cariUmkm', $data);
+  }
+
+  public function cariPD($kunciKata){
+    $data["title"] = "Hasil Pencarian Perangkat Desa";
+    $data['cari_PD'] = $this->search->searchPD($kunciKata);
+    $this->load->view('cariPD', $data);
   }
 
 }
