@@ -191,7 +191,7 @@
           <p class="left fs-3 mb-5">BERITA TERKINI</p>
         </div>
 
-        <div class="ms-auto">
+        <div class="ms-auto" style="margin-top:13px ;">
           <a href="<?php echo site_url('news'); ?>" class="text-decoration-underline right">LIHAT SEMUA</a>
         </div>
       </div>
@@ -256,7 +256,7 @@
           <p class="left fs-3 mb-5">UMKM DESA KARANGNONGKO</p>
         </div>
 
-        <div class="ms-auto">
+        <div class="ms-auto" style="margin-top:13px ;">
           <a href="<?php echo site_url('umkm'); ?>" class="text-decoration-underline right">LIHAT SEMUA</a>
         </div>
       </div>
