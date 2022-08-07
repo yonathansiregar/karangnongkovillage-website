@@ -109,7 +109,7 @@
               <div class="card mb-3">
                 <div class="row no-gutters">
                   <div class="col-md-4">
-                    <img src="<?php echo base_url(); ?>assets/images/village-profile/<?= $row->gambarPD ?>" class="card-img" alt="...">
+                    <img src="<?php echo base_url(); ?>assets/images/village-profile/<?= $row->gambarPD ?>" class="card-img" style="aspect-ratio: 86 / 107;" alt="...">
                   </div>
                   <div class="col-md-8">
                     <div class="card-body" style="padding: 75px 0;">
