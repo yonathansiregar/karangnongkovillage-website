@@ -144,38 +144,55 @@
             <img src="assets/images/homepage/Group-infoweb.png" class="justify-content-start img-fluid d-none d-md-block" alt="">
           </div>
           <div class="col-md-6 pt-5 ps-5">
-            <p class="title-infoweb fs-2">Informasi Website</p>
-            <ul class="">
-              <li class="list-infoweb pb-3">
-                <i class="bi bi-check-circle-fill me-2"></i>
-                <span>Profile mengenai Desa Karangnongko</span>
-              </li>
-              <li class="list-infoweb pb-3">
-                <i class="bi bi-check-circle-fill me-2"></i>
-                <span>Kegiatan terkini yang dilaksanakan di desa</span>
-              </li>
-              <li class="list-infoweb pb-3">
-                <i class="bi bi-check-circle-fill me-2"></i>x
-                <span>Produk unggulan UMKM Desa Karangnongko</span>
-              <li class="list-infoweb pb-3">
-                <i class="bi bi-check-circle-fill me-2"></i>
-                <span>Produk unggulan UMKM Desa Karangnongko</span>
-              </li>
-            </ul>
+            <p class="title-infoweb" style="font-size:32px ;">Informasi Website</p>
+            <table>
+            <tr style="vertical-align:top ;">
+              <td class="list-infoweb pb-3">
+                <span class="bi bi-check-circle-fill me-3" style="font-size:20px ;"></span>
+              </td>
+              <td class="list-infoweb pb-3">
+                <span style="font-size:20px ;">Profile Desa serta Perangkat Desa Karangnongko</span>
+              </td>
+              </tr>
+              <tr style="vertical-align:top ;">
+              <td class="list-infoweb pb-3">
+                <span class="bi bi-check-circle-fill me-3" style="font-size:20px ;"></span>
+              </td>
+              <td class="list-infoweb pb-3">
+                <span style="font-size:20px ;">Kegiatan dan berita terkini yang dilaksanakan di desa karangnongko</span>
+              </td>
+              </tr>
+              <tr style="vertical-align:top ;">
+              <td class="list-infoweb pb-3">
+                <span class="bi bi-check-circle-fill me-3" style="font-size:20px ;"></span>
+              </td>
+              <td class="list-infoweb pb-3">
+                <span style="font-size:20px ;">Produk unggulan UMKM Desa Karangnongko</span>
+              </td>
+              </tr>
+              <tr style="vertical-align:top ;">
+              <td class="list-infoweb pb-3">
+                <span class="bi bi-check-circle-fill me-3" style="font-size:20px ;"></span>
+              </td>
+                <td class="list-infoweb pb-3">
+                <span style="font-size:20px ;">Menyebarkan informasi terbaru desa karangnongko</span>
+              </td>
+            </tr>
+            </table>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Berita Terkini -->
-    <section id="current-news mb-5">
+    <section id="container current-news mb-5">
       <div class="d-flex mx-5 mt-5">
         <div class="me-auto">
-          <p class="left fs-3">BERITA TERKINI</p>
+          <p class="left fs-3 mb-5">BERITA TERKINI</p>
         </div>
 
         <div class="ms-auto">
-          <p class="text-decoration-underline right fs-6 mt-2">LIHAT SEMUA</p>
+          <a href="<?php echo site_url('news'); ?>" class="text-decoration-underline right">LIHAT SEMUA</a>
         </div>
       </div>
 
@@ -184,165 +201,47 @@
           <!-- Card Loop -->
           <?php foreach ($data_berita as $row) : ?>
             <div>
-              <div class="card" style="width: 18rem;">
-                <img src="assets/images/homepage/sdn01karangnongko.png" class="card-img-top p-3" alt="Card Image">
+              <div class="card-body" style="width: 18rem; border-style: solid; border-width: 1px; border-radius: 20px; border-color: #909A9B;">
+                <img src="assets/images/homepage/sdn01karangnongko.png" class="card-img-top p-2" style=" width: 320; height: 160; margin-left: auto; margin-right: auto;" alt="Card Image">
                 <div class="card-body">
-                  <?php if (strlen($row->judul) <= 45) : ?>
-                    <p class="card-title" style="text-align: center;"><b><?= $row->judul ?></b></p>
+                  <?php if (strlen($row->judul) <= 40) : ?>
+                    <p class="card-title" style="text-align: center; font-size: 14px;"><b><?= $row->judul ?></b></p>
                   <?php else : ?>
-                    <p class="card-title" style="text-align: center;"><b><?= substr($row->judul, 0, 45) . " ..." ?></b></p>
+                    <p class="card-title" style="text-align: center; font-size: 14px;"><b><?= substr($row->judul, 0, 40) . " ..." ?></b></p>
                   <?php endif; ?>
                   <?php if (strlen($row->deskripsi) <= 150) : ?>
-                    <p class="card-text"><?= $row->deskripsi ?></p>
+                    <p class="card-text" style="font-size: 12px;"><?= $row->deskripsi ?></p>
                   <?php else : ?>
-                    <p class="card-text"><?= substr($row->deskripsi, 0, 150) . " ..." ?></p>
+                    <p class="card-text" style="font-size: 12px;"><?= substr($row->deskripsi, 0, 150) . " ..." ?></p>
                   <?php endif; ?>
+                  <div class="d-flex justify-content-center">
                   <button type="button" class="btn" style="background: #125159; border-radius: 30px;">
-                    <a class="text-decoration-none" href="<?php echo base_url('berita'); ?>" style="color: #fff;">Baca Selengkapnya</a>
+                    <a class="text-decoration-none" href="<?php echo base_url('berita/' . $row->idBerita); ?>" style="color: #fff;">Baca Selengkapnya</a>
                   </button>
+                  </div>
                 </div>
               </div>
             </div>
           <?php endforeach; ?>
-
-          <!-- Card 1 -->
-          <div>
-            <div class="card" style="width: 18rem;">
-              <img src="assets/images/homepage/sdn01karangnongko.png" class="card-img-top p-3" alt="Card Image">
-              <div class="card-body">
-                <p class="card-title">SDN Karangnongko 1 Mendapat Kunjugan KKN ...</p>
-                <p class="card-text">Sejumlah 30 Mahasiswa mengikuti porseni tingkat kabupaten malang selama 30 hari di kepanjen. selama 30 hari di kepanjen. ...</p>
-                <button type="button" class="btn" style="background: #125159; border-radius: 30px;">
-                  <a class="text-decoration-none" href="<?php echo base_url('berita'); ?>" style="color: #fff;">Baca Selengkapnya</a>
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 2 -->
-          <div>
-            <div class="card" style="width: 18rem;">
-              <img src="assets/images/homepage/sdn01karangnongko.png" class="card-img-top p-3" alt="Card Image">
-              <div class="card-body">
-                <p class="card-title">SDN Karangnongko 1 Mendapat Kunjugan KKN ...</p>
-                <p class="card-text">Sejumlah 30 Mahasiswa mengikuti porseni tingkat kabupaten malang selama 30 hari di kepanjen. selama 30 hari di kepanjen. ...</p>
-                <button type="button" class="btn" style="background: #125159; border-radius: 30px;">
-                  <a class="text-decoration-none" href="<?php echo base_url('berita'); ?>" style="color: #fff;">Baca Selengkapnya</a>
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 3 -->
-          <div>
-            <div class="card" style="width: 18rem;">
-              <img src="assets/images/homepage/sdn01karangnongko.png" class="card-img-top p-3" alt="Card Image">
-              <div class="card-body">
-                <p class="card-title">SDN Karangnongko 1 Mendapat Kunjugan KKN ...</p>
-                <p class="card-text">Sejumlah 30 Mahasiswa mengikuti porseni tingkat kabupaten malang selama 30 hari di kepanjen. selama 30 hari di kepanjen. ...</p>
-                <button type="button" class="btn" style="background: #125159; border-radius: 30px;">
-                  <a class="text-decoration-none" href="<?php echo base_url('berita'); ?>" style="color: #fff;">Baca Selengkapnya</a>
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 4 -->
-          <div>
-            <div class="card" style="width: 18rem;">
-              <img src="assets/images/homepage/sdn01karangnongko.png" class="card-img-top p-3" alt="Card Image">
-              <div class="card-body">
-                <p class="card-title">SDN Karangnongko 1 Mendapat Kunjugan KKN ...</p>
-                <p class="card-text">Sejumlah 30 Mahasiswa mengikuti porseni tingkat kabupaten malang selama 30 hari di kepanjen. selama 30 hari di kepanjen. ...</p>
-                <button type="button" class="btn" style="background: #125159; border-radius: 30px;">
-                  <a class="text-decoration-none" href="<?php echo base_url('berita'); ?>" style="color: #fff;">Baca Selengkapnya</a>
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 5 -->
-          <div>
-            <div class="card" style="width: 18rem;">
-              <img src="assets/images/homepage/sdn01karangnongko.png" class="card-img-top p-3" alt="Card Image">
-              <div class="card-body">
-                <p class="card-title">SDN Karangnongko 1 Mendapat Kunjugan KKN ...</p>
-                <p class="card-text">Sejumlah 30 Mahasiswa mengikuti porseni tingkat kabupaten malang selama 30 hari di kepanjen. selama 30 hari di kepanjen. ...</p>
-                <button type="button" class="btn" style="background: #125159; border-radius: 30px;">
-                  <a class="text-decoration-none" href="<?php echo base_url('berita'); ?>" style="color: #fff;">Baca Selengkapnya</a>
-                </button>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div class="card" style="width: 18rem;">
-              <img src="assets/images/homepage/sdn01karangnongko.png" class="card-img-top p-3" alt="Card Image">
-              <div class="card-body">
-                <p class="card-title">SDN Karangnongko 1 Mendapat Kunjugan KKN ...</p>
-                <p class="card-text">Sejumlah 30 Mahasiswa mengikuti porseni tingkat kabupaten malang selama 30 hari di kepanjen. selama 30 hari di kepanjen. ...</p>
-                <button type="button" class="btn" style="background: #125159; border-radius: 30px;">
-                  <a class="text-decoration-none" href="<?php echo base_url('berita'); ?>" style="color: #fff;">Baca Selengkapnya</a>
-                </button>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div class="card" style="width: 18rem;">
-              <img src="assets/images/homepage/sdn01karangnongko.png" class="card-img-top p-3" alt="Card Image">
-              <div class="card-body">
-                <p class="card-title">SDN Karangnongko 1 Mendapat Kunjugan KKN ...</p>
-                <p class="card-text">Sejumlah 30 Mahasiswa mengikuti porseni tingkat kabupaten malang selama 30 hari di kepanjen. selama 30 hari di kepanjen. ...</p>
-                <button type="button" class="btn" style="background: #125159; border-radius: 30px;">
-                  <a class="text-decoration-none" href="<?php echo base_url('berita'); ?>" style="color: #fff;">Baca Selengkapnya</a>
-                </button>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div class="card" style="width: 18rem;">
-              <img src="assets/images/homepage/sdn01karangnongko.png" class="card-img-top p-3" alt="Card Image">
-              <div class="card-body">
-                <p class="card-title">SDN Karangnongko 1 Mendapat Kunjugan KKN ...</p>
-                <p class="card-text">Sejumlah 30 Mahasiswa mengikuti porseni tingkat kabupaten malang selama 30 hari di kepanjen. selama 30 hari di kepanjen. ...</p>
-                <button type="button" class="btn" style="background: #125159; border-radius: 30px;">
-                  <a class="text-decoration-none" href="<?php echo base_url('berita'); ?>" style="color: #fff;">Baca Selengkapnya</a>
-                </button>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div class="card" style="width: 18rem;">
-              <img src="assets/images/homepage/sdn01karangnongko.png" class="card-img-top p-3" alt="Card Image">
-              <div class="card-body">
-                <p class="card-title">SDN Karangnongko 1 Mendapat Kunjugan KKN ...</p>
-                <p class="card-text">Sejumlah 30 Mahasiswa mengikuti porseni tingkat kabupaten malang selama 30 hari di kepanjen. selama 30 hari di kepanjen. ...</p>
-                <button type="button" class="btn" style="background: #125159; border-radius: 30px;">
-                  <a class="text-decoration-none" href="<?php echo base_url('berita'); ?>" style="color: #fff;">Baca Selengkapnya</a>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </section>
     <!-- End of BERITA TERKINI -->
 
     <!-- Peta Desa Karangnongko-->
     <section id="peta-desa" class="" style="background: #125159; color: #fff;">
       <div class="container">
-        <div class="fs-5 d-flex justify-content-center justify-content-md-start" style="font-weight: 600; line-height: 48px; ">
+        <div class="fs-5 d-flex justify-content-center justify-content-md-start pt-3" style="font-weight: 600; line-height: 48px;">
           <p id="tulisan-petadesa">PETA DESA KARANGNONGKO</p>
         </div>
 
         <div class="d-flex flex-nowrap">
           <div class="row justify-content-center align-items-center" style="text-align: justify;">
-            <div class="col-md-6 order-2 order-md-1 fs-6" style="font-weight: 300; line-height: 27px; font-style: normal;">
+            <div class="col-md-6 order-2 order-md-1 fs-6 pb-4" style="font-weight: 300; line-height: 27px; font-style: normal;">
               <p>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Karangnongko merupakan salah satu desa yang ada di kecamatan karangnongko kabupaten malang. Salah satu keunikan desa ini merupakan banyak nya anak anak kecil yang ramah dan suka senyum terhadap teman teman kkn. oleh karena itu, kita sangat nyaman dalam menjalankan program kkn hingga akhir waktu. Salah satu keunikan desa ini merupakan banyak nya anak anak kecil yang ramah dan suka senyum terhadap teman teman kkn. oleh karena itu, kita sangat nyaman dalam menjalankan program kkn hingga akhir waktu. </p>
               <p>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Salah satu keunikan desa ini merupakan banyak nya anak anak kecil yang ramah dan suka senyum terhadap teman teman kkn. oleh karena itu, kita sangat nyaman dalam menjalankan program kkn hingga akhir waktu. Salah satu keunikan desa ini merupakan banyak nya anak anak kecil yang ramah dan suka senyum terhadap teman teman kkn. oleh karena itu, kita sangat nyaman dalam menjalankan program kkn hingga akhir waktu. </p>
             </div>
 
             <div class="col-md-6 order-1 order-md-2 d-flex justify-content-center justify-content-md-end">
-              <img src="assets/images/homepage/peta-desa.png" alt="Peta Desa" class="my-3 img-responsive">
+              <img src="assets/images/homepage/peta-desa.png" alt="Peta Desa" class="my-3 pb-5 img-responsive">
             </div>
           </div>
         </div>
@@ -351,10 +250,10 @@
     <!-- End of Peta Desa Karangnongko -->
 
     <!-- UMKM Desa Karangnongko -->
-    <section id="umkm-desa">
+    <section id="container umkm-desa">
       <div class="d-flex mx-5 mt-5">
         <div class="me-auto">
-          <p class="left">UMKM DESA KARANGNONGKO</p>
+          <p class="left fs-3 mb-5">UMKM DESA KARANGNONGKO</p>
         </div>
 
         <div class="ms-auto">
@@ -366,11 +265,11 @@
         <!-- UMKM Loop -->
         <?php foreach ($data_umkm as $row) : ?>
           <div>
-            <div class="card" style="width: 18rem; border-style: none;">
-              <img src="assets/images/umkm-products/<?= $row->gambarUmkm ?>" class="card-img-top" alt="...">
+            <div class="card" style="width: 18rem; border-style: none;  background-color:transparent;">
+              <img src="assets/images/umkm-products/<?= $row->gambarUmkm ?>" class="card-img-top" style=" width: 280; height: 328; margin-left: auto; margin-right: auto;" alt="...">
               <div class="card-body text-center">
-                <h5 class="card-title"><?= $row->namaUmkm ?></h5>
-                <p class="card-text"><?= $row->pemilikUmkm ?></p>
+                <h5 class="card-title mt-2" style="font-size:22px ;"><?= $row->namaUmkm ?></h5>
+                <p class="card-text mt-3" style="color: #898889; font-size:16px ;"><?= $row->pemilikUmkm ?></p>
               </div>
             </div>
           </div>

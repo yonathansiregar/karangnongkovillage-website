@@ -72,15 +72,15 @@
 
   <!-- MAIN CONTENTS -->
   <main>
-    <section class="page-title container mt-5">
+    <section class="page-title container mt-5 mb-5">
       <p>PROFILE DESA KARANGNONGKO</p>
     </section>
 
-    <section id="header-img">
+    <section class="mb-4"  id="header-img">
       <div class="d-flex justify-content-center align-items-center">
         <div>
-          <div class="card">
-            <img style="border-radius: 30px; border: 1px solid #D9D9D9;" src="<?php echo base_url(); ?>assets/images/village-profile/kantor-desa.png" class="card-img" alt="header image">
+          <div class="card" style="background-color: transparent;">
+            <img style="border-radius: 40px;" src="<?php echo base_url(); ?>assets/images/village-profile/kantor-desa.png" class="card-img" alt="header image">
             <div class="card-img-overlay" style="padding-top:100px;">
               <p class="card-text d-flex justify-content-center align-items-center title-text">STRUKTURAL PERANGKAT DESA</p>
               <p class="card-text d-flex justify-content-center align-items-center title-text">DESA KARANGNONGKO, KECAMATAN PONCOKUSUMO</p>
@@ -97,11 +97,11 @@
     </section>
 
     <section id="village-apparatus">
-      <div class="my-5 fs-5 d-flex justify-content-center justify-content-md-start ms-md-5">
-        <p class="sub-title">PERANGKAT DESA</p>
+      <div class="my-5 fs-5 d-flex justify-content-center justify-content-md-start">
+        <p class="sub-title container">PERANGKAT DESA</p>
       </div>
 
-      <div class="container">
+      <div class="container my-5 fs-5">
         <div class="row g-4">
           <?php
           foreach ($data_pd as $row) : ?>
@@ -112,7 +112,7 @@
                     <img src="<?php echo base_url(); ?>assets/images/village-profile/<?= $row->gambarPD ?>" class="card-img" alt="...">
                   </div>
                   <div class="col-md-8">
-                    <div class="card-body" style="padding-top: 60px;">
+                    <div class="card-body" style="padding: 75px 0;">
                       <p class="nama"><b><?= $row->namaPD ?></b></p>
                       <p class="jabatan"><?= $row->jabatanPD ?></p>
                     </div>
@@ -121,6 +121,7 @@
               </div>
             </div>
           <?php endforeach; ?>
+        </div>
         </div>
 
     </section>

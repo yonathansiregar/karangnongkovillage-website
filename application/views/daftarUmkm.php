@@ -55,39 +55,39 @@ echo "Maaf, anda belum login";
                                             </td>
                                             <td>
                                                 <table>
-                                                    <tr>
-                                                        <td><b>Nama UMKM</b></td>
-                                                        <td>&nbsp; : &nbsp;&nbsp;</td>
+                                                    <tr style="vertical-align:top ;">
+                                                        <td><b><span class="me-3">Nama UMKM</span></b></td>
+                                                        <td><span class="me-3">:</span></td>
                                                         <td><?= $row->namaUmkm;?></td>
                                                     </tr>
                                                     <tr>
-                                                        <td><b>Pemilik UMKM</b></td>
-                                                        <td>&nbsp; : &nbsp;&nbsp;</td>
+                                                        <td><b><span class="me-3">Pemilik UMKM</span></b></td>
+                                                        <td><span class="me-3">:</span></td>
                                                         <td><?= $row->pemilikUmkm;?></td>
                                                     </tr>
-                                                    <tr>
-                                                        <td><b>Jenis Produk</b></td>
-                                                        <td>&nbsp; : &nbsp;&nbsp;</td>
+                                                    <tr style="vertical-align:top ;">
+                                                        <td><b><span class="me-3">Jenis Produk</span></b></td>
+                                                        <td><span class="me-3">:</span></td>
                                                         <td><?= $row->jenisProduk;?></td>
                                                     </tr>
-                                                    <tr>
-                                                        <td><b>Lokasi</b></td>
-                                                        <td>&nbsp; : &nbsp;&nbsp;</td>
+                                                    <tr style="vertical-align:top ;">
+                                                        <td><b><span class="me-3">Lokasi</span></b></td>
+                                                        <td><span class="me-3">:</span></td>
                                                         <td><?= $row->lokasi;?></td>
                                                     </tr>
-                                                    <tr>
-                                                        <td><b>Nomor WA</b></td>
-                                                        <td>&nbsp; : &nbsp;&nbsp;</td>
+                                                    <tr style="vertical-align:top ;">
+                                                        <td><b><span class="me-3">Nomor WA</span></b></td>
+                                                        <td><span class="me-3">:</span></td>
                                                         <td>(+62)<?= $row->nomorWa;?></td>
                                                     </tr>
-                                                    <tr>
-                                                        <td><b>Olshop</b></td>
-                                                        <td>&nbsp; : &nbsp;&nbsp;</td>
+                                                    <tr style="vertical-align:top ;">
+                                                        <td><b><span class="me-3">Online Shop</span></b></td>
+                                                        <td><span class="me-3">:</span></td>
                                                         <td><?= $row->olshop;?></td>
                                                     </tr>
-                                                    <tr>
-                                                        <td><b>Deskripsi</b></td>
-                                                        <td>&nbsp; : &nbsp;&nbsp;</td>
+                                                    <tr style="vertical-align:top ;">
+                                                        <td><b><span class="me-3">Deskripsi</span></b></td>
+                                                        <td><span class="me-3">:</span></td>
                                                         <td width="600px"><?= $row->deskripsi;?></td>
                                                     </tr>
                                                 </table>

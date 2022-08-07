@@ -1,109 +1,119 @@
 /* ========= MAIN CONTENTS ========= */
+
+
 /* Header */
+
 #header {
-  margin: 20px;
+    margin: 20px;
 }
 
 #img-text {
-  font-weight: 700;
-  line-height: 48px;
-  color: #125159;
-  -webkit-text-stroke: 1px #DFE5E6;
+    font-weight: 700;
+    line-height: 48px;
+    color: #125159;
+    -webkit-text-stroke: 1px #DFE5E6;
 }
 
 .card-img-overlay {
-  padding-top: 28vh;
-  font-size: 2vw;
+    padding-top: 28vh;
+    font-size: 2vw;
 }
 
 .card-img-overlay .card-text {
-  font-weight: 700;
-  line-height: 48px;
-  color: #125159;
-  -webkit-text-stroke: 1px #DFE5E6;
+    font-weight: 700;
+    line-height: 48px;
+    color: #125159;
+    -webkit-text-stroke: 1px #DFE5E6;
 }
 
 @media only screen and (max-width: 720px) {
-  .card-img-overlay {
-    padding-top: 1vh;
-    font-size: 3px;
-  }
+    .card-img-overlay {
+        padding-top: 1vh;
+        font-size: 3px;
+    }
 }
 
 @media only screen and (max-width: 950px) {
-  .card-img-overlay {
-    padding-top: 10vh;
-    font-size: 2vw;
-  }
+    .card-img-overlay {
+        padding-top: 10vh;
+        font-size: 2vw;
+    }
 }
 
 @media only screen and (max-width: 1180px) {
-  .card-img-overlay {
-    padding-top: 15vh;
-    font-size: 2vw;
-  }
+    .card-img-overlay {
+        padding-top: 15vh;
+        font-size: 2vw;
+    }
 }
 
 @media only screen and (max-width: 1310px) {
-  .card-img-overlay {
-    padding-top: 20vh;
-    font-size: 2vw;
-  }
+    .card-img-overlay {
+        padding-top: 20vh;
+        font-size: 2vw;
+    }
 }
 
+
 /* Info Web Desa Section */
+
 #info-web {
-  background: #125159;
-  color: #DFE5E6;
-  padding: 80px;
+    background: #125159;
+    color: #DFE5E6;
+    padding: 80px;
 }
 
 .title-infoweb {
-  font-style: normal;
-  font-weight: 600;
-  line-height: 48px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 48px;
 }
 
 .list-infoweb {
-  list-style: none;
-  margin-left: -30px;
+    list-style: none;
+    margin-left: -30px;
 }
 
+
 /* Berita Terkini Section */
+
 .left {
-  font-style: normal;
-  font-weight: 600;
-  line-height: 48px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 48px;
 }
 
 .right {
-  color: #346A70;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 24px;
+    color: #346A70;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
 }
 
 .right:hover {
-  color: #346a70;
+    color: #346a70;
 }
 
 .card-img-top {
-  border-radius: 20px;
+    border-radius: 20px;
 }
 
 button.slick-prev .slick-next {
-  background: #000;
+    background: #000;
 }
 
+
 /* Peta Desa Karangnongko */
+
 #peta-desa {
-  background: #125159;
-  color: #DFE5E6;
+    background: #125159;
+    color: #DFE5E6;
 }
 
 #tulisan-petadesa {
-  font-weight: 600;
-  line-height: 48px;
+    font-weight: 600;
+    line-height: 48px;
 }
+
 
 /* ========= End of MAIN CONTENTS ========= */

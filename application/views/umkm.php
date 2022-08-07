@@ -77,32 +77,56 @@
     $alternative = $this->umkm->getAll();
     foreach ($alternative as $row) : ?>
       <section class="my-5 products-list d-flex justify-content-center align-items-center">
-        <div class="card horizontal-card mb-3" style="max-width: 1100px;">
+        <div class="card horizontal-card mb-3" style="width: 1100px; background-color: transparent;">
           <div class="row g-0">
             <div class="col-md-4">
-              <img id="umkm-image" src="<?php echo base_url(); ?>assets/images/umkm-products/<?= $row->gambarUmkm ?>" class="img-fluid p-5 rounded-start" alt="Foto Produk UMKM">
+              <img id="umkm-image" src="<?php echo base_url(); ?>assets/images/umkm-products/<?= $row->gambarUmkm ?>" class="img-fluid p-5 rounded-start" style=" width: 280; height: 328;" alt="Foto Produk UMKM">
             </div>
             <div class="col-md-8">
               <div class="card-body mt-4 me-5">
-                <p class="card-title" id="umkm-name"><b><?= $row->namaUmkm ?></b></p>
                 <div class="product-details">
-                  <p>Nama Produk&emsp;:&emsp;<?= $row->namaUmkm ?></p>
-                  <p>Jenis Produk&emsp;:&emsp;<?= $row->jenisProduk ?></p>
-                  <p>Alamat&emsp;:&emsp;<?= $row->lokasi ?></p>
+                  <table>
+                    <tr>
+                   <td colspan="3" style="height:50px ; "><p class="card-title" id="umkm-name" style="font-size:20px ;"><b><?= $row->namaUmkm ?></b></p></td>
+                    </tr>
+                    <tr style="vertical-align:top ;">
+                      <td style="height:50px ; width: 140px;"><span class="me-3" style="font-size:18px ;">Nama Produk</span></td>
+                      <td style="height:50px ;"><span class="me-3" style="font-size:18px ;">:</span></td>
+                      <td style="height:50px ;"><span style="font-size:18px ;"><?= $row->namaUmkm ?></span></td>
+                    </tr>
+                    <tr style="vertical-align:top ;">
+                      <td style="height:50px ; width: 140px;"><span class="me-3" style="font-size:18px ;">Jenis Produk</span></td>
+                      <td style="height:50px ;"><span class="me-3" style="font-size:18px ;">:</span></td>
+                      <td style="height:50px ;"><span style="font-size:18px ;"><?= $row->jenisProduk ?></span></td>
+                    </tr>
+                    <tr style="vertical-align:top ;">
+                      <td style="height:50px ; width: 140px;"><span class="me-3" style="font-size:18px ;">Alamat</span></td>
+                      <td style="height:50px ;"><span class="me-3" style="font-size:18px ;">:</span></td>
+                      <td style="height:50px ;"><span style="font-size:18px ;"><?= $row->lokasi ?></span></td>
+                    </tr>
+                  </table>
                 </div>
+                <br>
                 <div class="umkm-description">
                   <p class="card-text p-3"><?= $row->deskripsi ?></p>
                 </div>
               </div>
-            </div>
-
-            <div class="" id="btn-links">
-              <form target="_blank" action="">
-                <button class="p-3" id="shopee-link">Link Shopee</button>
-              </form>
-              <form target="_blank" action="https://wa.me/62<?= $row->nomorWa ?>">
-                <button class="p-3" id="whatsapp-link">Link Whatsapp</button>
-              </form>
+                <div style="padding-right:65px ; padding-top:40px ; padding-bottom:100px ;" id="btn-links">
+              <table align="right">
+                <tr>
+                  <td style="padding-right:20px ;">
+                  <form target="_blank" action="<?= $row->olshop ?>">
+                  <button class="p-3" style="background-color:transparent ;" id="shopee-link">Link Online Shop</button>
+                  </form>
+                  </td>
+                  <td>
+                  <form target="_blank" action="https://wa.me/62<?= $row->nomorWa ?>">
+                  <button class="p-3" id="whatsapp-link">Link WhatsApp</button>
+                  </form>
+                  </td>
+                </tr>
+              </table>
+              </div>
             </div>
           </div>
         </div>
