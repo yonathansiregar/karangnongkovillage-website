@@ -106,7 +106,7 @@
                 <?php endif; ?>
                 <div class="d-flex justify-content-center align-items-center">
                   <button type="button" class="btn" style="background: #125159; border-radius: 30px;">
-                    <a class="text-decoration-none" href="<?php echo base_url('news-detail'); ?>" style="color: #fff;">Baca Selengkapnya</a>
+                    <a class="text-decoration-none" href="<?php echo base_url('berita/' . $row->idBerita); ?>" style="color: #fff;">Baca Selengkapnya</a>
                   </button>
                 </div>
               </div>
