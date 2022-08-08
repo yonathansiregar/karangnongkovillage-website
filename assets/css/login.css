@@ -1,74 +1,55 @@
 #header {
-    margin: 70px;
-  }
-  
-  #img-text {
-    font-weight: 700;
-    line-height: 48px;
-    color: #125159;
-    -webkit-text-stroke: 1px #DFE5E6;
-  }
-  
-  .card-img-overlay {
-    padding-top: 28vh;
-    font-size: 2vw;
-  }
-  
-  .card-img-overlay .card-text {
-    font-weight: 700;
-    line-height: 48px;
-    color: #125159;
-    -webkit-text-stroke: 1px #DFE5E6;
-  }
-  
-  @media only screen and (max-width: 720px) {
-    .card-img-overlay {
-      padding-top: 1vh;
-      font-size: 2vw;
-    }
-  }
-  
-  @media only screen and (max-width: 950px) {
-    .card-img-overlay {
-      padding-top: 10vh;
-      font-size: 2vw;
-    }
-  }
-  
-  @media only screen and (max-width: 1180px) {
-    .card-img-overlay {
-      padding-top: 15vh;
-      font-size: 2vw;
-    }
-  }
-  
-  @media only screen and (max-width: 1310px) {
-    .card-img-overlay {
-      padding-top: 20vh;
-    }
-  }
+    margin: 20px;
+}
 
-  .page-title {
+#img-text {
+    font-weight: 700;
+    line-height: 48px;
+    color: #125159;
+    -webkit-text-stroke: 1px #DFE5E6;
+}
+
+.card-img-overlay {
+    padding-top: calc(20vw - 7vh);
+    font-size: 2vw;
+}
+
+.card-img-overlay .card-text {
+    font-weight: 700;
+    color: #125159;
+    -webkit-text-stroke: 1px #DFE5E6;
+}
+
+@media screen and (max-width:800px) {
+    .card-img-overlay {
+        font-size: 13px !important;
+    }
+    #img-text {
+        -webkit-text-stroke: 0px !important;
+    }
+}
+
+.page-title {
     color: #125159;
     font-weight: 600;
     font-style: normal;
     line-height: 48px;
     font-size: 32px;
-  }
+}
 
-  .horizontal-card {
+.horizontal-card {
     border: 2px dashed #909A9B;
     border-radius: 20px;
     width: 80vw;
     background-color: #DFE5E6;
-  }
+}
 
-  .form-label{
+.form-label {
     font-size: 2vw;
     font-weight: 500;
-  }
+}
 
-  .form-field{
+.form-field {
     padding-left: 20px;
     font-size: 2vw;
     font-weight: 400;
@@ -77,9 +58,9 @@
     height: 4vw;
     border-width: 1px;
     border-color: #CCCCCC;
-  }
+}
 
-  .form-btn{
+.form-btn {
     position: absolute;
     font-size: 1.5vw;
     right: 10vw;
@@ -88,4 +69,4 @@
     height: 3.5vw;
     border-radius: 1vw;
     background-color: #125159;
-  }
+}
