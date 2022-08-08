@@ -68,8 +68,21 @@
 
   <!-- MAIN CONTENTS -->
   <div id="main-content">
-    <section class="page-title container mt-5">
-      <p>UMKM DESA KARANGNONGKO</p>
+  <section class="container mt-5 mb-5">
+      <div class="d-flex mt-5">
+        <div class="me-auto">
+          <p class="page-title">UMKM DESA KARANGNONGKO</p>
+        </div>
+
+        <div class="ms-auto">
+          <div class="form-group has-search ms-auto">
+            <form action="<?php echo base_url('cariUmkm'); ?>" method="get">
+              <span class="bi bi-search search-icon position-absolute d-block text-center fs-3 pe-auto" style="color: #9A9EA6; padding-left: 15px;"></span>
+              <input class="form-control" type="text" name="keyword" id="" placeholder="CARI UMKM" style="max-width: 420px; height: 42px; padding-left: 50px; background-color: transparent; border-radius: 21px; border-width: 1px; border-color: #9A9EA6;">
+            </form>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- UMKM Loop -->

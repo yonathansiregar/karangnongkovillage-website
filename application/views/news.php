@@ -66,37 +66,22 @@
   <!-- End of NAVBAR -->
 
   <!-- MAIN CONTENTS -->
-<<<<<<< HEAD
-  <div id="main-content" style="margin-bottom:65px;">
-    <section class="container mt-5">
-      <div class="d-flex mx-5 mt-5">
+  <div id="main-content" class="mb-5">
+    <section class="container mt-5 mb-5">
+      <div class="d-flex mt-5">
         <div class="me-auto">
           <p class="page-title">BERITA DESA KARANGNONGKO</p>
         </div>
 
         <div class="ms-auto">
           <div class="form-group has-search ms-auto">
-            <form action="" method="">
-              <span class="bi bi-search search-icon position-absolute d-block text-center fs-2 pe-auto" style="color: #9A9EA6; padding-left: 10px;"></span>
-              <input class="form-control" type="text" name="" id="" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CARI BERITA DI SINI....." style="width: 420px; padding: 10px;">
+            <form action="<?php echo base_url('cariBerita'); ?>" method="get">
+              <span class="bi bi-search search-icon position-absolute d-block text-center fs-3 pe-auto" style="color: #9A9EA6; padding-left: 15px;"></span>
+              <input class="form-control" type="text" name="keyword" id="" placeholder="CARI BERITA" style="max-width: 420px; height: 42px; padding-left: 50px; background-color: transparent; border-radius: 21px; border-width: 1px; border-color: #9A9EA6;">
             </form>
           </div>
         </div>
       </div>
-      <!-- <div class="me-auto">
-        <p class="page-title">BERITA DESA KARANGNONGKO</p>
-      </div>
-      <div class="form-group has-search ms-auto">
-        <form action="" method="">
-          <span class="bi bi-search search-icon position-absolute d-block text-center fs-3 pe-auto" style="color: #9A9EA6;"></span>
-          <input class="form-control p-3 w-25" type="text" name="" id="" placeholder="Cari berita disini...">
-        </form>
-      </div> -->
-=======
-  <div id="main-content" class="mb-5">
-    <section class="page-title container mt-5 mb-5">
-      <p>BERITA DESA KARANGNONGKO</p>
->>>>>>> 6a966c1bbd58b6cf77e1a5d7c58125a2c47610de
     </section>
 
     <!-- NEWS LIST -->
@@ -119,17 +104,10 @@
                 <?php else : ?>
                   <p class="card-text" style="font-size: 12px;"><?= substr($row->deskripsi, 0, 200) . " ..." ?></p>
                 <?php endif; ?>
-<<<<<<< HEAD
                 <div class="d-flex justify-content-center align-items-center">
                   <button type="button" class="btn" style="background: #125159; border-radius: 30px;">
                     <a class="text-decoration-none" href="<?php echo base_url('news-detail'); ?>" style="color: #fff;">Baca Selengkapnya</a>
                   </button>
-=======
-                <div class="d-flex justify-content-center">
-                <button type="button" class="btn" style="background: #125159; border-radius: 30px;">
-                  <a class="text-decoration-none" href="<?php echo base_url('berita/' . $row->idBerita); ?>" style="color: #fff;">Baca Selengkapnya</a>
-                </button>
->>>>>>> 6a966c1bbd58b6cf77e1a5d7c58125a2c47610de
                 </div>
               </div>
             </div>

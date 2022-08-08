@@ -30,20 +30,12 @@ class Dashboard extends CI_Controller
     $this->load->view('news', $data);
   }
 
-<<<<<<< HEAD
-  public function newsDetail()
-=======
   public function newsDetails($idBerita)
->>>>>>> 6a966c1bbd58b6cf77e1a5d7c58125a2c47610de
   {
     $data["title"] = "Website Desa Karangnongko Poncokusumo - Detail Berita";
     $data['navbarTitle'] = 'PEMERINTAH DESA KARANGNONGKO';
     $data['icon'] = "assets/images/Logo.png";
-<<<<<<< HEAD
-    $data["data_berita"] = $this->berita->getAll();
-=======
     $data['detail_berita'] = $this->berita->getById($idBerita);
->>>>>>> 6a966c1bbd58b6cf77e1a5d7c58125a2c47610de
     $this->load->view('news-detail', $data);
   }
 
@@ -87,14 +79,6 @@ class Dashboard extends CI_Controller
     $username = $_POST['username'];
     $password = $_POST['password'];
     if ($username == $username_login && $password == $password_login) {
-<<<<<<< HEAD
-      session_start();
-      $_SESSION['username'] = $username;
-      redirect('dashboard/modification');
-    } else {
-      redirect('dashboard/login');
-    }
-=======
         session_start();
         $_SESSION['username'] = $username;
         redirect('modification');
@@ -102,7 +86,6 @@ class Dashboard extends CI_Controller
     else {
       redirect('login');
    }
->>>>>>> 6a966c1bbd58b6cf77e1a5d7c58125a2c47610de
   }
 
   public function logout_process()
@@ -119,8 +102,6 @@ class Dashboard extends CI_Controller
     $data['navbarTitle'] = 'PEMERINTAH DESA KARANGNONGKO';
     $this->load->view('modification', $data);
   }
-<<<<<<< HEAD
-=======
 
   public function daftarBerita()
   {
@@ -297,5 +278,4 @@ class Dashboard extends CI_Controller
     $this->load->view('cariPD', $data);
   }
 
->>>>>>> 6a966c1bbd58b6cf77e1a5d7c58125a2c47610de
 }

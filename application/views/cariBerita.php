@@ -92,8 +92,11 @@
   <!-- MAIN CONTENTS -->
   <div id="main-contents">
     <!-- HASIL PENCARIAN BERITA -->
-    <section class="page-title container mt-5">
-      <p>HASIL PENCARIAN BERITA</p>
+    <section class="container mt-5 mb-5">
+      <div class="d-flex mt-5">
+        <div class="me-auto">
+          <p class="page-title">HASIL PENCARIAN BERITA</p>
+        </div>
     </section>
     <?php 
         if (!empty($cari_berita)) {
@@ -131,7 +134,7 @@
     <?php
         } else {
     ?>
-    <section class="container mb-2">
+    <section class="container mb-5">
       <p>Berita Tidak Ditemukan</p>
     </section>
     <?php

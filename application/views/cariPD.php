@@ -93,9 +93,12 @@
   <div id="main-contents">
     <!-- HASIL PENCARIAN PERANGKAT DESA -->
     <section id="village-apparatus">
-      <div class="fs-5 d-flex justify-content-center justify-content-md-start">
-        <p class="page-title container">HASIL PENCARIAN PERANGKAT DESA</p>
-      </div>
+    <section class="container mt-5 mb-5">
+      <div class="d-flex mt-5">
+        <div class="me-auto">
+          <p class="page-title">HASIL PENCARIAN PERANGKAT DESA</p>
+        </div>
+    </section>
       <?php 
         if (!empty($cari_PD)) {
       ?>
