@@ -105,7 +105,7 @@ class Dashboard extends CI_Controller
 
   public function daftarBerita()
   {
-    $data["title"] = "Website Desa Karangnongko Poncokusumo - Daftar Berita";
+    $data["title"] = "DAFTAR BERITA";
     $data['semua_berita'] = $this->berita->getAll();
     $this->load->view('daftarBerita', $data);
   }
