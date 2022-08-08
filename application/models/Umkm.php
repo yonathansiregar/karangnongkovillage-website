@@ -54,6 +54,7 @@ class Umkm extends CI_Model
   {
     $data = array(
       "namaUmkm" => $this->input->post('namaUmkm'),
+      "namaProduk" => $this->input->post('namaProduk'),
       "pemilikUmkm" => $this->input->post('pemilikUmkm'),
       "jenisProduk" => $this->input->post('jenisProduk'),
       "deskripsi" => $this->input->post('deskripsi'),
@@ -73,6 +74,7 @@ class Umkm extends CI_Model
   {
     $data = array(
       "namaUmkm" => $this->input->post('namaUmkm'),
+      "namaProduk" => $this->input->post('namaProduk'),
       "pemilikUmkm" => $this->input->post('pemilikUmkm'),
       "jenisProduk" => $this->input->post('jenisProduk'),
       "deskripsi" => $this->input->post('deskripsi'),
