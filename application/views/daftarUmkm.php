@@ -60,6 +60,11 @@ echo "Maaf, anda belum login";
                                                         <td><span class="me-3">:</span></td>
                                                         <td><?= $row->namaUmkm;?></td>
                                                     </tr>
+                                                    <tr style="vertical-align:top ;">
+                                                        <td><b><span class="me-3">Nama Produk</span></b></td>
+                                                        <td><span class="me-3">:</span></td>
+                                                        <td><?= $row->namaProduk;?></td>
+                                                    </tr>
                                                     <tr>
                                                         <td><b><span class="me-3">Pemilik UMKM</span></b></td>
                                                         <td><span class="me-3">:</span></td>

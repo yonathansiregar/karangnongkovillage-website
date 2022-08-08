@@ -127,16 +127,32 @@
                 <div style="padding-right:65px ; padding-top:40px ; padding-bottom:100px ;" id="btn-links">
               <table align="right">
                 <tr>
+                  <?php
+                  if (!empty($row->olshop)) { 
+                  ?>
                   <td style="padding-right:20px ;">
                   <form target="_blank" action="<?= $row->olshop ?>">
                   <button class="p-3" style="background-color:transparent ;" id="shopee-link">Link Online Shop</button>
                   </form>
                   </td>
+                  <?php
+                  } else {
+
+                  } 
+                  ?>
+                  <?php
+                  if (!empty($row->nomorWa)) { 
+                  ?>
                   <td>
                   <form target="_blank" action="https://wa.me/62<?= $row->nomorWa ?>">
                   <button class="p-3" id="whatsapp-link">Link WhatsApp</button>
                   </form>
                   </td>
+                  <?php
+                  } else {
+
+                  } 
+                  ?>
                 </tr>
               </table>
               </div>
