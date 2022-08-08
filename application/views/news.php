@@ -54,8 +54,8 @@
         </ul>
 
         <!-- Search icon -->
-        <form action="" method="" class="d-flex mx-md-4" id="search">
-          <input type="text" name="search" id="" placeholder="CARI BERITA.." class="p-2">
+        <form action="<?php echo base_url('cariSemua'); ?>" method="get" class="d-flex mx-md-4" id="search">
+          <input class="form-control" type="text" name="keyword" id="" placeholder="CARI DISINI" class="p-2" required>
           <button type="submit" class="btn btn-search btn-light ms-1">
             <i class="bi bi-search text-black"></i>
           </button>
@@ -66,6 +66,7 @@
   <!-- End of NAVBAR -->
 
   <!-- MAIN CONTENTS -->
+<<<<<<< HEAD
   <div id="main-content" style="margin-bottom:65px;">
     <section class="container mt-5">
       <div class="d-flex mx-5 mt-5">
@@ -91,6 +92,11 @@
           <input class="form-control p-3 w-25" type="text" name="" id="" placeholder="Cari berita disini...">
         </form>
       </div> -->
+=======
+  <div id="main-content" class="mb-5">
+    <section class="page-title container mt-5 mb-5">
+      <p>BERITA DESA KARANGNONGKO</p>
+>>>>>>> 6a966c1bbd58b6cf77e1a5d7c58125a2c47610de
     </section>
 
     <!-- NEWS LIST -->
@@ -100,23 +106,30 @@
         $alternative = $this->berita->getAll();
         foreach ($alternative as $row) : ?>
           <div class="col-12 col-md-6 col-lg-4">
-            <div class="card">
-              <img src="<?php echo base_url(); ?>assets/images/homepage/sdn01karangnongko.png" height="250px" class="card-img-top p-3" alt="Card Image">
+            <div class="card-body" style="border-style: solid; border-width: 1px; border-radius: 20px; border-color: #909A9B;">
+              <img src="<?php echo base_url(); ?>assets/images/news/<?= $row->gambarBerita;?>" height="250px" class="card-img-top p-2" style=" width: 350; height: 175; margin-left: auto; margin-right: auto;" alt="Card Image">
               <div class="card-body">
                 <?php if (strlen($row->judul) <= 75) : ?>
-                  <p class="card-title" style="text-align: center;"><b><?= $row->judul ?></b></p>
+                  <p class="card-title" style="text-align: center; font-size: 14px;"><b><?= $row->judul ?></b></p>
                 <?php else : ?>
-                  <p class="card-title" style="text-align: center;"><b><?= substr($row->judul, 0, 75) . " ..." ?></b></p>
+                  <p class="card-title" style="text-align: center; font-size: 14px;"><b><?= substr($row->judul, 0, 75) . " ..." ?></b></p>
                 <?php endif; ?>
                 <?php if (strlen($row->deskripsi) <= 200) : ?>
-                  <p class="card-text"><?= $row->deskripsi ?></p>
+                  <p class="card-text" style="font-size: 12px;"><?= $row->deskripsi ?></p>
                 <?php else : ?>
-                  <p class="card-text"><?= substr($row->deskripsi, 0, 200) . " ..." ?></p>
+                  <p class="card-text" style="font-size: 12px;"><?= substr($row->deskripsi, 0, 200) . " ..." ?></p>
                 <?php endif; ?>
+<<<<<<< HEAD
                 <div class="d-flex justify-content-center align-items-center">
                   <button type="button" class="btn" style="background: #125159; border-radius: 30px;">
                     <a class="text-decoration-none" href="<?php echo base_url('news-detail'); ?>" style="color: #fff;">Baca Selengkapnya</a>
                   </button>
+=======
+                <div class="d-flex justify-content-center">
+                <button type="button" class="btn" style="background: #125159; border-radius: 30px;">
+                  <a class="text-decoration-none" href="<?php echo base_url('berita/' . $row->idBerita); ?>" style="color: #fff;">Baca Selengkapnya</a>
+                </button>
+>>>>>>> 6a966c1bbd58b6cf77e1a5d7c58125a2c47610de
                 </div>
               </div>
             </div>

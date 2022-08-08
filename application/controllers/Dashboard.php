@@ -10,6 +10,7 @@ class Dashboard extends CI_Controller
     $this->load->model("berita");
     $this->load->model("perangkatDesa");
     $this->load->model("umkm");
+    $this->load->model("search");
   }
 
   public function index()
@@ -29,12 +30,20 @@ class Dashboard extends CI_Controller
     $this->load->view('news', $data);
   }
 
+<<<<<<< HEAD
   public function newsDetail()
+=======
+  public function newsDetails($idBerita)
+>>>>>>> 6a966c1bbd58b6cf77e1a5d7c58125a2c47610de
   {
     $data["title"] = "Website Desa Karangnongko Poncokusumo - Detail Berita";
     $data['navbarTitle'] = 'PEMERINTAH DESA KARANGNONGKO';
     $data['icon'] = "assets/images/Logo.png";
+<<<<<<< HEAD
     $data["data_berita"] = $this->berita->getAll();
+=======
+    $data['detail_berita'] = $this->berita->getById($idBerita);
+>>>>>>> 6a966c1bbd58b6cf77e1a5d7c58125a2c47610de
     $this->load->view('news-detail', $data);
   }
 
@@ -78,12 +87,30 @@ class Dashboard extends CI_Controller
     $username = $_POST['username'];
     $password = $_POST['password'];
     if ($username == $username_login && $password == $password_login) {
+<<<<<<< HEAD
       session_start();
       $_SESSION['username'] = $username;
       redirect('dashboard/modification');
     } else {
       redirect('dashboard/login');
     }
+=======
+        session_start();
+        $_SESSION['username'] = $username;
+        redirect('modification');
+    } 
+    else {
+      redirect('login');
+   }
+>>>>>>> 6a966c1bbd58b6cf77e1a5d7c58125a2c47610de
+  }
+
+  public function logout_process()
+  {
+    session_start();
+    unset($_SESSION["username"]);
+    session_destroy();
+    redirect('login');
   }
 
   public function modification()
@@ -92,4 +119,183 @@ class Dashboard extends CI_Controller
     $data['navbarTitle'] = 'PEMERINTAH DESA KARANGNONGKO';
     $this->load->view('modification', $data);
   }
+<<<<<<< HEAD
+=======
+
+  public function daftarBerita()
+  {
+    $data["title"] = "Website Desa Karangnongko Poncokusumo - Daftar Berita";
+    $data['semua_berita'] = $this->berita->getAll();
+    $this->load->view('daftarBerita', $data);
+  }
+  
+  public function tambahBerita()
+  {
+    $this->load->helper('form');
+    $data["title"] = "BUAT BERITA BARU";
+    $this->load->view('tambahBerita', $data);
+  }
+
+  public function editBerita($idBerita)
+  {
+    $this->load->helper('form');
+    $data["title"] = "EDIT BERITA";
+    $data['pilih_berita'] = $this->berita->getById($idBerita);
+    $this->load->view('editBerita', $data);
+  }
+
+  public function hapusBerita($idBerita)
+  {
+    $this->berita->hapus($idBerita);
+    unlink("assets/images/news/". $this->berita->gambarById($idBerita));
+    redirect("daftarBerita");
+  }
+
+  public function simpanBerita()
+  {
+    $upload_path = 'assets/images/news/';
+    $filename = $_FILES["gambar"]["name"];
+    move_uploaded_file($_FILES["gambar"]["tmp_name"],$upload_path . $filename);
+    $this->berita->simpan();
+    redirect('daftarBerita');
+  }
+  
+  public function simpanEditBerita()
+  {
+    $upload_path = 'assets/images/news/';
+    $filename = $_FILES["gambar"]["name"];
+    move_uploaded_file($_FILES["gambar"]["tmp_name"],$upload_path . $filename);
+    $this->berita->edit();
+    redirect('daftarBerita');
+  }
+
+  public function daftarUmkm()
+  {
+    $data["title"] = "DAFTAR UMKM";
+    $data['semua_umkm'] = $this->umkm->getAll();
+    $this->load->view('daftarUmkm', $data);
+  }
+  
+  public function tambahUmkm()
+  {
+    $this->load->helper('form');
+    $data["title"] = "BUAT UMKM BARU";
+    $this->load->view('tambahUmkm', $data);
+  }
+
+  public function editUmkm($idUmkm)
+  {
+    $this->load->helper('form');
+    $data["title"] = "EDIT UMKM";
+    $data['pilih_umkm'] = $this->umkm->getById($idUmkm);
+    $this->load->view('editUmkm', $data);
+  }
+
+  public function hapusUmkm($idUmkm)
+  {
+    $this->umkm->hapus($idUmkm);
+    unlink("assets/images/umkm-products/". $this->umkm->gambarById($idUmkm));
+    redirect("daftarUmkm");
+  }
+
+  public function simpanUmkm()
+  {
+    $upload_path = 'assets/images/umkm-products/';
+    $filename = $_FILES["gambar"]["name"];
+    move_uploaded_file($_FILES["gambar"]["tmp_name"],$upload_path . $filename);
+    $this->umkm->simpan();
+    redirect('daftarUmkm');
+  }
+
+  public function simpanEditUmkm()
+  {
+    $upload_path = 'assets/images/umkm-products/';
+    $filename = $_FILES["gambar"]["name"];
+    move_uploaded_file($_FILES["gambar"]["tmp_name"],$upload_path . $filename);
+    $this->umkm->edit();
+    redirect('daftarUmkm');
+  }
+
+  public function daftarPD()
+  {
+    $data["title"] = "DAFTAR PERANGKAT DESA";
+    $data['semua_PD'] = $this->perangkatDesa->getAllDesc();
+    $this->load->view('daftarPD', $data);
+  }
+  
+  public function tambahPD()
+  {
+    $this->load->helper('form');
+    $data["title"] = "BUAT PERANGKAT DESA BARU";
+    $this->load->view('tambahPD', $data);
+  }
+
+  public function editPD($idPD)
+  {
+    $this->load->helper('form');
+    $data["title"] = "EDIT PERANGKAT DESA";
+    $data['pilih_PD'] = $this->perangkatDesa->getById($idPD);
+    $this->load->view('editPD', $data);
+  }
+
+  public function hapusPD($idPD)
+  {
+    $this->perangkatDesa->hapus($idPD);
+    unlink("assets/images/village-profile/". $this->perangkatDesa->gambarById($idPD));
+    redirect("daftarPD");
+  }
+
+  public function simpanPD()
+  {
+    $upload_path = 'assets/images/village-profile/';
+    $filename = $_FILES["gambar"]["name"];
+    move_uploaded_file($_FILES["gambar"]["tmp_name"],$upload_path . $filename);
+    $this->perangkatDesa->simpan();
+    redirect('daftarPD');
+  }
+
+  public function simpanEditPD()
+  {
+    $upload_path = 'assets/images/village-profile/';
+    $filename = $_FILES["gambar"]["name"];
+    move_uploaded_file($_FILES["gambar"]["tmp_name"],$upload_path . $filename);
+    $this->perangkatDesa->edit();
+    redirect('daftarPD');
+  }
+
+  public function cariSemua(){
+    $data["title"] = "Website Desa Karangnongko Poncokusumo - Hasil Pencarian";
+    $data['navbarTitle'] = 'PEMERINTAH DESA KARANGNONGKO';
+    $keyword = $this->input->get('keyword');
+    $data['cari_berita'] = $this->search->searchBerita($keyword);
+    $data['cari_umkm'] = $this->search->searchUmkm($keyword);
+    $data['cari_PD'] = $this->search->searchPD($keyword);
+    $this->load->view('cariSemua', $data);
+  }
+
+  public function cariBerita(){
+    $data["title"] = "Website Desa Karangnongko Poncokusumo - Hasil Pencarian Berita";
+    $data['navbarTitle'] = 'PEMERINTAH DESA KARANGNONGKO';
+    $keyword = $this->input->get('keyword');
+    $data['cari_berita'] = $this->search->searchBerita($keyword);
+    $this->load->view('cariBerita', $data);
+  }
+
+  public function cariUmkm(){
+    $data["title"] = "Website Desa Karangnongko Poncokusumo - Hasil Pencarian UMKM";
+    $data['navbarTitle'] = 'PEMERINTAH DESA KARANGNONGKO';
+    $keyword = $this->input->get('keyword');
+    $data['cari_umkm'] = $this->search->searchUmkm($keyword);
+    $this->load->view('cariUmkm', $data);
+  }
+
+  public function cariPD(){
+    $data["title"] = "Website Desa Karangnongko Poncokusumo - Hasil Pencarian Perangkat Desa";
+    $data['navbarTitle'] = 'PEMERINTAH DESA KARANGNONGKO';
+    $keyword = $this->input->get('keyword');
+    $data['cari_PD'] = $this->search->searchPD($keyword);
+    $this->load->view('cariPD', $data);
+  }
+
+>>>>>>> 6a966c1bbd58b6cf77e1a5d7c58125a2c47610de
 }
