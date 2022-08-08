@@ -62,11 +62,20 @@
 .card-text {
   font-style: normal;
   font-weight: 700;
-  line-height: 48px;
   color: #125159;
 }
 
 .title-text{
-  font-size: 32px;
+  font-size: 2vw;
   -webkit-text-stroke: 1px #DFE5E6;
 }
+.card-img-overlay{
+    padding-top: calc(6vw - 2vh);
+}
+@media screen and (max-width:800px) {
+  .title-text{
+    font-size: 13px !important;
+  }
+}
+
+
