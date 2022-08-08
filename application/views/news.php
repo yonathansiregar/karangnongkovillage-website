@@ -54,8 +54,8 @@
         </ul>
 
         <!-- Search icon -->
-        <form action="" method="" class="d-flex mx-md-4" id="search">
-          <input type="text" name="search" id="" placeholder="CARI BERITA.." class="p-2">
+        <form action="<?php echo base_url('cariSemua'); ?>" method="get" class="d-flex mx-md-4" id="search">
+          <input class="form-control" type="text" name="keyword" id="" placeholder="CARI DISINI" class="p-2" required>
           <button type="submit" class="btn btn-search btn-light ms-1">
             <i class="bi bi-search text-black"></i>
           </button>
@@ -66,9 +66,22 @@
   <!-- End of NAVBAR -->
 
   <!-- MAIN CONTENTS -->
-  <div id="main-content" style="margin-bottom:65px;">
-    <section class="page-title container mt-5">
-      <p>BERITA DESA KARANGNONGKO</p>
+  <div id="main-content" class="mb-5">
+    <section class="container mt-5 mb-5">
+      <div class="d-flex mt-5">
+        <div class="me-auto">
+          <p class="page-title">BERITA DESA KARANGNONGKO</p>
+        </div>
+
+        <div class="ms-auto">
+          <div class="form-group has-search ms-auto">
+            <form action="<?php echo base_url('cariBerita'); ?>" method="get">
+              <span class="bi bi-search search-icon position-absolute d-block text-center fs-3 pe-auto" style="color: #9A9EA6; padding-left: 15px;"></span>
+              <input class="form-control" type="text" name="keyword" id="" placeholder="CARI BERITA" style="max-width: 420px; height: 42px; padding-left: 50px; background-color: transparent; border-radius: 21px; border-width: 1px; border-color: #9A9EA6;">
+            </form>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- NEWS LIST -->
@@ -91,10 +104,10 @@
                 <?php else : ?>
                   <p class="card-text" style="font-size: 12px;"><?= substr($row->deskripsi, 0, 200) . " ..." ?></p>
                 <?php endif; ?>
-                <div class="d-flex justify-content-center">
-                <button type="button" class="btn" style="background: #125159; border-radius: 30px;">
-                  <a class="text-decoration-none" href="<?php echo base_url('berita/' . $row->idBerita); ?>" style="color: #fff;">Baca Selengkapnya</a>
-                </button>
+                <div class="d-flex justify-content-center align-items-center">
+                  <button type="button" class="btn" style="background: #125159; border-radius: 30px;">
+                    <a class="text-decoration-none" href="<?php echo base_url('news-detail'); ?>" style="color: #fff;">Baca Selengkapnya</a>
+                  </button>
                 </div>
               </div>
             </div>

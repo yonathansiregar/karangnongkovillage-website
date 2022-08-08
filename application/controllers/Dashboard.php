@@ -10,6 +10,7 @@ class Dashboard extends CI_Controller
     $this->load->model("berita");
     $this->load->model("perangkatDesa");
     $this->load->model("umkm");
+    $this->load->model("search");
   }
 
   public function index()
@@ -241,6 +242,40 @@ class Dashboard extends CI_Controller
     move_uploaded_file($_FILES["gambar"]["tmp_name"],$upload_path . $filename);
     $this->perangkatDesa->edit();
     redirect('daftarPD');
+  }
+
+  public function cariSemua(){
+    $data["title"] = "Website Desa Karangnongko Poncokusumo - Hasil Pencarian";
+    $data['navbarTitle'] = 'PEMERINTAH DESA KARANGNONGKO';
+    $keyword = $this->input->get('keyword');
+    $data['cari_berita'] = $this->search->searchBerita($keyword);
+    $data['cari_umkm'] = $this->search->searchUmkm($keyword);
+    $data['cari_PD'] = $this->search->searchPD($keyword);
+    $this->load->view('cariSemua', $data);
+  }
+
+  public function cariBerita(){
+    $data["title"] = "Website Desa Karangnongko Poncokusumo - Hasil Pencarian Berita";
+    $data['navbarTitle'] = 'PEMERINTAH DESA KARANGNONGKO';
+    $keyword = $this->input->get('keyword');
+    $data['cari_berita'] = $this->search->searchBerita($keyword);
+    $this->load->view('cariBerita', $data);
+  }
+
+  public function cariUmkm(){
+    $data["title"] = "Website Desa Karangnongko Poncokusumo - Hasil Pencarian UMKM";
+    $data['navbarTitle'] = 'PEMERINTAH DESA KARANGNONGKO';
+    $keyword = $this->input->get('keyword');
+    $data['cari_umkm'] = $this->search->searchUmkm($keyword);
+    $this->load->view('cariUmkm', $data);
+  }
+
+  public function cariPD(){
+    $data["title"] = "Website Desa Karangnongko Poncokusumo - Hasil Pencarian Perangkat Desa";
+    $data['navbarTitle'] = 'PEMERINTAH DESA KARANGNONGKO';
+    $keyword = $this->input->get('keyword');
+    $data['cari_PD'] = $this->search->searchPD($keyword);
+    $this->load->view('cariPD', $data);
   }
 
 }

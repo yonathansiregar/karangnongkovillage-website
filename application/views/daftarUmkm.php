@@ -22,7 +22,7 @@ echo "Maaf, anda belum login";
   <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/global.css">
 
   <!-- TITLE PAGE -->
-  <title><?php echo $title; ?></title>
+  <title>Website Desa Karangnongko Poncokusumo - Daftar UMKM</title>
 </head>
 <body>
     <div class="container pt-5">

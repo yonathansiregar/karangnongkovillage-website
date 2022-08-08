@@ -59,8 +59,8 @@
         </ul>
 
         <!-- Search icon -->
-        <form action="" method="" class="d-flex mx-md-4" id="search">
-          <input type="text" name="search" id="" placeholder="CARI BERITA.." class="p-2">
+        <form action="<?php echo base_url('cariSemua'); ?>" method="get" class="d-flex mx-md-4" id="search">
+          <input class="form-control" type="text" name="keyword" id="" placeholder="CARI DISINI" class="p-2" required>
           <button type="submit" class="btn btn-search btn-light ms-1">
             <i class="bi bi-search text-black"></i>
           </button>
@@ -97,9 +97,22 @@
     </section>
 
     <section id="village-apparatus">
-      <div class="my-5 fs-5 d-flex justify-content-center justify-content-md-start">
-        <p class="sub-title container">PERANGKAT DESA</p>
+    <section class="container mt-5 mb-5">
+      <div class="d-flex mt-5">
+        <div class="me-auto">
+          <p class="page-title">PERANGKAT DESA</p>
+        </div>
+
+        <div class="ms-auto">
+          <div class="form-group has-search ms-auto">
+            <form action="<?php echo base_url('cariPD'); ?>" method="get">
+              <span class="bi bi-search search-icon position-absolute d-block text-center fs-3 pe-auto" style="color: #9A9EA6; padding-left: 15px;"></span>
+              <input class="form-control" type="text" name="keyword" id="" placeholder="CARI PERANGKAT DESA" style="max-width: 420px; height: 42px; padding-left: 50px; background-color: transparent; border-radius: 21px; border-width: 1px; border-color: #9A9EA6;">
+            </form>
+          </div>
+        </div>
       </div>
+    </section>
 
       <div class="container my-5 fs-5">
         <div class="row g-4">
