@@ -269,7 +269,7 @@
               <img src="assets/images/umkm-products/<?= $row->gambarUmkm ?>" class="card-img-top" style=" width: 280; height: 328; margin-left: auto; margin-right: auto;" alt="...">
               <div class="card-body text-center">
                 <h5 class="card-title mt-2" style="font-size:22px ;"><?= $row->namaProduk ?></h5>
-                <p class="card-text mt-3" style="color: #898889; font-size:16px ;"><?= $row->namaUmkm ?> <?= $row->pemilikUmkm ?> <?= $row->pemilikUmkm ?></p>
+                <p class="card-text mt-3" style="color: #898889; font-size:16px ;"><?= $row->namaUmkm ?> <?= $row->pemilikUmkm ?></p>
               </div>
             </div>
           </div>
