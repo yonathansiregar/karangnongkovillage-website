@@ -100,12 +100,12 @@
                 <div class="product-details">
                   <table>
                     <tr>
-                   <td colspan="3" style="height:50px ; "><p class="card-title" id="umkm-name" style="font-size:20px ;"><b><?= $row->namaUmkm ?></b></p></td>
+                   <td colspan="3" style="height:50px ; "><p class="card-title" id="umkm-name" style="font-size:20px ;"><b><?= $row->namaUmkm ?> <?= $row->pemilikUmkm ?></b></p></td>
                     </tr>
                     <tr style="vertical-align:top ;">
                       <td style="height:50px ; width: 140px;"><span class="me-3" style="font-size:18px ;">Nama Produk</span></td>
                       <td style="height:50px ;"><span class="me-3" style="font-size:18px ;">:</span></td>
-                      <td style="height:50px ;"><span style="font-size:18px ;"><?= $row->namaProduk ?> <?= $row->pemilikUmkm ?></span></td>
+                      <td style="height:50px ;"><span style="font-size:18px ;"><?= $row->namaProduk ?></span></td>
                     </tr>
                     <tr style="vertical-align:top ;">
                       <td style="height:50px ; width: 140px;"><span class="me-3" style="font-size:18px ;">Jenis Produk</span></td>
