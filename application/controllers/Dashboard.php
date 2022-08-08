@@ -152,7 +152,7 @@ class Dashboard extends CI_Controller
 
   public function daftarUmkm()
   {
-    $data["title"] = "Website Desa Karangnongko Poncokusumo - Daftar UMKM";
+    $data["title"] = "DAFTAR UMKM";
     $data['semua_umkm'] = $this->umkm->getAll();
     $this->load->view('daftarUmkm', $data);
   }
@@ -199,7 +199,7 @@ class Dashboard extends CI_Controller
 
   public function daftarPD()
   {
-    $data["title"] = "Website Desa Karangnongko Poncokusumo - Daftar Perangkat Desa";
+    $data["title"] = "DAFTAR PERANGKAT DESA";
     $data['semua_PD'] = $this->perangkatDesa->getAllDesc();
     $this->load->view('daftarPD', $data);
   }
