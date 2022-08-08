@@ -67,8 +67,30 @@
 
   <!-- MAIN CONTENTS -->
   <div id="main-content" style="margin-bottom:65px;">
-    <section class="page-title container mt-5">
-      <p>BERITA DESA KARANGNONGKO</p>
+    <section class="container mt-5">
+      <div class="d-flex mx-5 mt-5">
+        <div class="me-auto">
+          <p class="page-title">BERITA DESA KARANGNONGKO</p>
+        </div>
+
+        <div class="ms-auto">
+          <div class="form-group has-search ms-auto">
+            <form action="" method="">
+              <span class="bi bi-search search-icon position-absolute d-block text-center fs-2 pe-auto" style="color: #9A9EA6; padding-left: 10px;"></span>
+              <input class="form-control" type="text" name="" id="" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CARI BERITA DI SINI....." style="width: 420px; padding: 10px;">
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="me-auto">
+        <p class="page-title">BERITA DESA KARANGNONGKO</p>
+      </div>
+      <div class="form-group has-search ms-auto">
+        <form action="" method="">
+          <span class="bi bi-search search-icon position-absolute d-block text-center fs-3 pe-auto" style="color: #9A9EA6;"></span>
+          <input class="form-control p-3 w-25" type="text" name="" id="" placeholder="Cari berita disini...">
+        </form>
+      </div> -->
     </section>
 
     <!-- NEWS LIST -->
@@ -91,9 +113,11 @@
                 <?php else : ?>
                   <p class="card-text"><?= substr($row->deskripsi, 0, 200) . " ..." ?></p>
                 <?php endif; ?>
-                <button type="button" class="btn" style="background: #125159; border-radius: 30px;">
-                  <a class="text-decoration-none" href="<?php echo base_url('berita'); ?>" style="color: #fff;">Baca Selengkapnya</a>
-                </button>
+                <div class="d-flex justify-content-center align-items-center">
+                  <button type="button" class="btn" style="background: #125159; border-radius: 30px;">
+                    <a class="text-decoration-none" href="<?php echo base_url('news-detail'); ?>" style="color: #fff;">Baca Selengkapnya</a>
+                  </button>
+                </div>
               </div>
             </div>
           </div>

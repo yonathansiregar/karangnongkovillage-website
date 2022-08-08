@@ -29,12 +29,13 @@ class Dashboard extends CI_Controller
     $this->load->view('news', $data);
   }
 
-  public function newsDetails()
+  public function newsDetail()
   {
     $data["title"] = "Website Desa Karangnongko Poncokusumo - Detail Berita";
     $data['navbarTitle'] = 'PEMERINTAH DESA KARANGNONGKO';
     $data['icon'] = "assets/images/Logo.png";
-    $this->load->view('news-details', $data);
+    $data["data_berita"] = $this->berita->getAll();
+    $this->load->view('news-detail', $data);
   }
 
   public function umkm()
@@ -77,13 +78,12 @@ class Dashboard extends CI_Controller
     $username = $_POST['username'];
     $password = $_POST['password'];
     if ($username == $username_login && $password == $password_login) {
-        session_start();
-        $_SESSION['username'] = $username;
-        redirect('dashboard/modification');
-    } 
-    else {
+      session_start();
+      $_SESSION['username'] = $username;
+      redirect('dashboard/modification');
+    } else {
       redirect('dashboard/login');
-   }
+    }
   }
 
   public function modification()
@@ -92,5 +92,4 @@ class Dashboard extends CI_Controller
     $data['navbarTitle'] = 'PEMERINTAH DESA KARANGNONGKO';
     $this->load->view('modification', $data);
   }
-
 }
