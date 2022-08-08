@@ -71,9 +71,9 @@
   <!-- End of NAVBAR -->
 
   <!-- MAIN CONTENTS -->
-  <!-- Header -->
   <div id="main-contents">
-    <section id="header">
+  <!-- Header -->
+  <section id="header">
       <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
           <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -83,16 +83,16 @@
         <div class="carousel-inner">
           <div class="carousel-item active">
             <div class="card">
-              <img src="<?php echo base_url(); ?>assets/images/homepage/KantorDesa.jpeg" class="card-img d-block w-100" alt="Kantor Desa Karangnongko">
+              <img src="assets/images/homepage/KantorDesa.jpeg" class="card-img d-block w-100" alt="Kantor Desa Karangnongko">
               <div class="card-img-overlay">
-                <p class="card-text d-flex justify-content-center align-items-center" style="font-weight: 700; line-height: 48px; color: #125159; -webkit-text-stroke: 1px #DFE5E6;">DESA KARANGNONGKO</p>
-                <p class="card-text d-flex justify-content-center align-items-center" style="font-weight: 700; line-height: 48px; color: #125159; -webkit-text-stroke: 1px #DFE5E6;">Kec. Poncokusumo Kab. Malang Prov. Jawa Timur</p>
+                <p class="card-text d-flex justify-content-center align-items-center" style="font-weight: 700; color: #125159; -webkit-text-stroke: 1px #DFE5E6;">DESA KARANGNONGKO</p>
+                <p class="card-text d-flex justify-content-center align-items-center" style="font-weight: 700; color: #125159; -webkit-text-stroke: 1px #DFE5E6;">Kec. Poncokusumo Kab. Malang Prov. Jawa Timur</p>
               </div>
             </div>
           </div>
           <div class="carousel-item">
             <div class="card">
-              <img src="<?php echo base_url(); ?>assets/images/homepage/KantorDesa.jpeg" class="card-img d-block w-100" alt="Kantor Desa Karangnongko">
+              <img src="assets/images/homepage/KantorDesa.jpeg" class="card-img d-block w-100" alt="Kantor Desa Karangnongko">
               <div class="card-img-overlay">
                 <p class="card-text d-flex justify-content-center align-items-center">DESA KARANGNONGKO</p>
                 <p class="card-text d-flex justify-content-center align-items-center">Kec. Poncokusumo Kab. Malang Prov. Jawa Timur</p>
@@ -101,10 +101,10 @@
           </div>
           <div class="carousel-item">
             <div class="card">
-              <img src="<?php echo base_url(); ?>assets/images/homepage/KantorDesa.jpeg" class="card-img d-block w-100" alt="Kantor Desa Karangnongko">
+              <img src="assets/images/homepage/KantorDesa.jpeg" class="card-img d-block w-100" alt="Kantor Desa Karangnongko">
               <div class="card-img-overlay">
-                <p class="card-text d-flex justify-content-center align-items-center" style="font-weight: 700; line-height: 48px; color: #125159; -webkit-text-stroke: 1px #DFE5E6;">DESA KARANGNONGKO</p>
-                <p class="card-text d-flex justify-content-center align-items-center" style="font-weight: 700; line-height: 48px; color: #125159; -webkit-text-stroke: 1px #DFE5E6;">Kec. Poncokusumo Kab. Malang Prov. Jawa Timur</p>
+                <p class="card-text d-flex justify-content-center align-items-center" style="font-weight: 700; color: #125159; -webkit-text-stroke: 1px #DFE5E6;">DESA KARANGNONGKO</p>
+                <p class="card-text d-flex justify-content-center align-items-center" style="font-weight: 700; color: #125159; -webkit-text-stroke: 1px #DFE5E6;">Kec. Poncokusumo Kab. Malang Prov. Jawa Timur</p>
               </div>
             </div>
           </div>
@@ -119,6 +119,7 @@
         </button>
       </div>
     </section>
+
     <section class="page-title container mt-5">
       <p>LOGIN</p>
     </section>
