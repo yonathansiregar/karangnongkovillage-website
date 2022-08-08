@@ -81,7 +81,7 @@
         <div>
           <div class="card" style="background-color: transparent;">
             <img style="border-radius: 40px;" src="<?php echo base_url(); ?>assets/images/village-profile/kantor-desa.png" class="card-img" alt="header image">
-            <div class="card-img-overlay" style="padding-top:100px;">
+            <div class="card-img-overlay">
               <p class="card-text d-flex justify-content-center align-items-center title-text">STRUKTURAL PERANGKAT DESA</p>
               <p class="card-text d-flex justify-content-center align-items-center title-text">DESA KARANGNONGKO, KECAMATAN PONCOKUSUMO</p>
             </div>

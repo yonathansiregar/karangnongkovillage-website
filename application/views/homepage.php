@@ -101,8 +101,8 @@
             <div class="card">
               <img src="assets/images/homepage/KantorDesa.jpeg" class="card-img d-block w-100" alt="Kantor Desa Karangnongko">
               <div class="card-img-overlay">
-                <p class="card-text d-flex justify-content-center align-items-center" style="font-weight: 700; line-height: 48px; color: #125159; -webkit-text-stroke: 1px #DFE5E6;">DESA KARANGNONGKO</p>
-                <p class="card-text d-flex justify-content-center align-items-center" style="font-weight: 700; line-height: 48px; color: #125159; -webkit-text-stroke: 1px #DFE5E6;">Kec. Poncokusumo Kab. Malang Prov. Jawa Timur</p>
+                <p class="card-text d-flex justify-content-center align-items-center" style="font-weight: 700; color: #125159; -webkit-text-stroke: 1px #DFE5E6;">DESA KARANGNONGKO</p>
+                <p class="card-text d-flex justify-content-center align-items-center" style="font-weight: 700; color: #125159; -webkit-text-stroke: 1px #DFE5E6;">Kec. Poncokusumo Kab. Malang Prov. Jawa Timur</p>
               </div>
             </div>
           </div>
@@ -119,8 +119,8 @@
             <div class="card">
               <img src="assets/images/homepage/KantorDesa.jpeg" class="card-img d-block w-100" alt="Kantor Desa Karangnongko">
               <div class="card-img-overlay">
-                <p class="card-text d-flex justify-content-center align-items-center" style="font-weight: 700; line-height: 48px; color: #125159; -webkit-text-stroke: 1px #DFE5E6;">DESA KARANGNONGKO</p>
-                <p class="card-text d-flex justify-content-center align-items-center" style="font-weight: 700; line-height: 48px; color: #125159; -webkit-text-stroke: 1px #DFE5E6;">Kec. Poncokusumo Kab. Malang Prov. Jawa Timur</p>
+                <p class="card-text d-flex justify-content-center align-items-center" style="font-weight: 700; color: #125159; -webkit-text-stroke: 1px #DFE5E6;">DESA KARANGNONGKO</p>
+                <p class="card-text d-flex justify-content-center align-items-center" style="font-weight: 700; color: #125159; -webkit-text-stroke: 1px #DFE5E6;">Kec. Poncokusumo Kab. Malang Prov. Jawa Timur</p>
               </div>
             </div>
           </div>
@@ -233,15 +233,15 @@
           <p id="tulisan-petadesa">PETA DESA KARANGNONGKO</p>
         </div>
 
-        <div class="d-flex flex-nowrap">
+        <div class="d-flex flex-nowrap px-1">
           <div class="row justify-content-center align-items-center" style="text-align: justify;">
             <div class="col-md-6 order-2 order-md-1 fs-6 pb-4" style="font-weight: 300; line-height: 27px; font-style: normal;">
-              <p>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Karangnongko merupakan salah satu desa yang ada di kecamatan karangnongko kabupaten malang. Salah satu keunikan desa ini merupakan banyak nya anak anak kecil yang ramah dan suka senyum terhadap teman teman kkn. oleh karena itu, kita sangat nyaman dalam menjalankan program kkn hingga akhir waktu. Salah satu keunikan desa ini merupakan banyak nya anak anak kecil yang ramah dan suka senyum terhadap teman teman kkn. oleh karena itu, kita sangat nyaman dalam menjalankan program kkn hingga akhir waktu. </p>
-              <p>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Salah satu keunikan desa ini merupakan banyak nya anak anak kecil yang ramah dan suka senyum terhadap teman teman kkn. oleh karena itu, kita sangat nyaman dalam menjalankan program kkn hingga akhir waktu. Salah satu keunikan desa ini merupakan banyak nya anak anak kecil yang ramah dan suka senyum terhadap teman teman kkn. oleh karena itu, kita sangat nyaman dalam menjalankan program kkn hingga akhir waktu. </p>
+              <p class="mx-5">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Karangnongko merupakan salah satu desa yang ada di kecamatan karangnongko kabupaten malang. Salah satu keunikan desa ini merupakan banyak nya anak anak kecil yang ramah dan suka senyum terhadap teman teman kkn. oleh karena itu, kita sangat nyaman dalam menjalankan program kkn hingga akhir waktu. Salah satu keunikan desa ini merupakan banyak nya anak anak kecil yang ramah dan suka senyum terhadap teman teman kkn. oleh karena itu, kita sangat nyaman dalam menjalankan program kkn hingga akhir waktu. </p>
+              <p class="mx-5">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Salah satu keunikan desa ini merupakan banyak nya anak anak kecil yang ramah dan suka senyum terhadap teman teman kkn. oleh karena itu, kita sangat nyaman dalam menjalankan program kkn hingga akhir waktu. Salah satu keunikan desa ini merupakan banyak nya anak anak kecil yang ramah dan suka senyum terhadap teman teman kkn. oleh karena itu, kita sangat nyaman dalam menjalankan program kkn hingga akhir waktu. </p>
             </div>
 
             <div class="col-md-6 order-1 order-md-2 d-flex justify-content-center justify-content-md-end">
-              <img src="assets/images/homepage/peta-desa.png" alt="Peta Desa" class="my-3 pb-5 img-responsive">
+              <img src="assets/images/homepage/peta-desa.png" alt="Peta Desa" class="test my-3 pb-5 img-responsive">
             </div>
           </div>
         </div>
