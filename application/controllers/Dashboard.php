@@ -105,7 +105,7 @@ class Dashboard extends CI_Controller
 
   public function daftarBerita()
   {
-    $data["title"] = "DAFTAR BERITA";
+    $data["title"] = "Website Desa Karangnongko Poncokusumo - Daftar Berita";
     $data['semua_berita'] = $this->berita->getAll();
     $this->load->view('daftarBerita', $data);
   }
@@ -152,7 +152,7 @@ class Dashboard extends CI_Controller
 
   public function daftarUmkm()
   {
-    $data["title"] = "DAFTAR UMKM";
+    $data["title"] = "Website Desa Karangnongko Poncokusumo - Daftar UMKM";
     $data['semua_umkm'] = $this->umkm->getAll();
     $this->load->view('daftarUmkm', $data);
   }
@@ -199,7 +199,7 @@ class Dashboard extends CI_Controller
 
   public function daftarPD()
   {
-    $data["title"] = "DAFTAR PERANGKAT DESA";
+    $data["title"] = "Website Desa Karangnongko Poncokusumo - Daftar Perangkat Desa";
     $data['semua_PD'] = $this->perangkatDesa->getAllDesc();
     $this->load->view('daftarPD', $data);
   }
@@ -245,7 +245,7 @@ class Dashboard extends CI_Controller
   }
 
   public function cariSemua(){
-    $data["title"] = "Hasil Pencarian";
+    $data["title"] = "Website Desa Karangnongko Poncokusumo - Hasil Pencarian";
     $data['navbarTitle'] = 'PEMERINTAH DESA KARANGNONGKO';
     $keyword = $this->input->get('keyword');
     $data['cari_berita'] = $this->search->searchBerita($keyword);
@@ -255,7 +255,7 @@ class Dashboard extends CI_Controller
   }
 
   public function cariBerita(){
-    $data["title"] = "Hasil Pencarian Berita";
+    $data["title"] = "Website Desa Karangnongko Poncokusumo - Hasil Pencarian Berita";
     $data['navbarTitle'] = 'PEMERINTAH DESA KARANGNONGKO';
     $keyword = $this->input->get('keyword');
     $data['cari_berita'] = $this->search->searchBerita($keyword);
@@ -263,7 +263,7 @@ class Dashboard extends CI_Controller
   }
 
   public function cariUmkm(){
-    $data["title"] = "Hasil Pencarian UMKM";
+    $data["title"] = "Website Desa Karangnongko Poncokusumo - Hasil Pencarian UMKM";
     $data['navbarTitle'] = 'PEMERINTAH DESA KARANGNONGKO';
     $keyword = $this->input->get('keyword');
     $data['cari_umkm'] = $this->search->searchUmkm($keyword);
@@ -271,7 +271,7 @@ class Dashboard extends CI_Controller
   }
 
   public function cariPD(){
-    $data["title"] = "Hasil Pencarian Perangkat Desa";
+    $data["title"] = "Website Desa Karangnongko Poncokusumo - Hasil Pencarian Perangkat Desa";
     $data['navbarTitle'] = 'PEMERINTAH DESA KARANGNONGKO';
     $keyword = $this->input->get('keyword');
     $data['cari_PD'] = $this->search->searchPD($keyword);

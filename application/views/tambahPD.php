@@ -43,7 +43,7 @@ if (empty($_SESSION["username"])) {
         <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/global.css">
         <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/homepage.css">
         <!-- TITLE PAGE -->
-        <title><?php echo $title; ?></title>
+        <title>Website Desa Karangnongko Poncokusumo - Tambah Perangkat Desa</title>
         <script>
             function getFile(filePath) {
                 return filePath.substr(filePath.lastIndexOf('\\') + 1);
