@@ -105,7 +105,7 @@
                     <tr style="vertical-align:top ;">
                       <td style="height:50px ; width: 140px;"><span class="me-3" style="font-size:18px ;">Nama Produk</span></td>
                       <td style="height:50px ;"><span class="me-3" style="font-size:18px ;">:</span></td>
-                      <td style="height:50px ;"><span style="font-size:18px ;"><?= $row->namaUmkm ?></span></td>
+                      <td style="height:50px ;"><span style="font-size:18px ;"><?= $row->namaProduk ?></span></td>
                     </tr>
                     <tr style="vertical-align:top ;">
                       <td style="height:50px ; width: 140px;"><span class="me-3" style="font-size:18px ;">Jenis Produk</span></td>
