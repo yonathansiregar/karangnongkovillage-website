@@ -59,8 +59,8 @@
         </ul>
 
         <!-- Search icon -->
-        <form action="" method="" class="d-flex mx-md-4" id="search">
-          <input type="text" name="search" id="" placeholder="CARI BERITA.." class="p-2">
+        <form action="<?php echo base_url('cariSemua'); ?>" method="get" class="d-flex mx-md-4" id="search">
+          <input class="form-control" type="text" name="keyword" id="" placeholder="CARI DISINI" class="p-2" required>
           <button type="submit" class="btn btn-search btn-light ms-1">
             <i class="bi bi-search text-black"></i>
           </button>

@@ -244,29 +244,37 @@ class Dashboard extends CI_Controller
     redirect('daftarPD');
   }
 
-  public function cariSemua($kunciKata){
+  public function cariSemua(){
     $data["title"] = "Hasil Pencarian";
-    $data['cari_berita'] = $this->search->searchBerita($kunciKata);
-    $data['cari_Umkm'] = $this->search->searchUmkm($kunciKata);
-    $data['cari_PD'] = $this->search->searchPD($kunciKata);
+    $data['navbarTitle'] = 'PEMERINTAH DESA KARANGNONGKO';
+    $keyword = $this->input->get('keyword');
+    $data['cari_berita'] = $this->search->searchBerita($keyword);
+    $data['cari_umkm'] = $this->search->searchUmkm($keyword);
+    $data['cari_PD'] = $this->search->searchPD($keyword);
     $this->load->view('cariSemua', $data);
   }
 
-  public function cariBerita($kunciKata){
+  public function cariBerita(){
     $data["title"] = "Hasil Pencarian Berita";
-    $data['cari_berita'] = $this->search->searchBerita($kunciKata);
-    $this->load->view('cariSemua', $data);
+    $data['navbarTitle'] = 'PEMERINTAH DESA KARANGNONGKO';
+    $keyword = $this->input->get('keyword');
+    $data['cari_berita'] = $this->search->searchBerita($keyword);
+    $this->load->view('cariBerita', $data);
   }
 
-  public function cariUmkm($kunciKata){
+  public function cariUmkm(){
     $data["title"] = "Hasil Pencarian UMKM";
-    $data['cari_umkm'] = $this->search->searchUmkm($kunciKata);
+    $data['navbarTitle'] = 'PEMERINTAH DESA KARANGNONGKO';
+    $keyword = $this->input->get('keyword');
+    $data['cari_umkm'] = $this->search->searchUmkm($keyword);
     $this->load->view('cariUmkm', $data);
   }
 
-  public function cariPD($kunciKata){
+  public function cariPD(){
     $data["title"] = "Hasil Pencarian Perangkat Desa";
-    $data['cari_PD'] = $this->search->searchPD($kunciKata);
+    $data['navbarTitle'] = 'PEMERINTAH DESA KARANGNONGKO';
+    $keyword = $this->input->get('keyword');
+    $data['cari_PD'] = $this->search->searchPD($keyword);
     $this->load->view('cariPD', $data);
   }
 

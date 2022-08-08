@@ -8,7 +8,7 @@ class search extends CI_Model
     protected $PerangkatDesa = 'perangkatDesa';
 
     // Menampilkan data pencarian berita
-    public function searchBerita($keyword) {
+    public function searchBerita($keyword = null) {
         $this->db->from($this->Berita);
         $this->db->like('judul', $keyword);
         $this->db->or_like('deskripsi', $keyword);
@@ -17,7 +17,7 @@ class search extends CI_Model
     }
 
     // Menampilkan data pencarian Umkm
-    public function searchUmkm($keyword) {
+    public function searchUmkm($keyword = null) {
         $this->db->from($this->Umkm);
         $this->db->like('namaUmkm', $keyword);
         $this->db->or_like('jenisProduk', $keyword);
@@ -29,7 +29,7 @@ class search extends CI_Model
     }
     
     // Menampilkan data pencarian Perangkat Desa
-    public function searchPD($keyword) {
+    public function searchPD($keyword = null) {
         $this->db->from($this->PerangkatDesa);
         $this->db->like('namaPD', $keyword);
         $this->db->or_like('jabatanPD', $keyword);
