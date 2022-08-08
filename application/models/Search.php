@@ -23,7 +23,6 @@ class search extends CI_Model
         $this->db->or_like('jenisProduk', $keyword);
         $this->db->or_like('pemilikUmkm', $keyword);
         $this->db->or_like('deskripsi', $keyword);
-        $this->db->or_like('nomorWa', $keyword);
         $query = $this->db->get();
         return $query->result();
     }
