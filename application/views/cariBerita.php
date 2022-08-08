@@ -92,15 +92,15 @@
   <!-- MAIN CONTENTS -->
   <div id="main-contents">
     <!-- HASIL PENCARIAN BERITA -->
+    <?php 
+        if (!empty($cari_berita)) {
+    ?>
     <section class="container mt-5 mb-5">
       <div class="d-flex mt-5">
         <div class="me-auto">
           <p class="page-title">HASIL PENCARIAN BERITA</p>
         </div>
     </section>
-    <?php 
-        if (!empty($cari_berita)) {
-    ?>
     <!-- NEWS LIST -->
     <div class="container mb-5">
       <div class="row g-3">
@@ -134,6 +134,12 @@
     <?php
         } else {
     ?>
+    <section class="container mt-5">
+      <div class="d-flex mt-5">
+        <div class="me-auto">
+          <p class="page-title">HASIL PENCARIAN BERITA</p>
+        </div>
+    </section>
     <section class="container mb-5">
       <p>Berita Tidak Ditemukan</p>
     </section>
