@@ -2,7 +2,8 @@
     color: #125159;
     font-weight: 600;
     font-style: normal;
-    font-size: 4vh;
+    line-height: 48px;
+    font-size: 32px;
 }
 
 @media only screen and (max-width: 400px) {
