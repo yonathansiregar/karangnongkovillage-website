@@ -22,7 +22,7 @@ echo "Maaf, anda belum login";
   <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/global.css">
 
   <!-- TITLE PAGE -->
-  <title><?php echo $title; ?></title>
+  <title>Website Desa Karangnongko Poncokusumo - Daftar UMKM</title>
 </head>
 <body>
     <div class="container pt-5">
@@ -59,6 +59,11 @@ echo "Maaf, anda belum login";
                                                         <td><b><span class="me-3">Nama UMKM</span></b></td>
                                                         <td><span class="me-3">:</span></td>
                                                         <td><?= $row->namaUmkm;?></td>
+                                                    </tr>
+                                                    <tr style="vertical-align:top ;">
+                                                        <td><b><span class="me-3">Nama Produk</span></b></td>
+                                                        <td><span class="me-3">:</span></td>
+                                                        <td><?= $row->namaProduk;?></td>
                                                     </tr>
                                                     <tr>
                                                         <td><b><span class="me-3">Pemilik UMKM</span></b></td>

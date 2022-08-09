@@ -32,13 +32,13 @@ echo "Maaf, anda belum login";
         <section class="page-title">
             <p>DASHBOARD</p>
         </section>
-        <button type="button" class="dashboard-btn" style="background: #125159; border-radius: 30px; margin-bottom: 20px;">
+        <button onclick="location.href='<?php echo base_url('daftarPD'); ?>'" type="button" class="dashboard-btn" style="background: #125159; border-radius: 30px; margin-bottom: 20px;">
             <a class="text-decoration-none" href="<?php echo base_url('daftarPD'); ?>" style="color: #fff;">Perangkat Desa</a>
         </button>
-        <button type="button" class="dashboard-btn" style="background: #125159; border-radius: 30px; margin-bottom: 20px;">
+        <button onclick="location.href='<?php echo base_url('daftarBerita'); ?>'" type="button" class="dashboard-btn" style="background: #125159; border-radius: 30px; margin-bottom: 20px;">
             <a class="text-decoration-none" href="<?php echo base_url('daftarBerita'); ?>" style="color: #fff;">Berita</a>
         </button>
-        <button type="button" class="dashboard-btn" style="background: #125159; border-radius: 30px; margin-bottom: 20px;">
+        <button onclick="location.href='<?php echo base_url('daftarUmkm'); ?>'" type="button" class="dashboard-btn" style="background: #125159; border-radius: 30px; margin-bottom: 20px;">
             <a class="text-decoration-none" href="<?php echo base_url('daftarUmkm'); ?>" style="color: #fff;">UMKM</a>
         </button>
         <a class="text-decoration-none logout-btn" href="<?php echo base_url('logout_process'); ?>">Logout</a>

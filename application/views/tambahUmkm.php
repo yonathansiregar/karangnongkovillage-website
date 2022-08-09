@@ -76,6 +76,16 @@ if (empty($_SESSION["username"])) {
                                 </div>
 
                                 <div class="form-group row mb-2">
+                                    <label for="namaProduk" class="col-sm-2 col-form-label">Nama Produk</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="namaProduk" name="namaProduk" required value="<?= set_value('namaProduk'); ?>">
+                                        <small class="text-danger">
+                                            <?php echo form_error('namaProduk') ?>
+                                        </small>
+                                    </div>
+                                </div>
+
+                                <div class="form-group row mb-2">
                                     <label for="pemilikUmkm" class="col-sm-2 col-form-label">Pemilik UMKM</label>
                                     <div class="col-sm-10">
                                         <input type="text" class="form-control" id="pemilikUmkm" name="pemilikUmkm" required value="<?= set_value('pemilikUmkm'); ?>">
@@ -118,7 +128,7 @@ if (empty($_SESSION["username"])) {
                                 <div class="form-group row mb-2">
                                     <label for="olshop" class="col-sm-2 col-form-label">Tautan Online Shop</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="olshop" name="olshop" required value="<?= set_value('olshop'); ?>">
+                                        <input type="text" class="form-control" id="olshop" name="olshop" value="<?= set_value('olshop'); ?>">
                                         <small class="text-danger">
                                             <?php echo form_error('olshop') ?>
                                         </small>

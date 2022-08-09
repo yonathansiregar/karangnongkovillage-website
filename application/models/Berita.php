@@ -15,18 +15,6 @@ class Berita extends CI_Model
     //query diatas seperti halnya query pada mysql 
     //select * from berita where idBerita='$idBerita'
   }
-  
-  //Menampilkan gambarBerita berdasarkan idBerita
-  public function gambarById($idBerita)
-  {
-    $this->db->select('gambarBerita');
-    $this->db->from($this->table);
-    $this->db->where(["idBerita" => $idBerita]);
-    $query = $this->db->get();
-    return $query->result();
-    //query diatas seperti halnya query pada mysql 
-    //select gambarBerita from berita where idBerita='$idBerita'
-  }
 
   //Menampilkan semua data berita yang tersimpan
   public function getAll()
@@ -56,7 +44,7 @@ class Berita extends CI_Model
       "judul" => $this->input->post('judul'),
       "deskripsi" => $this->input->post('deskripsi'),
       "tanggal" => $this->input->post('tanggal'),
-      "gambarBerita" => $this->input->post('gambarBerita')
+      "gambarBerita" => date("d-m-Y H:i"). ' '. $this->input->post('gambarBerita')
     );
     return $this->db->insert(
       $this->table,
@@ -65,19 +53,19 @@ class Berita extends CI_Model
   }
 
   //Mengedit data berita
-  public function edit()
+  public function edit($idBerita)
   {
     $data = array(
       "judul" => $this->input->post('judul'),
       "deskripsi" => $this->input->post('deskripsi'),
       "tanggal" => $this->input->post('tanggal'),
-      "gambarBerita" => $this->input->post('gambarBerita')
+      "gambarBerita" => date("d-m-Y H:i"). ' '. $this->input->post('gambarBerita')
     );
     return $this->db->update(
       $this->table,
       $data,
       array(
-        'idBerita' => $this->input->post('idBerita')
+        'idBerita' => $idBerita
       )
     );
   }

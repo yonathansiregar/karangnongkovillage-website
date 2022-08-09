@@ -92,12 +92,15 @@
   <!-- MAIN CONTENTS -->
   <div id="main-contents">
     <!-- HASIL PENCARIAN BERITA -->
-    <section class="page-title container mt-5">
-      <p>HASIL PENCARIAN BERITA</p>
-    </section>
     <?php 
         if (!empty($cari_berita)) {
     ?>
+    <section class="container mt-5 mb-5">
+      <div class="d-flex mt-5">
+        <div class="me-auto">
+          <p class="page-title">HASIL PENCARIAN BERITA</p>
+        </div>
+    </section>
     <!-- NEWS LIST -->
     <div class="container mb-5">
       <div class="row g-3">
@@ -131,6 +134,12 @@
     <?php
         } else {
     ?>
+    <section class="container mt-5">
+      <div class="d-flex mt-5">
+        <div class="me-auto">
+          <p class="page-title">HASIL PENCARIAN BERITA</p>
+        </div>
+    </section>
     <section class="container mb-2">
       <p>Berita Tidak Ditemukan</p>
     </section>
@@ -141,12 +150,15 @@
     <!-- End of HASIL PENCARIAN BERITA -->
 
     <!-- HASIL PENCARIAN UMKM DESA KARANGNONGKO -->
-    <section class="page-title container">
-      <p>HASIL PENCARIAN UMKM DESA KARANGNONGKO</p>
-    </section>
     <?php 
         if (!empty($cari_umkm)) {
     ?>
+    <section class="container mt-5">
+      <div class="d-flex mt-5">
+        <div class="me-auto">
+          <p class="page-title">HASIL PENCARIAN UMKM</p>
+        </div>
+    </section>
     <!-- UMKM Loop -->
     <?php
     foreach ($cari_umkm as $row) : ?>
@@ -209,6 +221,12 @@
     <?php
         } else {
     ?>
+    <section class="container mt-5">
+      <div class="d-flex mt-5">
+        <div class="me-auto">
+          <p class="page-title">HASIL PENCARIAN UMKM</p>
+        </div>
+    </section>
     <section class="container mb-2">
       <p>UMKM Tidak Ditemukan</p>
     </section>
@@ -218,12 +236,15 @@
 
     <!-- HASIL PENCARIAN PERANGKAT DESA -->
     <section id="village-apparatus">
-      <div class="fs-5 d-flex justify-content-center justify-content-md-start">
-        <p class="page-title container">HASIL PENCARIAN PERANGKAT DESA</p>
-      </div>
-      <?php 
+    <?php 
         if (!empty($cari_PD)) {
-      ?>
+    ?>
+    <section class="container mt-5 mb-5">
+      <div class="d-flex mt-5">
+        <div class="me-auto">
+          <p class="page-title">HASIL PENCARIAN PERANGKAT DESA</p>
+        </div>
+    </section>
       <div class="container my-5 fs-5">
         <div class="row g-4">
           <?php
@@ -247,6 +268,12 @@
           <?php
         } else {
         ?>
+        <section class="container mt-5">
+        <div class="d-flex mt-5">
+        <div class="me-auto">
+          <p class="page-title">HASIL PENCARIAN PERANGKAT DESA</p>
+        </div>
+        </section>
         <section class="container mb-5">
             <p>Perangkat Desa Tidak Ditemukan</p>
         </section>

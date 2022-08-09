@@ -92,12 +92,15 @@
   <!-- MAIN CONTENTS -->
   <div id="main-contents">
     <!-- HASIL PENCARIAN UMKM DESA KARANGNONGKO -->
-    <section class="page-title container">
-      <p>HASIL PENCARIAN UMKM DESA KARANGNONGKO</p>
-    </section>
     <?php 
         if (!empty($cari_umkm)) {
     ?>
+    <section class="container mt-5">
+      <div class="d-flex mt-5">
+        <div class="me-auto">
+          <p class="page-title">HASIL PENCARIAN UMKM</p>
+        </div>
+    </section>
     <!-- UMKM Loop -->
     <?php
     foreach ($cari_umkm as $row) : ?>
@@ -160,7 +163,13 @@
     <?php
         } else {
     ?>
-    <section class="container mb-2">
+    <section class="container mt-5">
+      <div class="d-flex mt-5">
+        <div class="me-auto">
+          <p class="page-title">HASIL PENCARIAN UMKM</p>
+        </div>
+    </section>
+    <section class="container mb-5">
       <p>UMKM Tidak Ditemukan</p>
     </section>
     <?php

@@ -16,18 +16,6 @@ class PerangkatDesa extends CI_Model
     //select * from perangkatDesa where idPD='$idPD'
   }
 
-  //Menampilkan gambarBerita berdasarkan idPD
-  public function gambarById($idPD)
-  {
-    $this->db->select('gambarPD');
-    $this->db->from($this->table);
-    $this->db->where(["idPD" => $idPD]);
-    $query = $this->db->get();
-    return $query->result();
-    //query diatas seperti halnya query pada mysql 
-    //select gambarPD from perangkatDesa where idPD='$idPD'
-  }
-
   //Menampilkan semua data perangkatDesa yang tersimpan
   public function getAll()
   {
@@ -66,7 +54,7 @@ class PerangkatDesa extends CI_Model
     $data = array(
       "namaPD" => $this->input->post('namaPD'),
       "jabatanPD" => $this->input->post('jabatanPD'),
-      "gambarPD" => $this->input->post('gambarPD')
+      "gambarPD" => date("d-m-Y H:i"). ' '. $this->input->post('gambarPD')
     );
     return $this->db->insert(
       $this->table,
@@ -75,18 +63,18 @@ class PerangkatDesa extends CI_Model
   }
 
   //Mengedit data perangkatDesa
-  public function edit()
+  public function edit($idPD)
   {
     $data = array(
       "namaPD" => $this->input->post('namaPD'),
       "jabatanPD" => $this->input->post('jabatanPD'),
-      "gambarPD" => $this->input->post('gambarPD')
+      "gambarPD" => date("d-m-Y H:i"). ' '. $this->input->post('gambarPD')
     );
     return $this->db->update(
       $this->table,
       $data,
       array(
-        'idPD' => $this->input->post('idPD')
+        'idPD' => $idPD
       )
     );
   }

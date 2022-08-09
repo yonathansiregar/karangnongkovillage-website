@@ -68,8 +68,21 @@
 
   <!-- MAIN CONTENTS -->
   <div id="main-content">
-    <section class="page-title container mt-5">
-      <p>UMKM DESA KARANGNONGKO</p>
+  <section class="container mt-5 mb-5">
+      <div class="d-flex mt-5">
+        <div class="me-auto">
+          <p class="page-title">UMKM DESA KARANGNONGKO</p>
+        </div>
+
+        <div class="ms-auto">
+          <div class="form-group has-search ms-auto">
+            <form action="<?php echo base_url('cariUmkm'); ?>" method="get">
+              <span class="bi bi-search search-icon position-absolute d-block text-center fs-3 pe-auto" style="color: #9A9EA6; padding-left: 15px;"></span>
+              <input class="form-control" type="text" name="keyword" id="" placeholder="CARI UMKM" style="max-width: 420px; height: 42px; padding-left: 50px; background-color: transparent; border-radius: 21px; border-width: 1px; border-color: #9A9EA6;">
+            </form>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- UMKM Loop -->
@@ -87,12 +100,12 @@
                 <div class="product-details">
                   <table>
                     <tr>
-                   <td colspan="3" style="height:50px ; "><p class="card-title" id="umkm-name" style="font-size:20px ;"><b><?= $row->namaUmkm ?></b></p></td>
+                   <td colspan="3" style="height:50px ; "><p class="card-title" id="umkm-name" style="font-size:20px ;"><b><?= $row->namaUmkm ?> <?= $row->pemilikUmkm ?></b></p></td>
                     </tr>
                     <tr style="vertical-align:top ;">
                       <td style="height:50px ; width: 140px;"><span class="me-3" style="font-size:18px ;">Nama Produk</span></td>
                       <td style="height:50px ;"><span class="me-3" style="font-size:18px ;">:</span></td>
-                      <td style="height:50px ;"><span style="font-size:18px ;"><?= $row->namaUmkm ?></span></td>
+                      <td style="height:50px ;"><span style="font-size:18px ;"><?= $row->namaProduk ?></span></td>
                     </tr>
                     <tr style="vertical-align:top ;">
                       <td style="height:50px ; width: 140px;"><span class="me-3" style="font-size:18px ;">Jenis Produk</span></td>
@@ -114,16 +127,32 @@
                 <div style="padding-right:65px ; padding-top:40px ; padding-bottom:100px ;" id="btn-links">
               <table align="right">
                 <tr>
+                  <?php
+                  if (!empty($row->olshop)) { 
+                  ?>
                   <td style="padding-right:20px ;">
                   <form target="_blank" action="<?= $row->olshop ?>">
                   <button class="p-3" style="background-color:transparent ;" id="shopee-link">Link Online Shop</button>
                   </form>
                   </td>
+                  <?php
+                  } else {
+
+                  } 
+                  ?>
+                  <?php
+                  if (!empty($row->nomorWa)) { 
+                  ?>
                   <td>
                   <form target="_blank" action="https://wa.me/62<?= $row->nomorWa ?>">
                   <button class="p-3" id="whatsapp-link">Link WhatsApp</button>
                   </form>
                   </td>
+                  <?php
+                  } else {
+
+                  } 
+                  ?>
                 </tr>
               </table>
               </div>
