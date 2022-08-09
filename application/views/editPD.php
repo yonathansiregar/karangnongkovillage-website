@@ -3,6 +3,7 @@ session_start();
 if (empty($_SESSION["username"])) {
     echo "Maaf, anda belum login";
 } else {
+    $data = date("d-m-Y H:i:s");
 ?>
 
     <!DOCTYPE html>
@@ -50,9 +51,7 @@ if (empty($_SESSION["username"])) {
             }
 
             function getoutput() {
-                const today = new Date();
-                var datenow = <?php echo date("d-m-Y H:i:s")?>;
-                gambarPD.value = datenow +' '+getFile(gambar.value);
+                gambarPD.value = <?php $data?> +' '+getFile(gambar.value);
                 extension.value = gambar.value.split('.')[1];
             }
         </script>
