@@ -1,41 +1,41 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class PerangkatDesa extends CI_Model
+class kkn extends CI_Model
 {
-  protected $table = 'perangkatDesa';
+  protected $table = 'KKN';
 
-  //Menampilkan data perangkatDesa berdasarkan idPD
-  public function getById($idPD)
+  //Menampilkan data KKN berdasarkan idPD
+  public function getById($idKKN)
   {
     return $this->db->get_where(
       $this->table,
-      ["idPD" => $idPD]
+      ["idKKN" => $idKKN]
     )->row();
     //query diatas seperti halnya query pada mysql 
-    //select * from perangkatDesa where idPD='$idPD'
+    //select * from KKN where idKKN='$idKKN'
   }
 
-  //Menampilkan semua data perangkatDesa yang tersimpan
+  //Menampilkan semua data KKN yang tersimpan
   public function getAll()
   {
     $this->db->from($this->table);
-    $this->db->order_by("idPD", "asc");
+    $this->db->order_by("idKKN", "asc");
     $query = $this->db->get();
     return $query->result();
     //fungsi diatas seperti halnya query 
-    //select * from perangkatDesa order by idPD asc
+    //select * from KKN order by idKKN asc
   }
 
-  //Menampilkan semua data perangkatDesa yang tersimpan
+  //Menampilkan semua data KKN yang tersimpan
   public function getAllDesc()
   {
     $this->db->from($this->table);
-    $this->db->order_by("idPD", "desc");
+    $this->db->order_by("idKKN", "desc");
     $query = $this->db->get();
     return $query->result();
     //fungsi diatas seperti halnya query 
-    //select * from perangkatDesa order by idPD asc
+    //select * from KKN order by idKKN asc
   }
 
   //Menampilkan jumlah data yang tersimpan
@@ -45,16 +45,16 @@ class PerangkatDesa extends CI_Model
     $query = $this->db->get();
     return $query->result();
     //fungsi diatas seperti halnya query 
-    //select count * from perangkatDesa
+    //select count * from KKN
   }
 
-  //Menyimpan perangkatDesa baru
+  //Menyimpan KKN baru
   public function simpan()
   {
     $data = array(
-      "namaPD" => $this->input->post('namaPD'),
-      "jabatanPD" => $this->input->post('jabatanPD'),
-      "gambarPD" => $this->input->post('gambarPD')
+      "namaKKN" => $this->input->post('namaKKN'),
+      "jabatanKKN" => $this->input->post('jabatanKKN'),
+      "gambarKKN" => $this->input->post('gambarKKN')
     );
     return $this->db->insert(
       $this->table,
@@ -62,29 +62,29 @@ class PerangkatDesa extends CI_Model
     );
   }
 
-  //Mengedit data perangkatDesa
-  public function edit($idPD)
+  //Mengedit data KKN
+  public function edit($idKKN)
   {
     $data = array(
-      "namaPD" => $this->input->post('namaPD'),
-      "jabatanPD" => $this->input->post('jabatanPD'),
-      "gambarPD" => $this->input->post('gambarPD')
+      "namaKKN" => $this->input->post('namaKKN'),
+      "jabatanKKN" => $this->input->post('jabatanKKN'),
+      "gambarKKN" => $this->input->post('gambarKKN')
     );
     return $this->db->update(
       $this->table,
       $data,
       array(
-        'idPD' => $idPD
+        'idKKN' => $idKKN
       )
     );
   }
 
-  //Menghapus data perangkatDesa
-  public function hapus($idPD)
+  //Menghapus data KKN
+  public function hapus($idKKN)
   {
     return $this->db->delete(
       $this->table,
-      array("idPD" => $idPD)
+      array("idKKN" => $idKKN)
     );
   }
 }

@@ -68,7 +68,7 @@
 
   <!-- MAIN CONTENTS -->
   <div id="main-content">
-  <section class="container mt-5 mb-5">
+    <section class="container mt-5 mb-5">
       <div class="d-flex mt-5">
         <div class="me-auto">
           <p class="page-title">UMKM DESA KARANGNONGKO</p>
@@ -100,7 +100,9 @@
                 <div class="product-details">
                   <table>
                     <tr>
-                   <td colspan="3" style="height:50px ; "><p class="card-title" id="umkm-name" style="font-size:20px ;"><b><?= $row->namaUmkm ?> <?= $row->pemilikUmkm ?></b></p></td>
+                      <td colspan="3" style="height:50px ; ">
+                        <p class="card-title" id="umkm-name" style="font-size:20px ;"><b><?= $row->namaUmkm ?> <?= $row->pemilikUmkm ?></b></p>
+                      </td>
                     </tr>
                     <tr style="vertical-align:top ;">
                       <td style="height:50px ; width: 140px;"><span class="me-3" style="font-size:18px ;">Nama Produk</span></td>
@@ -124,37 +126,35 @@
                   <p class="card-text p-3"><?= $row->deskripsi ?></p>
                 </div>
               </div>
-                <div style="padding-right:65px ; padding-top:40px ; padding-bottom:100px ;" id="btn-links">
-              <table align="right">
-                <tr>
-                  <?php
-                  if (!empty($row->olshop)) { 
-                  ?>
-                  <td style="padding-right:20px ;">
-                  <form target="_blank" action="<?= $row->olshop ?>">
-                  <button class="p-3" style="background-color:transparent ;" id="shopee-link">Link Online Shop</button>
-                  </form>
-                  </td>
-                  <?php
-                  } else {
-
-                  } 
-                  ?>
-                  <?php
-                  if (!empty($row->nomorWa)) { 
-                  ?>
-                  <td>
-                  <form target="_blank" action="https://wa.me/62<?= $row->nomorWa ?>">
-                  <button class="p-3" id="whatsapp-link">Link WhatsApp</button>
-                  </form>
-                  </td>
-                  <?php
-                  } else {
-
-                  } 
-                  ?>
-                </tr>
-              </table>
+              <div style="padding-right:65px ; padding-top:40px ; padding-bottom:100px ;" id="btn-links">
+                <table align="right">
+                  <tr>
+                    <?php
+                    if (!empty($row->olshop)) {
+                    ?>
+                      <td style="padding-right:20px ;">
+                        <form target="_blank" action="<?= $row->olshop ?>">
+                          <button class="p-3" style="background-color:transparent ;" id="shopee-link">Link Online Shop</button>
+                        </form>
+                      </td>
+                    <?php
+                    } else {
+                    }
+                    ?>
+                    <?php
+                    if (!empty($row->nomorWa)) {
+                    ?>
+                      <td>
+                        <form target="_blank" action="https://wa.me/62<?= $row->nomorWa ?>">
+                          <button class="p-3" id="whatsapp-link">Link WhatsApp</button>
+                        </form>
+                      </td>
+                    <?php
+                    } else {
+                    }
+                    ?>
+                  </tr>
+                </table>
               </div>
             </div>
           </div>
@@ -233,7 +233,10 @@
       </div>
     </div>
     <div class="lines" style="border-bottom: 1px solid #1E2833;"></div>
-    <div class="footer-bottom container text-center" id="copyright">Copyright &copy; 2022. Desa Karangnongko Poncokusumo Malang. All rights reserved.</div>
+    <div class="footer-bottom container text-center" id="copyright">
+      Copyright &copy; 2022. Desa Karangnongko Poncokusumo Malang. All rights reserved.<br>
+      <span>Created by KKN Kelompok 7 FILKOM UB 2022</span>
+    </div>
   </footer>
   <!-- End of FOOTER -->
 

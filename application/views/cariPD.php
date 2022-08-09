@@ -93,51 +93,51 @@
   <div id="main-contents">
     <!-- HASIL PENCARIAN PERANGKAT DESA -->
     <section id="village-apparatus">
-    <?php 
-        if (!empty($cari_PD)) {
-    ?>
-    <section class="container mt-5 mb-5">
-      <div class="d-flex mt-5">
-        <div class="me-auto">
-          <p class="page-title">HASIL PENCARIAN PERANGKAT DESA</p>
-        </div>
-    </section>
-      <div class="container my-5 fs-5">
-        <div class="row g-4">
-          <?php
-          foreach ($cari_PD as $row) : ?>
-            <div class="col-12 col-lg-6">
-              <div class="card mb-3">
-                <div class="row no-gutters">
-                  <div class="col-md-4">
-                    <img src="<?php echo base_url(); ?>assets/images/village-profile/<?= $row->gambarPD ?>" class="card-img" style="aspect-ratio: 86 / 107;" alt="...">
-                  </div>
-                  <div class="col-md-8">
-                    <div class="card-body" style="padding: 75px 0px 0px 25px;">
-                      <p class="nama"><b><?= $row->namaPD ?></b></p>
-                      <p class="jabatan"><?= $row->jabatanPD ?></p>
+      <?php
+      if (!empty($cari_PD)) {
+      ?>
+        <section class="container mt-5 mb-5">
+          <div class="d-flex mt-5">
+            <div class="me-auto">
+              <p class="page-title">HASIL PENCARIAN PERANGKAT DESA</p>
+            </div>
+        </section>
+        <div class="container my-5 fs-5">
+          <div class="row g-4">
+            <?php
+            foreach ($cari_PD as $row) : ?>
+              <div class="col-12 col-lg-6">
+                <div class="card mb-3">
+                  <div class="row no-gutters">
+                    <div class="col-md-4">
+                      <img src="<?php echo base_url(); ?>assets/images/village-profile/<?= $row->gambarPD ?>" class="card-img" style="aspect-ratio: 86 / 107;" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body" style="padding: 75px 0px 0px 25px;">
+                        <p class="nama"><b><?= $row->namaPD ?></b></p>
+                        <p class="jabatan"><?= $row->jabatanPD ?></p>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-          <?php endforeach; ?>
+            <?php endforeach; ?>
           <?php
         } else {
-        ?>
-        <section class="container mt-5">
-        <div class="d-flex mt-5">
-        <div class="me-auto">
-            <p class="page-title">HASIL PENCARIAN PERANGKAT DESA</p>
-        </div>
-        </section>
-        <section class="container mb-5">
-            <p>Perangkat Desa Tidak Ditemukan</p>
-        </section>
-        <?php
+          ?>
+            <section class="container mt-5">
+              <div class="d-flex mt-5">
+                <div class="me-auto">
+                  <p class="page-title">HASIL PENCARIAN PERANGKAT DESA</p>
+                </div>
+            </section>
+            <section class="container mb-5">
+              <p>Perangkat Desa Tidak Ditemukan</p>
+            </section>
+          <?php
         }
-    ?>
-        </div>
+          ?>
+          </div>
         </div>
     </section>
   </div>
@@ -211,7 +211,10 @@
       </div>
     </div>
     <div class="lines" style="border-bottom: 1px solid #1E2833;"></div>
-    <div class="footer-bottom container text-center" id="copyright">Copyright &copy; 2022. Desa Karangnongko Poncokusumo Malang. All rights reserved.</div>
+    <div class="footer-bottom container text-center" id="copyright">
+      Copyright &copy; 2022. Desa Karangnongko Poncokusumo Malang. All rights reserved.<br>
+      <span>Created by KKN Kelompok 7 FILKOM UB 2022</span>
+    </div>
   </footer>
   <!-- End of FOOTER -->
 

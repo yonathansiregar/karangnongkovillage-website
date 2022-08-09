@@ -146,38 +146,38 @@
           <div class="col-md-6 pt-5 ps-5">
             <p class="title-infoweb" style="font-size:32px ;">Informasi Website</p>
             <table>
-            <tr style="vertical-align:top ;">
-              <td class="list-infoweb pb-3">
-                <span class="bi bi-check-circle-fill me-3" style="font-size:20px ;"></span>
-              </td>
-              <td class="list-infoweb pb-3">
-                <span style="font-size:20px ;">Profile Desa serta Perangkat Desa Karangnongko</span>
-              </td>
-              </tr>
               <tr style="vertical-align:top ;">
-              <td class="list-infoweb pb-3">
-                <span class="bi bi-check-circle-fill me-3" style="font-size:20px ;"></span>
-              </td>
-              <td class="list-infoweb pb-3">
-                <span style="font-size:20px ;">Kegiatan dan berita terkini yang dilaksanakan di desa karangnongko</span>
-              </td>
-              </tr>
-              <tr style="vertical-align:top ;">
-              <td class="list-infoweb pb-3">
-                <span class="bi bi-check-circle-fill me-3" style="font-size:20px ;"></span>
-              </td>
-              <td class="list-infoweb pb-3">
-                <span style="font-size:20px ;">Produk unggulan UMKM Desa Karangnongko</span>
-              </td>
-              </tr>
-              <tr style="vertical-align:top ;">
-              <td class="list-infoweb pb-3">
-                <span class="bi bi-check-circle-fill me-3" style="font-size:20px ;"></span>
-              </td>
                 <td class="list-infoweb pb-3">
-                <span style="font-size:20px ;">Menyebarkan informasi terbaru desa karangnongko</span>
-              </td>
-            </tr>
+                  <span class="bi bi-check-circle-fill me-3" style="font-size:20px ;"></span>
+                </td>
+                <td class="list-infoweb pb-3">
+                  <span style="font-size:20px ;">Profile Desa serta Perangkat Desa Karangnongko</span>
+                </td>
+              </tr>
+              <tr style="vertical-align:top ;">
+                <td class="list-infoweb pb-3">
+                  <span class="bi bi-check-circle-fill me-3" style="font-size:20px ;"></span>
+                </td>
+                <td class="list-infoweb pb-3">
+                  <span style="font-size:20px ;">Kegiatan dan berita terkini yang dilaksanakan di desa karangnongko</span>
+                </td>
+              </tr>
+              <tr style="vertical-align:top ;">
+                <td class="list-infoweb pb-3">
+                  <span class="bi bi-check-circle-fill me-3" style="font-size:20px ;"></span>
+                </td>
+                <td class="list-infoweb pb-3">
+                  <span style="font-size:20px ;">Produk unggulan UMKM Desa Karangnongko</span>
+                </td>
+              </tr>
+              <tr style="vertical-align:top ;">
+                <td class="list-infoweb pb-3">
+                  <span class="bi bi-check-circle-fill me-3" style="font-size:20px ;"></span>
+                </td>
+                <td class="list-infoweb pb-3">
+                  <span style="font-size:20px ;">Menyebarkan informasi terbaru desa karangnongko</span>
+                </td>
+              </tr>
             </table>
           </div>
         </div>
@@ -185,7 +185,7 @@
     </section>
 
     <!-- Berita Terkini -->
-    <section class="container"  id="current-news mb-5">
+    <section class="container" id="current-news mb-5">
       <div class="d-flex mx-5 mt-5">
         <div class="me-auto">
           <p class="left fs-3 mb-5">BERITA TERKINI</p>
@@ -215,9 +215,9 @@
                     <p class="card-text" style="font-size: 12px;"><?= substr($row->deskripsi, 0, 150) . " ..." ?></p>
                   <?php endif; ?>
                   <div class="d-flex justify-content-center">
-                  <button type="button" class="btn" style="background: #125159; border-radius: 30px;">
-                    <a class="text-decoration-none" href="<?php echo base_url('berita/' . $row->idBerita); ?>" style="color: #fff;">Baca Selengkapnya</a>
-                  </button>
+                    <button type="button" class="btn" style="background: #125159; border-radius: 30px;">
+                      <a class="text-decoration-none" href="<?php echo base_url('berita/' . $row->idBerita); ?>" style="color: #fff;">Baca Selengkapnya</a>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -348,7 +348,11 @@
       </div>
     </div>
     <div class="lines" style="border-bottom: 1px solid #1E2833;"></div>
-    <div class="footer-bottom container text-center" id="copyright">Copyright &copy; 2022. Desa Karangnongko Poncokusumo Malang. All rights reserved.</div>
+    <div class="footer-bottom container text-center" id="copyright">
+      Copyright &copy; 2022. Desa Karangnongko Poncokusumo Malang. All rights reserved.<br>
+      <span>Created by KKN Kelompok 7 FILKOM UB 2022</span>
+    </div>
+
   </footer>
   <!-- End of FOOTER -->
 
