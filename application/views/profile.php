@@ -137,7 +137,7 @@
         </div>
       </div>
 
-      <div class="container d-flex justify-content-center align-items-center" style="margin-bottom: 70px;">
+      <div class="container d-flex justify-content-center align-items-center mb-5">
         <h1>
           <span id="first">"KKN</span>
           <span id="second"> KELOMPOK 7</span>
