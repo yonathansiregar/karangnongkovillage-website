@@ -1,26 +1,27 @@
-<?php 
-function tgl_indo($tanggal){
-	$bulan = array (
-		1 =>   'Januari',
-		'Februari',
-		'Maret',
-		'April',
-		'Mei',
-		'Juni',
-		'Juli',
-		'Agustus',
-		'September',
-		'Oktober',
-		'November',
-		'Desember'
-	);
-	$pecahkan = explode('-', $tanggal);
-	
-	// variabel pecahkan 0 = tanggal
-	// variabel pecahkan 1 = bulan
-	// variabel pecahkan 2 = tahun
- 
-	return $pecahkan[2] . ' ' . $bulan[ (int)$pecahkan[1] ] . ' ' . $pecahkan[0];
+<?php
+function tgl_indo($tanggal)
+{
+  $bulan = array(
+    1 =>   'Januari',
+    'Februari',
+    'Maret',
+    'April',
+    'Mei',
+    'Juni',
+    'Juli',
+    'Agustus',
+    'September',
+    'Oktober',
+    'November',
+    'Desember'
+  );
+  $pecahkan = explode('-', $tanggal);
+
+  // variabel pecahkan 0 = tanggal
+  // variabel pecahkan 1 = bulan
+  // variabel pecahkan 2 = tahun
+
+  return $pecahkan[2] . ' ' . $bulan[(int)$pecahkan[1]] . ' ' . $pecahkan[0];
 }
 ?>
 
@@ -93,13 +94,13 @@ function tgl_indo($tanggal){
   <div id="main-contents" class="main">
     <!-- Background Article -->
     <div class="background-picture" style="padding-top: 10vh;">
-      <img src="<?= base_url(); ?>assets/images/news/<?= $detail_berita->gambarBerita;?>" alt="" class="w-100 position-absolute">
+      <img src="<?= base_url(); ?>assets/images/news/<?= $detail_berita->gambarBerita; ?>" alt="" class="w-100 position-absolute">
     </div>
     <div class="container">
       <div class="article position-relative">
-        <p class="fs-1 news-title" style="text-align:justify ;"><?= $detail_berita->judul;?></h1>
-        <p><?= tgl_indo($detail_berita->tanggal);?></h5>
-        <p style="text-align:justify ;"><?= $detail_berita->deskripsi;?></p>
+        <p class="fs-1 news-title" style="text-align:justify ;"><?= $detail_berita->judul; ?></h1>
+        <p><?= tgl_indo($detail_berita->tanggal); ?></h5>
+        <p style="text-align:justify ;"><?= $detail_berita->deskripsi; ?></p>
       </div>
     </div>
 
@@ -174,7 +175,10 @@ function tgl_indo($tanggal){
       </div>
     </div>
     <div class="lines"></div>
-    <div class="footer-bottom container text-center" id="copyright">Copyright &copy; 2022. Desa Karangnongko Poncokusumo Malang. All rights reserved.</div>
+    <div class="footer-bottom container text-center" id="copyright">
+      Copyright &copy; 2022. Desa Karangnongko Poncokusumo Malang. All rights reserved.<br>
+      <span>Created by KKN Kelompok 7 FILKOM UB 2022</span>
+    </div>
   </footer>
   <!-- End of FOOTER -->
 

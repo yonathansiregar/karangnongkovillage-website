@@ -76,7 +76,7 @@
       <p>PROFILE DESA KARANGNONGKO</p>
     </section>
 
-    <section class="mb-4"  id="header-img">
+    <section class="mb-4" id="header-img">
       <div class="d-flex justify-content-center align-items-center">
         <div>
           <div class="card" style="background-color: transparent;">
@@ -97,22 +97,22 @@
     </section>
 
     <section id="village-apparatus">
-    <section class="container mt-5 mb-5">
-      <div class="d-flex mt-5">
-        <div class="me-auto">
-          <p class="page-title">PERANGKAT DESA</p>
-        </div>
+      <section class="container mt-5 mb-5">
+        <div class="d-flex mt-5">
+          <div class="me-auto">
+            <p class="page-title">PERANGKAT DESA</p>
+          </div>
 
-        <div class="ms-auto">
-          <div class="form-group has-search ms-auto">
-            <form action="<?php echo base_url('cariPD'); ?>" method="get">
-              <span class="bi bi-search search-icon position-absolute d-block text-center fs-3 pe-auto" style="color: #9A9EA6; padding-left: 15px;"></span>
-              <input class="form-control" type="text" name="keyword" id="" placeholder="CARI PERANGKAT DESA" style="max-width: 420px; height: 42px; padding-left: 50px; background-color: transparent; border-radius: 21px; border-width: 1px; border-color: #9A9EA6;">
-            </form>
+          <div class="ms-auto">
+            <div class="form-group has-search ms-auto">
+              <form action="<?php echo base_url('cariPD'); ?>" method="get">
+                <span class="bi bi-search search-icon position-absolute d-block text-center fs-3 pe-auto" style="color: #9A9EA6; padding-left: 15px;"></span>
+                <input class="form-control" type="text" name="keyword" id="" placeholder="CARI PERANGKAT DESA" style="max-width: 420px; height: 42px; padding-left: 50px; background-color: transparent; border-radius: 21px; border-width: 1px; border-color: #9A9EA6;">
+              </form>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
       <div class="container my-5 fs-5">
         <div class="row g-4">
@@ -135,7 +135,7 @@
             </div>
           <?php endforeach; ?>
         </div>
-        </div>
+      </div>
 
     </section>
   </main>
@@ -208,7 +208,10 @@
       </div>
     </div>
     <div class="lines" style="border-bottom: 1px solid #1E2833;"></div>
-    <div class="footer-bottom container text-center" id="copyright">Copyright &copy; 2022. Desa Karangnongko Poncokusumo Malang. All rights reserved.</div>
+    <div class="footer-bottom container text-center" id="copyright">
+      Copyright &copy; 2022. Desa Karangnongko Poncokusumo Malang. All rights reserved.<br>
+      <span>Created by KKN Kelompok 7 FILKOM UB 2022</span>
+    </div>
   </footer>
   <!-- End of FOOTER -->
 

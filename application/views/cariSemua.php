@@ -92,195 +92,197 @@
   <!-- MAIN CONTENTS -->
   <div id="main-contents">
     <!-- HASIL PENCARIAN BERITA -->
-    <?php 
-        if (!empty($cari_berita)) {
+    <?php
+    if (!empty($cari_berita)) {
     ?>
-    <section class="container mt-5 mb-5">
-      <div class="d-flex mt-5">
-        <div class="me-auto">
-          <p class="page-title">HASIL PENCARIAN BERITA</p>
-        </div>
-    </section>
-    <!-- NEWS LIST -->
-    <div class="container mb-5">
-      <div class="row g-3">
-        <?php
-        foreach ($cari_berita as $row) : ?>
-          <div class="col-12 col-md-6 col-lg-4">
-            <div class="card-body" style="border-style: solid; border-width: 1px; border-radius: 20px; border-color: #909A9B;">
-              <img src="<?php echo base_url(); ?>assets/images/news/<?= $row->gambarBerita; ?>" height="250px" class="card-img-top p-2" style=" width: 350; height: 175; margin-left: auto; margin-right: auto;" alt="Card Image">
-              <div class="card-body">
-                <?php if (strlen($row->judul) <= 75) : ?>
-                  <p class="card-title" style="text-align: center; font-size: 14px;"><b><?= $row->judul ?></b></p>
-                <?php else : ?>
-                  <p class="card-title" style="text-align: center; font-size: 14px;"><b><?= substr($row->judul, 0, 75) . " ..." ?></b></p>
-                <?php endif; ?>
-                <?php if (strlen($row->deskripsi) <= 200) : ?>
-                  <p class="" style="font-size: 12px;"><?= $row->deskripsi ?></p>
-                <?php else : ?>
-                  <p class="" style="font-size: 12px;"><?= substr($row->deskripsi, 0, 200) . " ..." ?></p>
-                <?php endif; ?>
-                <div class="d-flex justify-content-center">
-                <button type="button" class="btn" style="background: #125159; border-radius: 30px;">
-                  <a class="text-decoration-none" href="<?php echo base_url('berita/' . $row->idBerita); ?>" style="color: #fff;">Baca Selengkapnya</a>
-                </button>
-                </div>
-              </div>
-            </div>
+      <section class="container mt-5 mb-5">
+        <div class="d-flex mt-5">
+          <div class="me-auto">
+            <p class="page-title">HASIL PENCARIAN BERITA</p>
           </div>
-        <?php endforeach; ?>
-      </div>
-    </div>
-    <?php
-        } else {
-    ?>
-    <section class="container mt-5">
-      <div class="d-flex mt-5">
-        <div class="me-auto">
-          <p class="page-title">HASIL PENCARIAN BERITA</p>
-        </div>
-    </section>
-    <section class="container mb-2">
-      <p>Berita Tidak Ditemukan</p>
-    </section>
-    <?php
-        }
-    ?>
-
-    <!-- End of HASIL PENCARIAN BERITA -->
-
-    <!-- HASIL PENCARIAN UMKM DESA KARANGNONGKO -->
-    <?php 
-        if (!empty($cari_umkm)) {
-    ?>
-    <section class="container mt-5">
-      <div class="d-flex mt-5">
-        <div class="me-auto">
-          <p class="page-title">HASIL PENCARIAN UMKM</p>
-        </div>
-    </section>
-    <!-- UMKM Loop -->
-    <?php
-    foreach ($cari_umkm as $row) : ?>
-      <section class="my-5 products-list d-flex justify-content-center align-items-center">
-        <div class="card horizontal-card mb-3" style="width: 1295px; background-color: transparent;">
-          <div class="row g-0">
-            <div class="col-md-4">
-              <img id="umkm-image" src="<?php echo base_url(); ?>assets/images/umkm-products/<?= $row->gambarUmkm ?>" class="img-fluid p-5 rounded-start" style=" width: 280; height: 328;" alt="Foto Produk UMKM">
-            </div>
-            <div class="col-md-8">
-              <div class="card-body mt-4 me-5">
-                <div class="product-details">
-                  <table>
-                    <tr>
-                   <td colspan="3" style="height:50px ; "><p class="card-title" id="umkm-name" style="font-size:20px ;"><b><?= $row->namaUmkm ?></b></p></td>
-                    </tr>
-                    <tr style="vertical-align:top ;">
-                      <td style="height:50px ; width: 140px;"><span class="me-3" style="font-size:18px ;">Nama Produk</span></td>
-                      <td style="height:50px ;"><span class="me-3" style="font-size:18px ;">:</span></td>
-                      <td style="height:50px ;"><span style="font-size:18px ;"><?= $row->namaUmkm ?></span></td>
-                    </tr>
-                    <tr style="vertical-align:top ;">
-                      <td style="height:50px ; width: 140px;"><span class="me-3" style="font-size:18px ;">Jenis Produk</span></td>
-                      <td style="height:50px ;"><span class="me-3" style="font-size:18px ;">:</span></td>
-                      <td style="height:50px ;"><span style="font-size:18px ;"><?= $row->jenisProduk ?></span></td>
-                    </tr>
-                    <tr style="vertical-align:top ;">
-                      <td style="height:50px ; width: 140px;"><span class="me-3" style="font-size:18px ;">Alamat</span></td>
-                      <td style="height:50px ;"><span class="me-3" style="font-size:18px ;">:</span></td>
-                      <td style="height:50px ;"><span style="font-size:18px ;"><?= $row->lokasi ?></span></td>
-                    </tr>
-                  </table>
-                </div>
-                <br>
-                <div class="umkm-description">
-                  <p class="p-3"><?= $row->deskripsi ?></p>
-                </div>
-              </div>
-                <div style="padding-right:65px ; padding-top:40px ; padding-bottom:100px ;" id="btn-links">
-              <table align="right">
-                <tr>
-                  <td style="padding-right:20px ;">
-                  <form target="_blank" action="<?= $row->olshop ?>">
-                  <button class="p-3" style="background-color:transparent ;" id="shopee-link">Link Online Shop</button>
-                  </form>
-                  </td>
-                  <td>
-                  <form target="_blank" action="https://wa.me/62<?= $row->nomorWa ?>">
-                  <button class="p-3" id="whatsapp-link">Link WhatsApp</button>
-                  </form>
-                  </td>
-                </tr>
-              </table>
-              </div>
-            </div>
-          </div>
-        </div>
       </section>
-    <?php endforeach; ?>
-    <?php
-        } else {
-    ?>
-    <section class="container mt-5">
-      <div class="d-flex mt-5">
-        <div class="me-auto">
-          <p class="page-title">HASIL PENCARIAN UMKM</p>
-        </div>
-    </section>
-    <section class="container mb-2">
-      <p>UMKM Tidak Ditemukan</p>
-    </section>
-    <?php
-        }
-    ?>
-
-    <!-- HASIL PENCARIAN PERANGKAT DESA -->
-    <section id="village-apparatus">
-    <?php 
-        if (!empty($cari_PD)) {
-    ?>
-    <section class="container mt-5 mb-5">
-      <div class="d-flex mt-5">
-        <div class="me-auto">
-          <p class="page-title">HASIL PENCARIAN PERANGKAT DESA</p>
-        </div>
-    </section>
-      <div class="container my-5 fs-5">
-        <div class="row g-4">
+      <!-- NEWS LIST -->
+      <div class="container mb-5">
+        <div class="row g-3">
           <?php
-          foreach ($cari_PD as $row) : ?>
-            <div class="col-12 col-lg-6">
-              <div class="card mb-3">
-                <div class="row no-gutters">
-                  <div class="col-md-4">
-                    <img src="<?php echo base_url(); ?>assets/images/village-profile/<?= $row->gambarPD ?>" class="card-img" style="aspect-ratio: 86 / 107;" alt="...">
-                  </div>
-                  <div class="col-md-8">
-                    <div class="card-body" style="padding: 75px 0px 0px 25px;">
-                      <p class="nama"><b><?= $row->namaPD ?></b></p>
-                      <p class="jabatan"><?= $row->jabatanPD ?></p>
-                    </div>
+          foreach ($cari_berita as $row) : ?>
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="card-body" style="border-style: solid; border-width: 1px; border-radius: 20px; border-color: #909A9B;">
+                <img src="<?php echo base_url(); ?>assets/images/news/<?= $row->gambarBerita; ?>" height="250px" class="card-img-top p-2" style=" width: 350; height: 175; margin-left: auto; margin-right: auto;" alt="Card Image">
+                <div class="card-body">
+                  <?php if (strlen($row->judul) <= 75) : ?>
+                    <p class="card-title" style="text-align: center; font-size: 14px;"><b><?= $row->judul ?></b></p>
+                  <?php else : ?>
+                    <p class="card-title" style="text-align: center; font-size: 14px;"><b><?= substr($row->judul, 0, 75) . " ..." ?></b></p>
+                  <?php endif; ?>
+                  <?php if (strlen($row->deskripsi) <= 200) : ?>
+                    <p class="" style="font-size: 12px;"><?= $row->deskripsi ?></p>
+                  <?php else : ?>
+                    <p class="" style="font-size: 12px;"><?= substr($row->deskripsi, 0, 200) . " ..." ?></p>
+                  <?php endif; ?>
+                  <div class="d-flex justify-content-center">
+                    <button type="button" class="btn" style="background: #125159; border-radius: 30px;">
+                      <a class="text-decoration-none" href="<?php echo base_url('berita/' . $row->idBerita); ?>" style="color: #fff;">Baca Selengkapnya</a>
+                    </button>
                   </div>
                 </div>
               </div>
             </div>
           <?php endforeach; ?>
+        </div>
+      </div>
+    <?php
+    } else {
+    ?>
+      <section class="container mt-5">
+        <div class="d-flex mt-5">
+          <div class="me-auto">
+            <p class="page-title">HASIL PENCARIAN BERITA</p>
+          </div>
+      </section>
+      <section class="container mb-2">
+        <p>Berita Tidak Ditemukan</p>
+      </section>
+    <?php
+    }
+    ?>
+
+    <!-- End of HASIL PENCARIAN BERITA -->
+
+    <!-- HASIL PENCARIAN UMKM DESA KARANGNONGKO -->
+    <?php
+    if (!empty($cari_umkm)) {
+    ?>
+      <section class="container mt-5">
+        <div class="d-flex mt-5">
+          <div class="me-auto">
+            <p class="page-title">HASIL PENCARIAN UMKM</p>
+          </div>
+      </section>
+      <!-- UMKM Loop -->
+      <?php
+      foreach ($cari_umkm as $row) : ?>
+        <section class="my-5 products-list d-flex justify-content-center align-items-center">
+          <div class="card horizontal-card mb-3" style="width: 1295px; background-color: transparent;">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img id="umkm-image" src="<?php echo base_url(); ?>assets/images/umkm-products/<?= $row->gambarUmkm ?>" class="img-fluid p-5 rounded-start" style=" width: 280; height: 328;" alt="Foto Produk UMKM">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body mt-4 me-5">
+                  <div class="product-details">
+                    <table>
+                      <tr>
+                        <td colspan="3" style="height:50px ; ">
+                          <p class="card-title" id="umkm-name" style="font-size:20px ;"><b><?= $row->namaUmkm ?></b></p>
+                        </td>
+                      </tr>
+                      <tr style="vertical-align:top ;">
+                        <td style="height:50px ; width: 140px;"><span class="me-3" style="font-size:18px ;">Nama Produk</span></td>
+                        <td style="height:50px ;"><span class="me-3" style="font-size:18px ;">:</span></td>
+                        <td style="height:50px ;"><span style="font-size:18px ;"><?= $row->namaUmkm ?></span></td>
+                      </tr>
+                      <tr style="vertical-align:top ;">
+                        <td style="height:50px ; width: 140px;"><span class="me-3" style="font-size:18px ;">Jenis Produk</span></td>
+                        <td style="height:50px ;"><span class="me-3" style="font-size:18px ;">:</span></td>
+                        <td style="height:50px ;"><span style="font-size:18px ;"><?= $row->jenisProduk ?></span></td>
+                      </tr>
+                      <tr style="vertical-align:top ;">
+                        <td style="height:50px ; width: 140px;"><span class="me-3" style="font-size:18px ;">Alamat</span></td>
+                        <td style="height:50px ;"><span class="me-3" style="font-size:18px ;">:</span></td>
+                        <td style="height:50px ;"><span style="font-size:18px ;"><?= $row->lokasi ?></span></td>
+                      </tr>
+                    </table>
+                  </div>
+                  <br>
+                  <div class="umkm-description">
+                    <p class="p-3"><?= $row->deskripsi ?></p>
+                  </div>
+                </div>
+                <div style="padding-right:65px ; padding-top:40px ; padding-bottom:100px ;" id="btn-links">
+                  <table align="right">
+                    <tr>
+                      <td style="padding-right:20px ;">
+                        <form target="_blank" action="<?= $row->olshop ?>">
+                          <button class="p-3" style="background-color:transparent ;" id="shopee-link">Link Online Shop</button>
+                        </form>
+                      </td>
+                      <td>
+                        <form target="_blank" action="https://wa.me/62<?= $row->nomorWa ?>">
+                          <button class="p-3" id="whatsapp-link">Link WhatsApp</button>
+                        </form>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      <?php endforeach; ?>
+    <?php
+    } else {
+    ?>
+      <section class="container mt-5">
+        <div class="d-flex mt-5">
+          <div class="me-auto">
+            <p class="page-title">HASIL PENCARIAN UMKM</p>
+          </div>
+      </section>
+      <section class="container mb-2">
+        <p>UMKM Tidak Ditemukan</p>
+      </section>
+    <?php
+    }
+    ?>
+
+    <!-- HASIL PENCARIAN PERANGKAT DESA -->
+    <section id="village-apparatus">
+      <?php
+      if (!empty($cari_PD)) {
+      ?>
+        <section class="container mt-5 mb-5">
+          <div class="d-flex mt-5">
+            <div class="me-auto">
+              <p class="page-title">HASIL PENCARIAN PERANGKAT DESA</p>
+            </div>
+        </section>
+        <div class="container my-5 fs-5">
+          <div class="row g-4">
+            <?php
+            foreach ($cari_PD as $row) : ?>
+              <div class="col-12 col-lg-6">
+                <div class="card mb-3">
+                  <div class="row no-gutters">
+                    <div class="col-md-4">
+                      <img src="<?php echo base_url(); ?>assets/images/village-profile/<?= $row->gambarPD ?>" class="card-img" style="aspect-ratio: 86 / 107;" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body" style="padding: 75px 0px 0px 25px;">
+                        <p class="nama"><b><?= $row->namaPD ?></b></p>
+                        <p class="jabatan"><?= $row->jabatanPD ?></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <?php endforeach; ?>
           <?php
         } else {
-        ?>
-        <section class="container mt-5">
-        <div class="d-flex mt-5">
-        <div class="me-auto">
-          <p class="page-title">HASIL PENCARIAN PERANGKAT DESA</p>
-        </div>
-        </section>
-        <section class="container mb-5">
-            <p>Perangkat Desa Tidak Ditemukan</p>
-        </section>
-        <?php
+          ?>
+            <section class="container mt-5">
+              <div class="d-flex mt-5">
+                <div class="me-auto">
+                  <p class="page-title">HASIL PENCARIAN PERANGKAT DESA</p>
+                </div>
+            </section>
+            <section class="container mb-5">
+              <p>Perangkat Desa Tidak Ditemukan</p>
+            </section>
+          <?php
         }
-    ?>
-        </div>
+          ?>
+          </div>
         </div>
     </section>
   </div>
@@ -354,7 +356,10 @@
       </div>
     </div>
     <div class="lines" style="border-bottom: 1px solid #1E2833;"></div>
-    <div class="footer-bottom container text-center" id="copyright">Copyright &copy; 2022. Desa Karangnongko Poncokusumo Malang. All rights reserved.</div>
+    <div class="footer-bottom container text-center" id="copyright">
+      Copyright &copy; 2022. Desa Karangnongko Poncokusumo Malang. All rights reserved.<br>
+      <span>Created by KKN Kelompok 7 FILKOM UB 2022</span>
+    </div>
   </footer>
   <!-- End of FOOTER -->
 

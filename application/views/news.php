@@ -92,7 +92,7 @@
         foreach ($alternative as $row) : ?>
           <div class="col-12 col-md-6 col-lg-4">
             <div class="card-body" style="border-style: solid; border-width: 1px; border-radius: 20px; border-color: #909A9B;">
-              <img src="<?php echo base_url(); ?>assets/images/news/<?= $row->gambarBerita;?>" height="250px" class="card-img-top p-2" style=" width: 350; height: 175; margin-left: auto; margin-right: auto;" alt="Card Image">
+              <img src="<?php echo base_url(); ?>assets/images/news/<?= $row->gambarBerita; ?>" height="250px" class="card-img-top p-2" style=" width: 350; height: 175; margin-left: auto; margin-right: auto;" alt="Card Image">
               <div class="card-body">
                 <?php if (strlen($row->judul) <= 75) : ?>
                   <p class="card-title" style="text-align: center; font-size: 14px;"><b><?= $row->judul ?></b></p>
@@ -185,7 +185,10 @@
       </div>
     </div>
     <div class="lines" style="border-bottom: 1px solid #1E2833;"></div>
-    <div class="footer-bottom container text-center" id="copyright">Copyright &copy; 2022. Desa Karangnongko Poncokusumo Malang. All rights reserved.</div>
+    <div class="footer-bottom container text-center" id="copyright">
+      Copyright &copy; 2022. Desa Karangnongko Poncokusumo Malang. All rights reserved.<br>
+      <span>Created by KKN Kelompok 7 FILKOM UB 2022</span>
+    </div>
   </footer>
   <!-- End of FOOTER -->
 
