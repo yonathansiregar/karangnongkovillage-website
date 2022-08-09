@@ -146,12 +146,21 @@ class Dashboard extends CI_Controller
     redirect('daftarBerita');
   }
   
-  public function simpanEditBerita()
+  public function simpanEditBerita($idBerita)
   {
     $upload_path = 'assets/images/news/';
     $filename = $_FILES["gambar"]["name"];
     move_uploaded_file($_FILES["gambar"]["tmp_name"],$upload_path . $filename);
-    $this->berita->edit();
+    $lama = $this->berita->getById($idBerita);
+    $this->berita->edit($idBerita);
+    $baru = $this->berita->getById($idBerita);
+    if ($lama->gambarBerita != $baru->gambarBerita) {
+    $filename = "assets/images/news/". $lama->gambarBerita;
+    $open = fopen($filename, "w");
+    fclose($open);
+    chmod($filename, 0777);
+    unlink($filename);
+    }
     redirect('daftarBerita');
   }
 
@@ -198,12 +207,21 @@ class Dashboard extends CI_Controller
     redirect('daftarUmkm');
   }
 
-  public function simpanEditUmkm()
+  public function simpanEditUmkm($idUmkm)
   {
     $upload_path = 'assets/images/umkm-products/';
     $filename = $_FILES["gambar"]["name"];
     move_uploaded_file($_FILES["gambar"]["tmp_name"],$upload_path . $filename);
-    $this->umkm->edit();
+    $lama = $this->umkm->getById($idUmkm);
+    $this->umkm->edit($idUmkm);
+    $baru = $this->umkm->getById($idUmkm);
+    if ($lama->gambarUmkm != $baru->gambarUmkm) {
+    $filename = "assets/images/umkm-products/". $lama->gambarUmkm;
+    $open = fopen($filename, "w");
+    fclose($open);
+    chmod($filename, 0777);
+    unlink($filename);
+    }
     redirect('daftarUmkm');
   }
 
@@ -250,12 +268,21 @@ class Dashboard extends CI_Controller
     redirect('daftarPD');
   }
 
-  public function simpanEditPD()
+  public function simpanEditPD($idPD)
   {
     $upload_path = 'assets/images/village-profile/';
     $filename = $_FILES["gambar"]["name"];
     move_uploaded_file($_FILES["gambar"]["tmp_name"],$upload_path . $filename);
-    $this->perangkatDesa->edit();
+    $lama = $this->perangkatDesa->getById($idPD);
+    $this->perangkatDesa->edit($idPD);
+    $baru = $this->perangkatDesa->getById($idPD);
+    if ($lama->gambarPD != $baru->gambarPD) {
+    $filename = "assets/images/village-profile/". $lama->gambarPD;
+    $open = fopen($filename, "w");
+    fclose($open);
+    chmod($filename, 0777);
+    unlink($filename);
+    }
     redirect('daftarPD');
   }
 

@@ -53,7 +53,7 @@ class Berita extends CI_Model
   }
 
   //Mengedit data berita
-  public function edit()
+  public function edit($idBerita)
   {
     $data = array(
       "judul" => $this->input->post('judul'),
@@ -65,7 +65,7 @@ class Berita extends CI_Model
       $this->table,
       $data,
       array(
-        'idBerita' => $this->input->post('idBerita')
+        'idBerita' => $idBerita
       )
     );
   }
