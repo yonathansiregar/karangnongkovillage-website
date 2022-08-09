@@ -54,7 +54,7 @@ class PerangkatDesa extends CI_Model
     $data = array(
       "namaPD" => $this->input->post('namaPD'),
       "jabatanPD" => $this->input->post('jabatanPD'),
-      "gambarPD" => $this->input->post('gambarPD')
+      "gambarPD" => date("d-m-Y H:i:s"). ' '. $this->input->post('gambarPD')
     );
     return $this->db->insert(
       $this->table,
@@ -68,7 +68,7 @@ class PerangkatDesa extends CI_Model
     $data = array(
       "namaPD" => $this->input->post('namaPD'),
       "jabatanPD" => $this->input->post('jabatanPD'),
-      "gambarPD" => $this->input->post('gambarPD')
+      "gambarPD" => date("d-m-Y H:i:s"). ' '. $this->input->post('gambarPD')
     );
     return $this->db->update(
       $this->table,

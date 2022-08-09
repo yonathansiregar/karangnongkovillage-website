@@ -44,7 +44,7 @@ class Berita extends CI_Model
       "judul" => $this->input->post('judul'),
       "deskripsi" => $this->input->post('deskripsi'),
       "tanggal" => $this->input->post('tanggal'),
-      "gambarBerita" => $this->input->post('gambarBerita')
+      "gambarBerita" => date("d-m-Y H:i:s"). ' '. $this->input->post('gambarBerita')
     );
     return $this->db->insert(
       $this->table,
@@ -59,7 +59,7 @@ class Berita extends CI_Model
       "judul" => $this->input->post('judul'),
       "deskripsi" => $this->input->post('deskripsi'),
       "tanggal" => $this->input->post('tanggal'),
-      "gambarBerita" => $this->input->post('gambarBerita')
+      "gambarBerita" => date("d-m-Y H:i:s"). ' '. $this->input->post('gambarBerita')
     );
     return $this->db->update(
       $this->table,

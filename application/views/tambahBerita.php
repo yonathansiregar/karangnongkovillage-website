@@ -50,8 +50,7 @@ if (empty($_SESSION["username"])) {
             }
 
             function getoutput() {
-                const today = new Date();
-                gambarBerita.value = <?php date("d-m-Y H:i:s")?>+' '+getFile(gambar.value);
+                gambarBerita.value = getFile(gambar.value);
                 extension.value = gambar.value.split('.')[1];
             }
         </script>
