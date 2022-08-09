@@ -156,7 +156,7 @@ class Dashboard extends CI_Controller
     $lama = $this->berita->getById($idBerita);
     $this->berita->edit($idBerita);
     $baru = $this->berita->getById($idBerita);
-    if ($lama->gambarBerita != $baru->gambarBerita) {
+    if ($lama->gambarBerita != $baru->gambarBerita && $lama->gambarBerita != null && $lama->gambarBerita != '') {
     $filename = "assets/images/news/". $lama->gambarBerita;
     $open = fopen($filename, "w");
     fclose($open);
@@ -217,7 +217,7 @@ class Dashboard extends CI_Controller
     $lama = $this->umkm->getById($idUmkm);
     $this->umkm->edit($idUmkm);
     $baru = $this->umkm->getById($idUmkm);
-    if ($lama->gambarUmkm != $baru->gambarUmkm) {
+    if ($lama->gambarUmkm != $baru->gambarUmkm && $lama->gambarUmkm != null && $lama->gambarUmkm != '') {
     $filename = "assets/images/umkm-products/". $lama->gambarUmkm;
     $open = fopen($filename, "w");
     fclose($open);
@@ -278,7 +278,7 @@ class Dashboard extends CI_Controller
     $lama = $this->perangkatDesa->getById($idPD);
     $this->perangkatDesa->edit($idPD);
     $baru = $this->perangkatDesa->getById($idPD);
-    if ($lama->gambarPD != $baru->gambarPD) {
+    if ($lama->gambarPD != $baru->gambarPD && $lama->gambarPD != null && $lama->gambarPD != '') {
     $filename = "assets/images/village-profile/". $lama->gambarPD;
     $open = fopen($filename, "w");
     fclose($open);
@@ -339,7 +339,7 @@ class Dashboard extends CI_Controller
     $lama = $this->kkn->getById($idKKN);
     $this->kkn->edit($idKKN);
     $baru = $this->kkn->getById($idKKN);
-    if ($lama->gambarKKN != $baru->gambarKKN) {
+    if ($lama->gambarKKN != $baru->gambarKKN && $lama->gambarKKN != null && $lama->gambarKKN != '') {
     $filename = "assets/images/village-profile/". $lama->gambarKKN;
     $open = fopen($filename, "w");
     fclose($open);
