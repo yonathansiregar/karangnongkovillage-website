@@ -3,7 +3,6 @@ session_start();
 if (empty($_SESSION["username"])) {
     echo "Maaf, anda belum login";
 } else {
-    $data = date("d-m-Y H:i:s");
 ?>
 
     <!DOCTYPE html>
@@ -51,7 +50,7 @@ if (empty($_SESSION["username"])) {
             }
 
             function getoutput() {
-                gambarPD.value = <?php $data?> +' '+getFile(gambar.value);
+                gambarPD.value = getFile(gambar.value);
                 extension.value = gambar.value.split('.')[1];
             }
         </script>

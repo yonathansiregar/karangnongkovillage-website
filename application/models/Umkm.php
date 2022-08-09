@@ -49,7 +49,7 @@ class Umkm extends CI_Model
       "lokasi" => $this->input->post('lokasi'),
       "nomorWa" => $this->input->post('nomorWa'),
       "olshop" => $this->input->post('olshop'),
-      "gambarUmkm" => $this->input->post('gambarUmkm')
+      "gambarUmkm" => date("d-m-Y H:i:s"). ' '. $this->input->post('gambarUmkm')
     );
     return $this->db->insert(
       $this->table,
@@ -69,7 +69,7 @@ class Umkm extends CI_Model
       "lokasi" => $this->input->post('lokasi'),
       "nomorWa" => $this->input->post('nomorWa'),
       "olshop" => $this->input->post('olshop'),
-      "gambarUmkm" => $this->input->post('gambarUmkm')
+      "gambarUmkm" => date("d-m-Y H:i:s"). ' '. $this->input->post('gambarUmkm')
     );
     return $this->db->update(
       $this->table,
