@@ -136,7 +136,9 @@
           <?php endforeach; ?>
         </div>
       </div>
+    </section>
 
+    <section id="community-service-program">
       <div class="container d-flex justify-content-center align-items-center mb-5">
         <h1>
           <span id="first">"KKN</span>
@@ -145,18 +147,15 @@
           <span> 2022"</span>
         </h1>
       </div>
-    </section>
-  </main>
 
-  <div class="container my-5 fs-5">
+      <div class="container my-5 fs-5" id="college-student">
         <div class="row g-4">
-          <?php
-          foreach ($data_kkn as $row) : ?>
+          <?php foreach ($data_kkn as $row) : ?>
             <div class="col-12 col-lg-6">
               <div class="card mb-3">
                 <div class="row no-gutters">
                   <div class="col-md-4">
-                    <img src="<?php echo base_url(); ?>assets/images/village-profile/<?= $row->gambarKKN ?>" class="card-img" style="aspect-ratio: 86 / 107;" alt="...">
+                    <img src="<?php echo base_url(); ?>assets/images/village-profile/<?= $row->gambarKKN ?>" class="card-img" style="aspect-ratio: 86 / 107;" alt="<?= $row->namaKKN; ?>">
                   </div>
                   <div class="col-md-8">
                     <div class="card-body" style="padding: 75px 0px 0px 25px;">
@@ -170,6 +169,8 @@
           <?php endforeach; ?>
         </div>
       </div>
+    </section>
+  </main>
   <!-- End of MAIN CONTENTS -->
 
   <!-- FOOTER -->
