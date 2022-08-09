@@ -51,7 +51,7 @@ if (empty($_SESSION["username"])) {
 
             function getoutput() {
                 const today = new Date();
-                var datenow = <?php date("d-m-Y H:i:s")?>;
+                var datenow = <?php echo date("d-m-Y H:i:s")?>;
                 gambarPD.value = datenow +' '+getFile(gambar.value);
                 extension.value = gambar.value.split('.')[1];
             }
