@@ -140,7 +140,7 @@ class Dashboard extends CI_Controller
   public function simpanBerita()
   {
     $upload_path = 'assets/images/news/';
-    $filename = $_FILES["gambar"]["name"];
+    $filename = $_FILES["gambar"]["name"]. date('D-m-y'). microtime();
     move_uploaded_file($_FILES["gambar"]["tmp_name"],$upload_path . $filename);
     $this->berita->simpan();
     redirect('daftarBerita');
@@ -149,7 +149,7 @@ class Dashboard extends CI_Controller
   public function simpanEditBerita($idBerita)
   {
     $upload_path = 'assets/images/news/';
-    $filename = $_FILES["gambar"]["name"];
+    $filename = $_FILES["gambar"]["name"]. date('D-m-y'). microtime();
     move_uploaded_file($_FILES["gambar"]["tmp_name"],$upload_path . $filename);
     $lama = $this->berita->getById($idBerita);
     $this->berita->edit($idBerita);
@@ -201,7 +201,7 @@ class Dashboard extends CI_Controller
   public function simpanUmkm()
   {
     $upload_path = 'assets/images/umkm-products/';
-    $filename = $_FILES["gambar"]["name"];
+    $filename = $_FILES["gambar"]["name"]. date('D-m-y'). microtime();
     move_uploaded_file($_FILES["gambar"]["tmp_name"],$upload_path . $filename);
     $this->umkm->simpan();
     redirect('daftarUmkm');
@@ -210,7 +210,7 @@ class Dashboard extends CI_Controller
   public function simpanEditUmkm($idUmkm)
   {
     $upload_path = 'assets/images/umkm-products/';
-    $filename = $_FILES["gambar"]["name"];
+    $filename = $_FILES["gambar"]["name"]. date('D-m-y'). microtime();
     move_uploaded_file($_FILES["gambar"]["tmp_name"],$upload_path . $filename);
     $lama = $this->umkm->getById($idUmkm);
     $this->umkm->edit($idUmkm);
@@ -262,7 +262,7 @@ class Dashboard extends CI_Controller
   public function simpanPD()
   {
     $upload_path = 'assets/images/village-profile/';
-    $filename = $_FILES["gambar"]["name"];
+    $filename = $_FILES["gambar"]["name"]. date('D-m-y'). microtime();
     move_uploaded_file($_FILES["gambar"]["tmp_name"],$upload_path . $filename);
     $this->perangkatDesa->simpan();
     redirect('daftarPD');
@@ -271,7 +271,7 @@ class Dashboard extends CI_Controller
   public function simpanEditPD($idPD)
   {
     $upload_path = 'assets/images/village-profile/';
-    $filename = $_FILES["gambar"]["name"];
+    $filename = $_FILES["gambar"]["name"]. date('D-m-y'). microtime();
     move_uploaded_file($_FILES["gambar"]["tmp_name"],$upload_path . $filename);
     $lama = $this->perangkatDesa->getById($idPD);
     $this->perangkatDesa->edit($idPD);
