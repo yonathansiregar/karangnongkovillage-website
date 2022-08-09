@@ -63,7 +63,7 @@ class PerangkatDesa extends CI_Model
   }
 
   //Mengedit data perangkatDesa
-  public function edit()
+  public function edit($idPD)
   {
     $data = array(
       "namaPD" => $this->input->post('namaPD'),
@@ -74,7 +74,7 @@ class PerangkatDesa extends CI_Model
       $this->table,
       $data,
       array(
-        'idPD' => $this->input->post('idPD')
+        'idPD' => $idPD
       )
     );
   }

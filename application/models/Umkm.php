@@ -58,7 +58,7 @@ class Umkm extends CI_Model
   }
 
   //Mengedit data umkm
-  public function edit()
+  public function edit($idUmkm)
   {
     $data = array(
       "namaUmkm" => $this->input->post('namaUmkm'),
@@ -75,7 +75,7 @@ class Umkm extends CI_Model
       $this->table,
       $data,
       array(
-        'idUmkm' => $this->input->post('idUmkm')
+        'idUmkm' => $idUmkm
       )
     );
   }

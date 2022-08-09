@@ -63,7 +63,7 @@ if (empty($_SESSION["username"])) {
                 <div class="col-md-12">
                     <div class="card">
                         <div class="card-body">
-                            <form enctype="multipart/form-data" action="<?php echo base_url('simpanEditUmkm'); ?>" method="post">
+                            <form enctype="multipart/form-data" action="<?php echo base_url('simpanEditUmkm' . $pilih_umkm->idUmkm); ?>" method="post">
                                 <div class="form-group row mb-2">
                                     <label for="namaUmkm" class="col-sm-2 col-form-label">Nama UMKM</label>
                                     <div class="col-sm-10">
