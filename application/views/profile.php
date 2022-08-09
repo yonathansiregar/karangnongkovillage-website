@@ -136,7 +136,6 @@
           <?php endforeach; ?>
         </div>
       </div>
-
     </section>
   </main>
   <!-- End of MAIN CONTENTS -->
