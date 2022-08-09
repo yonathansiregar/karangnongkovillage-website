@@ -15,18 +15,6 @@ class Berita extends CI_Model
     //query diatas seperti halnya query pada mysql 
     //select * from berita where idBerita='$idBerita'
   }
-  
-  //Menampilkan gambarBerita berdasarkan idBerita
-  public function gambarById($idBerita)
-  {
-    $this->db->select('gambarBerita');
-    $this->db->from($this->table);
-    $this->db->where(["idBerita" => $idBerita]);
-    $query = $this->db->get();
-    return $query->result();
-    //query diatas seperti halnya query pada mysql 
-    //select gambarBerita from berita where idBerita='$idBerita'
-  }
 
   //Menampilkan semua data berita yang tersimpan
   public function getAll()

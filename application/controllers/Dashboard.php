@@ -127,8 +127,13 @@ class Dashboard extends CI_Controller
 
   public function hapusBerita($idBerita)
   {
+    $data = $this->berita->getById($idBerita);
+    $filename = "assets/images/news/". $data->gambarBerita;
+    $open = fopen($filename, "w");
+    fclose($open);
+    chmod($filename, 0777);
+    unlink($filename);
     $this->berita->hapus($idBerita);
-    unlink("assets/images/news/". $this->berita->gambarById($idBerita));
     redirect("daftarBerita");
   }
 
@@ -174,8 +179,13 @@ class Dashboard extends CI_Controller
 
   public function hapusUmkm($idUmkm)
   {
+    $data = $this->umkm->getById($idUmkm);
+    $filename = "assets/images/umkm-products/". $data->gambarUmkm;
+    $open = fopen($filename, "w");
+    fclose($open);
+    chmod($filename, 0777);
+    unlink($filename);
     $this->umkm->hapus($idUmkm);
-    unlink("assets/images/umkm-products/". $this->umkm->gambarById($idUmkm));
     redirect("daftarUmkm");
   }
 
@@ -221,8 +231,13 @@ class Dashboard extends CI_Controller
 
   public function hapusPD($idPD)
   {
+    $data = $this->perangkatDesa->getById($idPD);
+    $filename = "assets/images/village-profile/". $data->gambarPD;
+    $open = fopen($filename, "w");
+    fclose($open);
+    chmod($filename, 0777);
+    unlink($filename);
     $this->perangkatDesa->hapus($idPD);
-    unlink("assets/images/village-profile/". $this->perangkatDesa->gambarById($idPD));
     redirect("daftarPD");
   }
 
