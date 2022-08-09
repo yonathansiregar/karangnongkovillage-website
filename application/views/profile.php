@@ -137,7 +137,7 @@
         </div>
       </div>
 
-      <div class="container d-flex justify-content-center align-items-center mb-5">
+      <div class="container d-flex justify-content-center align-items-center" style="margin-bottom: 70px;">
         <h1>
           <span id="first">"KKN</span>
           <span id="second"> KELOMPOK 7</span>
@@ -147,6 +147,29 @@
       </div>
     </section>
   </main>
+
+  <div class="container my-5 fs-5">
+        <div class="row g-4">
+          <?php
+          foreach ($data_kkn as $row) : ?>
+            <div class="col-12 col-lg-6">
+              <div class="card mb-3">
+                <div class="row no-gutters">
+                  <div class="col-md-4">
+                    <img src="<?php echo base_url(); ?>assets/images/village-profile/<?= $row->gambarKKN ?>" class="card-img" style="aspect-ratio: 86 / 107;" alt="...">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body" style="padding: 75px 0px 0px 25px;">
+                      <p class="nama"><b><?= $row->namaKKN ?></b></p>
+                      <p class="jabatan"><?= $row->jabatanKKN ?></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <?php endforeach; ?>
+        </div>
+      </div>
   <!-- End of MAIN CONTENTS -->
 
   <!-- FOOTER -->
