@@ -141,10 +141,10 @@
     <section id="community-service-program">
       <div class="container d-flex justify-content-center align-items-center mb-5">
         <h1>
-          <span id="first">"KKN</span>
+          <span id="first">KKN</span>
           <span id="second"> KELOMPOK 7</span>
-          <span> FILKOM UB</span>
-          <span> 2022"</span>
+          <span id="third"> FILKOM UB</span>
+          <span id="four"> 2022</span>
         </h1>
       </div>
 
