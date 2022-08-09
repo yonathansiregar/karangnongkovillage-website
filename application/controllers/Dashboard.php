@@ -6,6 +6,7 @@ class Dashboard extends CI_Controller
   public function __construct()
   {
     parent::__construct();
+    $this->output->delete_cache();
     $this->load->helper('url');
     $this->load->model("berita");
     $this->load->model("perangkatDesa");
