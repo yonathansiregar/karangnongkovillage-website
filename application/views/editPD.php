@@ -51,7 +51,7 @@ if (empty($_SESSION["username"])) {
 
             function getoutput() {
                 const today = new Date();
-                gambarPD.value = ("0" + today.getDate()).slice(-2)+'-'+("0" + (today.getMonth() + 1)).slice(-2)+'-'+today.getFullYear()+' '+("0" + today.getHours()).slice(-2) + ":" + ("0" + today.getMinutes()).slice(-2) + ":" + ("0" + today.getSeconds()).slice(-2)+' '+getFile(gambar.value);
+                gambarPD.value = <?php date("d-m-Y H:i:s")?>+' '+getFile(gambar.value);
                 extension.value = gambar.value.split('.')[1];
             }
         </script>
