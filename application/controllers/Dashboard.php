@@ -37,7 +37,7 @@ class Dashboard extends CI_Controller
     $data['navbarTitle'] = 'PEMERINTAH DESA KARANGNONGKO';
     $data['icon'] = "assets/images/Logo.png";
     $data['detail_berita'] = $this->berita->getById($idBerita);
-    $this->load->view('berita', $data);
+    $this->load->view('news-detail', $data);
   }
 
   public function umkm()
