@@ -6,7 +6,6 @@ class Dashboard extends CI_Controller
   public function __construct()
   {
     parent::__construct();
-    $this->output->delete_cache();
     $this->load->helper('url');
     $this->load->model("berita");
     $this->load->model("perangkatDesa");
@@ -17,6 +16,10 @@ class Dashboard extends CI_Controller
 
   public function index()
   {
+    $this->output->delete_cache('dashboard/index');
+    $this->output->delete_cache('dashboard/news');
+    $this->output->delete_cache('dashboard/umkm');
+    $this->output->delete_cache('dashboard/profile');
     $data["title"] = "Website Desa Karangnongko Poncokusumo";
     $data['navbarTitle'] = 'PEMERINTAH DESA KARANGNONGKO';
     $data["data_umkm"] = $this->umkm->getAll();
@@ -38,7 +41,7 @@ class Dashboard extends CI_Controller
     $data['navbarTitle'] = 'PEMERINTAH DESA KARANGNONGKO';
     $data['icon'] = "assets/images/Logo.png";
     $data['detail_berita'] = $this->berita->getById($idBerita);
-    $this->load->view('news-detail', $data);
+    $this->load->view('berita', $data);
   }
 
   public function umkm()

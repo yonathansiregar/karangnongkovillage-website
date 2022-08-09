@@ -1,5 +1,3 @@
-<?php clearstatcache(); ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
