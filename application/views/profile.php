@@ -136,6 +136,15 @@
           <?php endforeach; ?>
         </div>
       </div>
+
+      <div class="container d-flex justify-content-center align-items-center mb-5">
+        <h1>
+          <span id="first">"KKN</span>
+          <span id="second"> KELOMPOK 7</span>
+          <span> FILKOM UB</span>
+          <span> 2022"</span>
+        </h1>
+      </div>
     </section>
   </main>
   <!-- End of MAIN CONTENTS -->
@@ -214,9 +223,16 @@
   </footer>
   <!-- End of FOOTER -->
 
+  <!-- JQuery JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" type="text/javascript"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
   <!-- Separate Popper and Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+  <!-- Profile JS -->
+  <script src="<?php echo base_url(); ?>assets/js/profile.js"></script>
 </body>
 
 </html>
