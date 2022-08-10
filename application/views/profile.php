@@ -152,7 +152,7 @@
         <div class="row g-4">
           <?php foreach ($data_kkn as $row) : ?>
             <div class="col-12 col-lg-6">
-              <div class="card mb-3">
+              <div class="card mb-3" style="border: 1px solid #000; border-radius: 10px;">
                 <div class="row no-gutters">
                   <div class="col-md-4">
                     <img src="<?php echo base_url(); ?>assets/images/village-profile/<?= $row->gambarKKN ?>" class="card-img" style="aspect-ratio: 86 / 107;" alt="<?= $row->namaKKN; ?>">
