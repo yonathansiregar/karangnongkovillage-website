@@ -81,13 +81,12 @@ class Dashboard extends CI_Controller
     $username = $_POST['username'];
     $password = $_POST['password'];
     if ($username == $username_login && $password == $password_login) {
-        session_start();
-        $_SESSION['username'] = $username;
-        redirect('modification');
-    } 
-    else {
+      session_start();
+      $_SESSION['username'] = $username;
+      redirect('modification');
+    } else {
       redirect('login');
-   }
+    }
   }
 
   public function logout_process()
@@ -111,7 +110,7 @@ class Dashboard extends CI_Controller
     $data['semua_berita'] = $this->berita->getAll();
     $this->load->view('daftarBerita', $data);
   }
-  
+
   public function tambahBerita()
   {
     $this->load->helper('form');
@@ -130,38 +129,40 @@ class Dashboard extends CI_Controller
   public function hapusBerita($idBerita)
   {
     $data = $this->berita->getById($idBerita);
-    $filename = "assets/images/news/". $data->gambarBerita;
-    $open = fopen($filename, "w");
-    fclose($open);
-    chmod($filename, 0777);
-    unlink($filename);
-    $this->berita->hapus($idBerita);
-    redirect("daftarBerita");
+    $filename = "assets/images/news/" . $data->gambarBerita;
+    if (!empty($data->gambarBerita)) {
+      $open = fopen($filename, "w");
+      fclose($open);
+      chmod($filename, 0777);
+      unlink($filename);
+      $this->berita->hapus($idBerita);
+      redirect("daftarBerita");
+    }
   }
 
   public function simpanBerita()
   {
     $upload_path = 'assets/images/news/';
     $filename = $_FILES["gambar"]["name"];
-    move_uploaded_file($_FILES["gambar"]["tmp_name"],$upload_path . $filename);
+    move_uploaded_file($_FILES["gambar"]["tmp_name"], $upload_path . $filename);
     $this->berita->simpan();
     redirect('daftarBerita');
   }
-  
+
   public function simpanEditBerita($idBerita)
   {
     $upload_path = 'assets/images/news/';
     $filename = $_FILES["gambar"]["name"];
-    move_uploaded_file($_FILES["gambar"]["tmp_name"],$upload_path . $filename);
+    move_uploaded_file($_FILES["gambar"]["tmp_name"], $upload_path . $filename);
     $lama = $this->berita->getById($idBerita);
     $this->berita->edit($idBerita);
     $baru = $this->berita->getById($idBerita);
     if ($lama->gambarBerita != $baru->gambarBerita && $lama->gambarBerita != null && $lama->gambarBerita != '') {
-    $filename = "assets/images/news/". $lama->gambarBerita;
-    $open = fopen($filename, "w");
-    fclose($open);
-    chmod($filename, 0777);
-    unlink($filename);
+      $filename = "assets/images/news/" . $lama->gambarBerita;
+      $open = fopen($filename, "w");
+      fclose($open);
+      chmod($filename, 0777);
+      unlink($filename);
     }
     redirect('daftarBerita');
   }
@@ -172,7 +173,7 @@ class Dashboard extends CI_Controller
     $data['semua_umkm'] = $this->umkm->getAll();
     $this->load->view('daftarUmkm', $data);
   }
-  
+
   public function tambahUmkm()
   {
     $this->load->helper('form');
@@ -191,20 +192,22 @@ class Dashboard extends CI_Controller
   public function hapusUmkm($idUmkm)
   {
     $data = $this->umkm->getById($idUmkm);
-    $filename = "assets/images/umkm-products/". $data->gambarUmkm;
-    $open = fopen($filename, "w");
-    fclose($open);
-    chmod($filename, 0777);
-    unlink($filename);
-    $this->umkm->hapus($idUmkm);
-    redirect("daftarUmkm");
+    $filename = "assets/images/umkm-products/" . $data->gambarUmkm;
+    if (!empty($data->gambarUmkm)) {
+      $open = fopen($filename, "w");
+      fclose($open);
+      chmod($filename, 0777);
+      unlink($filename);
+      $this->umkm->hapus($idUmkm);
+      redirect("daftarUmkm");
+    }
   }
 
   public function simpanUmkm()
   {
     $upload_path = 'assets/images/umkm-products/';
     $filename = $_FILES["gambar"]["name"];
-    move_uploaded_file($_FILES["gambar"]["tmp_name"],$upload_path . $filename);
+    move_uploaded_file($_FILES["gambar"]["tmp_name"], $upload_path . $filename);
     $this->umkm->simpan();
     redirect('daftarUmkm');
   }
@@ -213,16 +216,16 @@ class Dashboard extends CI_Controller
   {
     $upload_path = 'assets/images/umkm-products/';
     $filename = $_FILES["gambar"]["name"];
-    move_uploaded_file($_FILES["gambar"]["tmp_name"],$upload_path . $filename);
+    move_uploaded_file($_FILES["gambar"]["tmp_name"], $upload_path . $filename);
     $lama = $this->umkm->getById($idUmkm);
     $this->umkm->edit($idUmkm);
     $baru = $this->umkm->getById($idUmkm);
     if ($lama->gambarUmkm != $baru->gambarUmkm && $lama->gambarUmkm != null && $lama->gambarUmkm != '') {
-    $filename = "assets/images/umkm-products/". $lama->gambarUmkm;
-    $open = fopen($filename, "w");
-    fclose($open);
-    chmod($filename, 0777);
-    unlink($filename);
+      $filename = "assets/images/umkm-products/" . $lama->gambarUmkm;
+      $open = fopen($filename, "w");
+      fclose($open);
+      chmod($filename, 0777);
+      unlink($filename);
     }
     redirect('daftarUmkm');
   }
@@ -233,7 +236,7 @@ class Dashboard extends CI_Controller
     $data['semua_PD'] = $this->perangkatDesa->getAllDesc();
     $this->load->view('daftarPD', $data);
   }
-  
+
   public function tambahPD()
   {
     $this->load->helper('form');
@@ -252,20 +255,22 @@ class Dashboard extends CI_Controller
   public function hapusPD($idPD)
   {
     $data = $this->perangkatDesa->getById($idPD);
-    $filename = "assets/images/village-profile/". $data->gambarPD;
-    $open = fopen($filename, "w");
-    fclose($open);
-    chmod($filename, 0777);
-    unlink($filename);
-    $this->perangkatDesa->hapus($idPD);
-    redirect("daftarPD");
+    $filename = "assets/images/village-profile/" . $data->gambarPD;
+    if (!empty($data->gambarPD)) {
+      $open = fopen($filename, "w");
+      fclose($open);
+      chmod($filename, 0777);
+      unlink($filename);
+      $this->perangkatDesa->hapus($idPD);
+      redirect("daftarPD");
+    }
   }
 
   public function simpanPD()
   {
     $upload_path = 'assets/images/village-profile/';
     $filename = $_FILES["gambar"]["name"];
-    move_uploaded_file($_FILES["gambar"]["tmp_name"],$upload_path . $filename);
+    move_uploaded_file($_FILES["gambar"]["tmp_name"], $upload_path . $filename);
     $this->perangkatDesa->simpan();
     redirect('daftarPD');
   }
@@ -274,16 +279,16 @@ class Dashboard extends CI_Controller
   {
     $upload_path = 'assets/images/village-profile/';
     $filename = $_FILES["gambar"]["name"];
-    move_uploaded_file($_FILES["gambar"]["tmp_name"],$upload_path . $filename);
+    move_uploaded_file($_FILES["gambar"]["tmp_name"], $upload_path . $filename);
     $lama = $this->perangkatDesa->getById($idPD);
     $this->perangkatDesa->edit($idPD);
     $baru = $this->perangkatDesa->getById($idPD);
     if ($lama->gambarPD != $baru->gambarPD && $lama->gambarPD != null && $lama->gambarPD != '') {
-    $filename = "assets/images/village-profile/". $lama->gambarPD;
-    $open = fopen($filename, "w");
-    fclose($open);
-    chmod($filename, 0777);
-    unlink($filename);
+      $filename = "assets/images/village-profile/" . $lama->gambarPD;
+      $open = fopen($filename, "w");
+      fclose($open);
+      chmod($filename, 0777);
+      unlink($filename);
     }
     redirect('daftarPD');
   }
@@ -294,7 +299,7 @@ class Dashboard extends CI_Controller
     $data['semua_KKN'] = $this->kkn->getAllDesc();
     $this->load->view('daftarKKN', $data);
   }
-  
+
   public function tambahKKN()
   {
     $this->load->helper('form');
@@ -313,20 +318,22 @@ class Dashboard extends CI_Controller
   public function hapusKKN($idKKN)
   {
     $data = $this->kkn->getById($idKKN);
-    $filename = "assets/images/village-profile/". $data->gambarKKN;
-    $open = fopen($filename, "w");
-    fclose($open);
-    chmod($filename, 0777);
-    unlink($filename);
-    $this->kkn->hapus($idKKN);
-    redirect("modeRahasia");
+    $filename = "assets/images/village-profile/" . $data->gambarKKN;
+    if (!empty($data->gambarKKN)) {
+      $open = fopen($filename, "w");
+      fclose($open);
+      chmod($filename, 0777);
+      unlink($filename);
+      $this->kkn->hapus($idKKN);
+      redirect("modeRahasia");
+    }
   }
 
   public function simpanKKN()
   {
     $upload_path = 'assets/images/village-profile/';
     $filename = $_FILES["gambar"]["name"];
-    move_uploaded_file($_FILES["gambar"]["tmp_name"],$upload_path . $filename);
+    move_uploaded_file($_FILES["gambar"]["tmp_name"], $upload_path . $filename);
     $this->kkn->simpan();
     redirect('modeRahasia');
   }
@@ -335,21 +342,22 @@ class Dashboard extends CI_Controller
   {
     $upload_path = 'assets/images/village-profile/';
     $filename = $_FILES["gambar"]["name"];
-    move_uploaded_file($_FILES["gambar"]["tmp_name"],$upload_path . $filename);
+    move_uploaded_file($_FILES["gambar"]["tmp_name"], $upload_path . $filename);
     $lama = $this->kkn->getById($idKKN);
     $this->kkn->edit($idKKN);
     $baru = $this->kkn->getById($idKKN);
     if ($lama->gambarKKN != $baru->gambarKKN && $lama->gambarKKN != null && $lama->gambarKKN != '') {
-    $filename = "assets/images/village-profile/". $lama->gambarKKN;
-    $open = fopen($filename, "w");
-    fclose($open);
-    chmod($filename, 0777);
-    unlink($filename);
+      $filename = "assets/images/village-profile/" . $lama->gambarKKN;
+      $open = fopen($filename, "w");
+      fclose($open);
+      chmod($filename, 0777);
+      unlink($filename);
     }
     redirect('modeRahasia');
   }
 
-  public function cariSemua(){
+  public function cariSemua()
+  {
     $data["title"] = "Website Desa Karangnongko Poncokusumo - Hasil Pencarian";
     $data['navbarTitle'] = 'PEMERINTAH DESA KARANGNONGKO';
     $keyword = $this->input->get('keyword');
@@ -359,7 +367,8 @@ class Dashboard extends CI_Controller
     $this->load->view('cariSemua', $data);
   }
 
-  public function cariBerita(){
+  public function cariBerita()
+  {
     $data["title"] = "Website Desa Karangnongko Poncokusumo - Hasil Pencarian Berita";
     $data['navbarTitle'] = 'PEMERINTAH DESA KARANGNONGKO';
     $keyword = $this->input->get('keyword');
@@ -367,7 +376,8 @@ class Dashboard extends CI_Controller
     $this->load->view('cariBerita', $data);
   }
 
-  public function cariUmkm(){
+  public function cariUmkm()
+  {
     $data["title"] = "Website Desa Karangnongko Poncokusumo - Hasil Pencarian UMKM";
     $data['navbarTitle'] = 'PEMERINTAH DESA KARANGNONGKO';
     $keyword = $this->input->get('keyword');
@@ -375,12 +385,12 @@ class Dashboard extends CI_Controller
     $this->load->view('cariUmkm', $data);
   }
 
-  public function cariPD(){
+  public function cariPD()
+  {
     $data["title"] = "Website Desa Karangnongko Poncokusumo - Hasil Pencarian Perangkat Desa";
     $data['navbarTitle'] = 'PEMERINTAH DESA KARANGNONGKO';
     $keyword = $this->input->get('keyword');
     $data['cari_PD'] = $this->search->searchPD($keyword);
     $this->load->view('cariPD', $data);
   }
-
 }
