@@ -200,8 +200,8 @@
         <div class="responsive mx-5" style="padding-bottom: 50px;margin-bottom: 100px;">
           <!-- Card Loop -->
           <?php foreach ($data_berita as $row) : ?>
-            <div>
-              <div class="card-body" style="width: 18rem; border-style: solid; border-width: 1px; border-radius: 20px; border-color: #909A9B;">
+            <div class="card-body" style="border-style: solid; border-width: 1px; border-radius: 10px; border-color: transparent;">
+              <div class="card-body" style="height: auto; border-style: solid; border-width: 1px; border-radius: 20px; border-color: #909A9B;">
                 <img src="assets/images/news/<?= $row->gambarBerita; ?>" class="card-img-top p-2 myImages" style=" width: 320; height: 160; margin-left: auto; margin-right: auto;" alt="Card Image">
                 <div class="card-body">
                   <?php if (strlen($row->judul) <= 40) : ?>
@@ -269,8 +269,8 @@
       <div class="responsive mx-5" style="margin-bottom: 100px; padding-bottom: 50px;">
         <!-- UMKM Loop -->
         <?php foreach ($data_umkm as $row) : ?>
-          <div>
-            <div class="card" style="width: 18rem; border-style: none;  background-color:transparent;">
+          <div class="card-body" style="border-style: solid; border-width: 1px; border-radius: 10px; border-color: transparent;">
+            <div class="card" style="height: auto; border-style: none;  background-color:transparent;">
               <img src="assets/images/umkm-products/<?= $row->gambarUmkm ?>" class="card-img-top myImages" style=" width: 280; height: 328; margin-left: auto; margin-right: auto;" alt="...">
               <div class="card-body text-center">
                 <h5 class="card-title mt-2" style="font-size:22px ;"><?= $row->namaProduk ?></h5>
