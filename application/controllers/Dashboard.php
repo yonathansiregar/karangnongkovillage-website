@@ -135,8 +135,8 @@ class Dashboard extends CI_Controller
       fclose($open);
       chmod($filename, 0777);
       unlink($filename);
-      $this->berita->hapus($idBerita);
     }
+    $this->berita->hapus($idBerita);
     redirect("daftarBerita");
   }
 
@@ -198,8 +198,8 @@ class Dashboard extends CI_Controller
       fclose($open);
       chmod($filename, 0777);
       unlink($filename);
-      $this->umkm->hapus($idUmkm);
     }
+    $this->umkm->hapus($idUmkm);
     redirect("daftarUmkm");
   }
 
@@ -261,8 +261,8 @@ class Dashboard extends CI_Controller
       fclose($open);
       chmod($filename, 0777);
       unlink($filename);
-      $this->perangkatDesa->hapus($idPD);
     }
+    $this->perangkatDesa->hapus($idPD);
     redirect("daftarPD");
   }
 
@@ -324,8 +324,8 @@ class Dashboard extends CI_Controller
       fclose($open);
       chmod($filename, 0777);
       unlink($filename);
-      $this->kkn->hapus($idKKN);
     }
+    $this->kkn->hapus($idKKN);
     redirect("modeRahasia");
   }
 
