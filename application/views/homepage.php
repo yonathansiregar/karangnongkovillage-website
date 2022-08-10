@@ -90,13 +90,13 @@
   <div id="main-contents">
     <!-- Header -->
     <section id="header">
-      <div style="z-index: -1;" id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+      <div style="z-index: 0;" id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
           <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
           <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
           <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>
-        <div style="z-index: -1;" class="carousel-inner">
+        <div style="z-index: 0;" class="carousel-inner">
           <div class="carousel-item active">
             <div class="card">
               <img src="assets/images/homepage/KantorDesa.jpeg" class="card-img d-block w-100" alt="Kantor Desa Karangnongko">
@@ -106,7 +106,7 @@
               </div>
             </div>
           </div>
-          <div style="z-index: -1;" class="carousel-item">
+          <div style="z-index: 0;" class="carousel-item">
             <div class="card">
               <img src="assets/images/homepage/KantorDesa.jpeg" class="card-img d-block w-100" alt="Kantor Desa Karangnongko">
               <div class="card-img-overlay">
@@ -115,7 +115,7 @@
               </div>
             </div>
           </div>
-          <div style="z-index: -1;" class="carousel-item">
+          <div style="z-index: 0;" class="carousel-item">
             <div class="card">
               <img src="assets/images/homepage/KantorDesa.jpeg" class="card-img d-block w-100" alt="Kantor Desa Karangnongko">
               <div class="card-img-overlay">
