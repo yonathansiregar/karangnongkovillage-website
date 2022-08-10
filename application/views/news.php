@@ -92,7 +92,9 @@
         foreach ($alternative as $row) : ?>
           <div class="col-12 col-md-6 col-lg-4">
             <div class="card-body" style="border-style: solid; border-width: 1px; border-radius: 20px; border-color: #909A9B;">
-              <img src="<?php echo base_url(); ?>assets/images/news/<?= $row->gambarBerita; ?>" height="250px" class="card-img-top p-2" style=" width: 350; height: 175; margin-left: auto; margin-right: auto;" alt="Card Image" data-toggle="modal" data-target="#myModal">
+            <a data-toggle="modal" data-target="#myModal">
+              <img src="<?php echo base_url(); ?>assets/images/news/<?= $row->gambarBerita; ?>" height="250px" class="card-img-top p-2" style=" width: 350; height: 175; margin-left: auto; margin-right: auto;" alt="Card Image">
+              </a>
               <div class="card-body">
                 <?php if (strlen($row->judul) <= 75) : ?>
                   <p class="card-title" style="text-align: center; font-size: 14px;"><b><?= $row->judul ?></b></p>
