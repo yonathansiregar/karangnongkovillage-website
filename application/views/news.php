@@ -24,8 +24,8 @@
   <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
       <a class="navbar-brand" href="">
-        <img src="<?php echo base_url(); ?>assets/images/Logo.png" alt="Logo Pemkab Malang" class="brand-img">
-        <span class="navbar-title">PEMERINTAH DESA KARANGNONGKO</span>
+        <img src="<?php echo base_url(); ?>assets/images/Logo.png" alt="Logo Pemkab Malang" class="brand-img" href="<?php echo base_url(''); ?>">
+        <span class="navbar-title" href="<?php echo base_url(''); ?>">PEMERINTAH DESA KARANGNONGKO</span>
       </a>
       <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -92,9 +92,12 @@
         foreach ($alternative as $row) : ?>
           <div class="col-12 col-md-6 col-lg-4">
             <div class="card-body" style="border-style: solid; border-width: 1px; border-radius: 20px; border-color: #909A9B;">
-            <a data-toggle="modal" data-target="#myModal">
-              <img src="<?php echo base_url(); ?>assets/images/news/<?= $row->gambarBerita; ?>" height="250px" class="card-img-top p-2" style=" width: 350; height: 175; margin-left: auto; margin-right: auto;" alt="Card Image">
-              </a>
+              <img src="<?php echo base_url(); ?>assets/images/news/<?= $row->gambarBerita; ?>" height="250px" class="card-img-top p-2 myImages" style=" width: 350; height: 175;" alt="Card Image">
+              <!-- The Modal -->
+              <div id="myModal" class="modal">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="modal" >
+              </div>
               <div class="card-body">
                 <?php if (strlen($row->judul) <= 75) : ?>
                   <p class="card-title" style="text-align: center; font-size: 14px;"><b><?= $row->judul ?></b></p>
@@ -205,9 +208,10 @@
   <!-- End of FOOTER -->
 
   <!-- JS LINKS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" type="text/javascript"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js?v=<?php time(); ?>" type="text/javascript"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js?v=<?php time(); ?>" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js?v=<?php time(); ?>" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+  <script src="assets/js/global.js?v=<?php time(); ?>"></script>
   <!-- End of JS LINKS -->
 </body>
 

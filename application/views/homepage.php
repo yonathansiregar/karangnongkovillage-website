@@ -45,8 +45,8 @@
   <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
       <a class="navbar-brand" href="">
-        <img src="assets/images/Logo.png" alt="Logo Pemkab Malang" class="brand-img">
-        <span class="navbar-title"><?php echo $navbarTitle; ?></span>
+        <img src="assets/images/Logo.png" alt="Logo Pemkab Malang" class="brand-img" href="<?php echo base_url(''); ?>">
+        <span class="navbar-title" href="<?php echo base_url(''); ?>"><?php echo $navbarTitle; ?></span>
       </a>
       <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -90,13 +90,13 @@
   <div id="main-contents">
     <!-- Header -->
     <section id="header">
-      <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+      <div style="z-index: -1;" id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
           <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
           <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
           <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>
-        <div class="carousel-inner">
+        <div style="z-index: -1;" class="carousel-inner">
           <div class="carousel-item active">
             <div class="card">
               <img src="assets/images/homepage/KantorDesa.jpeg" class="card-img d-block w-100" alt="Kantor Desa Karangnongko">
@@ -106,7 +106,7 @@
               </div>
             </div>
           </div>
-          <div class="carousel-item">
+          <div style="z-index: -1;" class="carousel-item">
             <div class="card">
               <img src="assets/images/homepage/KantorDesa.jpeg" class="card-img d-block w-100" alt="Kantor Desa Karangnongko">
               <div class="card-img-overlay">
@@ -115,7 +115,7 @@
               </div>
             </div>
           </div>
-          <div class="carousel-item">
+          <div style="z-index: -1;" class="carousel-item">
             <div class="card">
               <img src="assets/images/homepage/KantorDesa.jpeg" class="card-img d-block w-100" alt="Kantor Desa Karangnongko">
               <div class="card-img-overlay">
@@ -141,7 +141,7 @@
       <div class="container d-flex">
         <div class="row">
           <div class="col-md-6" id="gambar-kantordesa">
-            <img src="assets/images/homepage/Group-infoweb.png" class="justify-content-start img-fluid d-none d-md-block" alt="">
+            <img src="assets/images/homepage/Group-infoweb.png" class="justify-content-start img-fluid d-flex d-md-block myImages" alt="">
           </div>
           <div class="col-md-6 pt-5 ps-5">
             <p class="title-infoweb" style="font-size:32px ;">Informasi Website</p>
@@ -202,7 +202,7 @@
           <?php foreach ($data_berita as $row) : ?>
             <div>
               <div class="card-body" style="width: 18rem; border-style: solid; border-width: 1px; border-radius: 20px; border-color: #909A9B;">
-                <img src="assets/images/homepage/sdn01karangnongko.png" class="card-img-top p-2" style=" width: 320; height: 160; margin-left: auto; margin-right: auto;" alt="Card Image">
+                <img src="assets/images/news/<?= $row->gambarBerita; ?>" class="card-img-top p-2 myImages" style=" width: 320; height: 160; margin-left: auto; margin-right: auto;" alt="Card Image">
                 <div class="card-body">
                   <?php if (strlen($row->judul) <= 40) : ?>
                     <p class="card-title" style="text-align: center; font-size: 14px;"><b><?= $row->judul ?></b></p>
@@ -236,13 +236,18 @@
         <div class="d-flex flex-nowrap px-1">
           <div class="row justify-content-center align-items-center" style="text-align: justify;">
             <div class="col-md-6 order-2 order-md-1 fs-6 pb-4" style="font-weight: 300; line-height: 27px; font-style: normal;">
-              <p class="mx-5">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Karangnongko merupakan salah satu desa yang ada di kecamatan karangnongko kabupaten malang. Salah satu keunikan desa ini merupakan banyak nya anak anak kecil yang ramah dan suka senyum terhadap teman teman kkn. oleh karena itu, kita sangat nyaman dalam menjalankan program kkn hingga akhir waktu. Salah satu keunikan desa ini merupakan banyak nya anak anak kecil yang ramah dan suka senyum terhadap teman teman kkn. oleh karena itu, kita sangat nyaman dalam menjalankan program kkn hingga akhir waktu. </p>
-              <p class="mx-5">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Salah satu keunikan desa ini merupakan banyak nya anak anak kecil yang ramah dan suka senyum terhadap teman teman kkn. oleh karena itu, kita sangat nyaman dalam menjalankan program kkn hingga akhir waktu. Salah satu keunikan desa ini merupakan banyak nya anak anak kecil yang ramah dan suka senyum terhadap teman teman kkn. oleh karena itu, kita sangat nyaman dalam menjalankan program kkn hingga akhir waktu. </p>
+              <p class="mx-5">Karangnongko merupakan salah satu desa yang ada di kecamatan poncokusumo kabupaten malang. Salah satu keunikan desa ini merupakan banyak nya anak anak kecil yang ramah dan suka senyum terhadap teman teman kkn. oleh karena itu, kita sangat nyaman dalam menjalankan program kkn hingga akhir waktu. Salah satu keunikan desa ini merupakan banyak nya anak anak kecil yang ramah dan suka senyum terhadap teman teman kkn. oleh karena itu, kita sangat nyaman dalam menjalankan program kkn hingga akhir waktu. </p>
+              <p class="mx-5">Salah satu keunikan desa ini merupakan banyak nya anak anak kecil yang ramah dan suka senyum terhadap teman teman kkn. oleh karena itu, kita sangat nyaman dalam menjalankan program kkn hingga akhir waktu. Salah satu keunikan desa ini merupakan banyak nya anak anak kecil yang ramah dan suka senyum terhadap teman teman kkn. oleh karena itu, kita sangat nyaman dalam menjalankan program kkn hingga akhir waktu. </p>
             </div>
 
             <div class="col-md-6 order-1 order-md-2 d-flex justify-content-center justify-content-md-end">
-              <img src="assets/images/homepage/peta-desa.png" alt="Peta Desa" class="test my-3 pb-5 img-responsive">
+              <img src="assets/images/homepage/peta-desa.png" alt="Peta Desa" class="test my-3 pb-5 img-responsive myImages">
             </div>
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="modal">
+              </div>
           </div>
         </div>
       </div>
@@ -266,7 +271,7 @@
         <?php foreach ($data_umkm as $row) : ?>
           <div>
             <div class="card" style="width: 18rem; border-style: none;  background-color:transparent;">
-              <img src="assets/images/umkm-products/<?= $row->gambarUmkm ?>" class="card-img-top" style=" width: 280; height: 328; margin-left: auto; margin-right: auto;" alt="...">
+              <img src="assets/images/umkm-products/<?= $row->gambarUmkm ?>" class="card-img-top myImages" style=" width: 280; height: 328; margin-left: auto; margin-right: auto;" alt="...">
               <div class="card-body text-center">
                 <h5 class="card-title mt-2" style="font-size:22px ;"><?= $row->namaProduk ?></h5>
                 <p class="card-text mt-3" style="color: #898889; font-size:16px ;"><?= $row->namaUmkm ?> <?= $row->pemilikUmkm ?></p>
@@ -357,17 +362,18 @@
   <!-- End of FOOTER -->
 
   <!-- JQuery JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" type="text/javascript"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js?v=<?php time(); ?>" type="text/javascript"></script>
 
   <!-- Separate Popper and Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js?v=<?php time(); ?>" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js?v=<?php time(); ?>" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 
   <!-- Slick JS -->
-  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js?v=<?php time(); ?>"></script>
 
   <!-- Homepage JS -->
-  <script src="<?php echo base_url(); ?>assets/js/homepage.js"></script>
+  <script src="<?php echo base_url(); ?>assets/js/homepage.js?v=<?php time(); ?>"></script>
+  <script src="assets/js/global.js?v=<?php time(); ?>"></script>
 </body>
 
 </html>
