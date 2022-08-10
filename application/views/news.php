@@ -92,7 +92,7 @@
         foreach ($alternative as $row) : ?>
           <div class="col-12 col-md-6 col-lg-4">
             <div class="card-body" style="border-style: solid; border-width: 1px; border-radius: 20px; border-color: #909A9B;">
-              <img src="<?php echo base_url(); ?>assets/images/news/<?= $row->gambarBerita; ?>" height="250px" class="card-img-top p-2" style=" width: 350; height: 175; margin-left: auto; margin-right: auto;" alt="Card Image">
+              <img src="<?php echo base_url(); ?>assets/images/news/<?= $row->gambarBerita; ?>" height="250px" class="card-img-top p-2" style=" width: 350; height: 175; margin-left: auto; margin-right: auto;" alt="Card Image" data-toggle="modal" data-target="#myModal">
               <div class="card-body">
                 <?php if (strlen($row->judul) <= 75) : ?>
                   <p class="card-title" style="text-align: center; font-size: 14px;"><b><?= $row->judul ?></b></p>
@@ -108,6 +108,16 @@
                   <button type="button" class="btn" style="background: #125159; border-radius: 30px;">
                     <a class="text-decoration-none" href="<?php echo base_url('berita/' . $row->idBerita); ?>" style="color: #fff;">Baca Selengkapnya</a>
                   </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Modal -->
+          <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-body">
+                  <img src="assets/images/news/<?= $row->gambarBerita; ?>" alt="Card Image">
                 </div>
               </div>
             </div>
