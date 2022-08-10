@@ -30,7 +30,7 @@ echo "Maaf, anda belum login";
         <div class="row">
             <div class="col-md-12">
                 <div class="d-flex">
-                    <a class="btn btn-secondary mb-2" style="margin-right: 10px;" href="<?= base_url('login'); ?>">Kembali</a>
+                    <a class="btn btn-secondary mb-2" style="margin-right: 10px;" href="<?= base_url('modification'); ?>">Kembali</a>
                     <a class="btn btn-primary mb-2" href="<?= base_url('tambahModeRahasia'); ?>">Tambah</a>
                 </div>
                 <div class="card">

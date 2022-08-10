@@ -148,7 +148,7 @@
         </h1>
       </div>
 
-      <div class="container my-5 fs-5" id="college-student">
+      <div class="container rainbow my-5 fs-5" id="college-student">
         <div class="row g-4">
           <?php foreach ($data_kkn as $row) : ?>
             <div class="col-12 col-lg-6">
