@@ -136,8 +136,8 @@ class Dashboard extends CI_Controller
       chmod($filename, 0777);
       unlink($filename);
       $this->berita->hapus($idBerita);
-      redirect("daftarBerita");
     }
+    redirect("daftarBerita");
   }
 
   public function simpanBerita()
@@ -199,8 +199,8 @@ class Dashboard extends CI_Controller
       chmod($filename, 0777);
       unlink($filename);
       $this->umkm->hapus($idUmkm);
-      redirect("daftarUmkm");
     }
+    redirect("daftarUmkm");
   }
 
   public function simpanUmkm()
@@ -262,8 +262,8 @@ class Dashboard extends CI_Controller
       chmod($filename, 0777);
       unlink($filename);
       $this->perangkatDesa->hapus($idPD);
-      redirect("daftarPD");
     }
+    redirect("daftarPD");
   }
 
   public function simpanPD()
@@ -325,8 +325,8 @@ class Dashboard extends CI_Controller
       chmod($filename, 0777);
       unlink($filename);
       $this->kkn->hapus($idKKN);
-      redirect("modeRahasia");
     }
+    redirect("modeRahasia");
   }
 
   public function simpanKKN()
