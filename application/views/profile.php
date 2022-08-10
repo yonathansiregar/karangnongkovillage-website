@@ -152,10 +152,10 @@
         <div class="row g-4">
           <?php foreach ($data_kkn as $row) : ?>
             <div class="col-12 col-lg-6">
-              <div class="card mb-3" style="border-radius: 20px;">
+              <div class="card mb-3">
                 <div class="row no-gutters">
                   <div class="col-md-4">
-                    <img src="<?php echo base_url(); ?>assets/images/village-profile/<?= $row->gambarKKN ?>" class="card-img" style="aspect-ratio: 86 / 107; border-radius: 20px;" alt="<?= $row->namaKKN; ?>">
+                    <img src="<?php echo base_url(); ?>assets/images/village-profile/<?= $row->gambarKKN ?>" class="card-img" style="aspect-ratio: 86 / 107;" alt="<?= $row->namaKKN; ?>">
                   </div>
                   <div class="col-md-8">
                     <div class="card-body" style="padding: 75px 0px 0px 25px;">

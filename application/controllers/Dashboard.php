@@ -76,8 +76,8 @@ class Dashboard extends CI_Controller
 
   public function login_process()
   {
-    $username_login = "u1584330_admin";
-    $password_login = "bucinlivematter";
+    $username_login = "admin@karangnongko";
+    $password_login = "kelompok7kkn2020";
     $username = $_POST['username'];
     $password = $_POST['password'];
     if ($username == $username_login && $password == $password_login) {
