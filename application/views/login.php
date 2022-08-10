@@ -75,12 +75,12 @@
     <!-- Header -->
     <section id="header">
       <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-        <div style="z-index: -1;" class="carousel-indicators">
+        <div style="z-index: 1" class="carousel-indicators">
           <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
           <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
           <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>
-        <div style="z-index: -1;" class="carousel-inner">
+        <div style="z-index: 0" class="carousel-inner">
           <div class="carousel-item active">
             <div class="card">
               <img src="assets/images/homepage/KantorDesa.jpeg" class="card-img d-block w-100" alt="Kantor Desa Karangnongko">
@@ -90,7 +90,7 @@
               </div>
             </div>
           </div>
-          <div style="z-index: -1;" class="carousel-item">
+          <div style="z-index: 0" class="carousel-item">
             <div class="card">
               <img src="assets/images/homepage/KantorDesa.jpeg" class="card-img d-block w-100" alt="Kantor Desa Karangnongko">
               <div class="card-img-overlay">
@@ -99,7 +99,7 @@
               </div>
             </div>
           </div>
-          <div style="z-index: -1;" class="carousel-item">
+          <div style="z-index: 0" class="carousel-item">
             <div class="card">
               <img src="assets/images/homepage/KantorDesa.jpeg" class="card-img d-block w-100" alt="Kantor Desa Karangnongko">
               <div class="card-img-overlay">
@@ -151,21 +151,16 @@
   </div>
   <!-- End of MAIN CONTENTS -->
 
-  <!-- FOOTER -->
-  <footer>
+ <!-- FOOTER -->
+ <footer>
     <div class="footer-top">
       <div class="container">
         <div class="row">
           <!-- Logo Pemkab Malang -->
           <div id="footer-logo" class="col-lg-4 col-md-6 d-flex justify-content-start">
             <a href="">
-              <img src="<?= base_url(); ?>assets/images/Logo.png" alt="Logo Kab Malang" class="img-fluid" id="">
+              <img src="assets/images/Logo.png" alt="Logo Kab Malang" class="img-fluid" id="">
             </a>
-          </div>
-          <!-- The Modal -->
-          <div id="myModal" class="modal">
-            <span class="close">&times;</span>
-            <img class="modal-content" id="modal">
           </div>
 
           <!-- Social Media Links -->
@@ -175,25 +170,25 @@
               <li>
                 <a id="social-media-icons" href="https://wwww.facebook.com/" target="_blank">
                   <i class="bi bi-facebook"></i>
-                  <span>Facebook</span>
+                  <span class="ms-1">Facebook</span>
                 </a>
               </li>
-              <li>
+              <li class="my-3">
                 <a id="social-media-icons" href="https://www.instagram.com/" target="_blank">
                   <i class="bi bi-instagram"></i>
-                  <span>Instagram</span>
+                  <span class="ms-1">Instagram</span>
                 </a>
               </li>
-              <li>
+              <li class="mb-3">
                 <a id="social-media-icons" href="https://twitter.com/" target="_blank">
                   <i class="bi bi-twitter"></i>
-                  <span>Twitter</span>
+                  <span class="ms-1">Twitter</span>
                 </a>
               </li>
               <li>
                 <a id="social-media-icons" href="https://www.youtube.com/" target="_blank" style="color: #DFE5E6;">
                   <i class="bi bi-youtube"></i>
-                  <span>YouTube</span>
+                  <span class="ms-1">YouTube</span>
                 </a>
               </li>
             </ul>
@@ -222,11 +217,12 @@
         </div>
       </div>
     </div>
-    <div class="lines"></div>
+    <div class="lines" style="border-bottom: 1px solid #1E2833;"></div>
     <div class="footer-bottom container text-center" id="copyright">
       Copyright &copy; 2022. Desa Karangnongko Poncokusumo Malang. All rights reserved.<br>
       <span>Created by KKN Kelompok 7 FILKOM UB 2022</span>
     </div>
+
   </footer>
   <!-- End of FOOTER -->
 
