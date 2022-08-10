@@ -51,8 +51,8 @@ function tgl_indo($tanggal)
   <nav class="navbar navbar-expand-lg position-absolute" style="z-index: 1; width: 100%;">
     <div class="container-fluid">
       <a class="navbar-brand" href="">
-        <img src="<?php echo base_url(); ?>assets/images/Logo.png" alt="Logo Pemkab Malang" class="brand-img">
-        <span class="navbar-title">PEMERINTAH DESA KARANGNONGKO</span>
+        <img src="<?php echo base_url(); ?>assets/images/Logo.png" alt="Logo Pemkab Malang" class="brand-img" href="<?php echo base_url(''); ?>">
+        <span class="navbar-title" href="<?php echo base_url(''); ?>">PEMERINTAH DESA KARANGNONGKO</span>
       </a>
       <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -93,8 +93,13 @@ function tgl_indo($tanggal)
   <!-- MAIN CONTENTS -->
   <div id="main-contents" class="main">
     <!-- Background Article -->
-    <div class="background-picture" style="padding-top: 10vh;">
-      <img src="<?= base_url(); ?>assets/images/news/<?= $detail_berita->gambarBerita; ?>" alt="" class="w-100 position-absolute">
+    <div class="background-picture" style="padding-top: 10vh;" >
+      <img src="<?= base_url(); ?>assets/images/news/<?= $detail_berita->gambarBerita; ?>" class="myImages w-100 position-fixed">
+    </div>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="modal">
     </div>
     <div class="container">
       <div class="article position-relative">
@@ -183,9 +188,10 @@ function tgl_indo($tanggal)
   <!-- End of FOOTER -->
 
   <!-- JS LINKS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" type="text/javascript"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js?v=<?php time(); ?>" type="text/javascript"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js?v=<?php time(); ?>" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js?v=<?php time(); ?>" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+  <script src="assets/js/global.js?v=<?php time(); ?>"></script>
   <!-- End of JS LINKS -->
 </body>
 

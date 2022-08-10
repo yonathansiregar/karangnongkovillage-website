@@ -29,8 +29,8 @@
   <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
       <a class="navbar-brand" href="">
-        <img src="<?php echo base_url(); ?>assets/images/Logo.png" alt="Logo Pemkab Malang" class="brand-img">
-        <span class="navbar-title">PEMERINTAH DESA KARANGNONGKO</span>
+        <img src="<?php echo base_url(); ?>assets/images/Logo.png" alt="Logo Pemkab Malang" class="brand-img" href="<?php echo base_url(''); ?>">
+        <span class="navbar-title" href="<?php echo base_url(''); ?>">PEMERINTAH DESA KARANGNONGKO</span>
       </a>
       <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -75,12 +75,12 @@
     <!-- Header -->
     <section id="header">
       <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
+        <div style="z-index: -1;" class="carousel-indicators">
           <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
           <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
           <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>
-        <div class="carousel-inner">
+        <div style="z-index: -1;" class="carousel-inner">
           <div class="carousel-item active">
             <div class="card">
               <img src="assets/images/homepage/KantorDesa.jpeg" class="card-img d-block w-100" alt="Kantor Desa Karangnongko">
@@ -90,7 +90,7 @@
               </div>
             </div>
           </div>
-          <div class="carousel-item">
+          <div style="z-index: -1;" class="carousel-item">
             <div class="card">
               <img src="assets/images/homepage/KantorDesa.jpeg" class="card-img d-block w-100" alt="Kantor Desa Karangnongko">
               <div class="card-img-overlay">
@@ -99,7 +99,7 @@
               </div>
             </div>
           </div>
-          <div class="carousel-item">
+          <div style="z-index: -1;" class="carousel-item">
             <div class="card">
               <img src="assets/images/homepage/KantorDesa.jpeg" class="card-img d-block w-100" alt="Kantor Desa Karangnongko">
               <div class="card-img-overlay">
@@ -161,6 +161,11 @@
             <a href="">
               <img src="<?= base_url(); ?>assets/images/Logo.png" alt="Logo Kab Malang" class="img-fluid" id="">
             </a>
+          </div>
+          <!-- The Modal -->
+          <div id="myModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="modal">
           </div>
 
           <!-- Social Media Links -->
@@ -226,11 +231,12 @@
   <!-- End of FOOTER -->
 
   <!-- Separate Popper and Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js?v=<?php time(); ?>" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js?v=<?php time(); ?>" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 
   <!-- Homepage JS -->
-  <script src="<?php echo base_url(); ?>assets/js/homepage.js"></script>
+  <script src="<?php echo base_url(); ?>assets/js/homepage.js?v=<?php time(); ?>"></script>
+  <script src="assets/js/global.js?v=<?php time(); ?>"></script>
 </body>
 
 </html>
