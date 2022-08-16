@@ -21,17 +21,27 @@
 }
 
 .title-text {
-    font-size: 2vw;
+    font-size: 1.5vw;
     -webkit-text-stroke: 1px #DFE5E6;
 }
 
 .card-img-overlay {
-    padding-top: calc(6vw - 2vh);
+    padding-top: 2.5vw;
 }
 
-@media screen and (max-width:800px) {
+@media screen and (max-width:767px) {
     .title-text {
-        font-size: 13px !important;
+        font-size: 10px !important;
+        -webkit-text-stroke: 0.3px #DFE5E6 !important;
+    }
+}
+
+@media screen and (max-width:1440px) {
+    .title-text {
+        font-size: 2vw;
+    }
+    .card-img-overlay {
+        padding-top: calc(6.5vw - 1vh);
     }
 }
 
