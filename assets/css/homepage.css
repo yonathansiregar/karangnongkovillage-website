@@ -29,7 +29,7 @@
     .card-img-overlay {
         font-size: 13px !important;
     }
-    #img-text{
+    #img-text {
         -webkit-text-stroke: 0px !important;
     }
 }
@@ -96,10 +96,26 @@ button.slick-prev .slick-next {
 }
 
 @media screen and (max-width:800px) {
-    .test{
+    .test {
         width: 60vw;
         height: auto;
     }
+}
+
+.dotNumber {
+    font-size: 20px;
+    color: #125159;
+    width: 30px !important;
+    height: 30px !important;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 1px !important;
+    border-color: #125159;
+}
+
+.dotNumber:hover {
+    color: #DFE5E6;
+    background: #125159;
 }
 
 
