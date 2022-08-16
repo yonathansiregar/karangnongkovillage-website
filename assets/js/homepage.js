@@ -1,7 +1,13 @@
 $('.responsive').slick({
+    autoplay: true,
     dots: true,
+    customPaging: function(slider, i) {
+        var thumb = $(slider.$slides[i]).data();
+        return `<div class="dotNumber"><a>${i + 1}</a></div>`;
+    },
+    arrows: false,
     infinite: true,
-    speed: 300,
+    speed: 1000,
     slidesToShow: 3,
     slidesToScroll: 3,
     responsive: [{
