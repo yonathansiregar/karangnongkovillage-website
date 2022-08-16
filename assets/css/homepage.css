@@ -103,7 +103,8 @@ button.slick-prev .slick-next {
 }
 
 .dotNumber {
-    font-size: 15px;
+    font-size: 12px;
+    padding-top: 2px;
     color: #125159;
     width: 25px !important;
     height: 25px !important;
