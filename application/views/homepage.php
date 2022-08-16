@@ -229,15 +229,14 @@
     <!-- Peta Desa Karangnongko-->
     <section id="peta-desa" class="" style="background: #125159; color: #fff;">
       <div class="container">
-        <div class="fs-5 d-flex justify-content-center justify-content-md-start pt-3" style="font-weight: 600; line-height: 48px;">
+        <div class="mx-5 fs-4 d-flex justify-content-center justify-content-md-start pt-5" style="font-weight: 600; line-height: 48px;">
           <p id="tulisan-petadesa">PETA DESA KARANGNONGKO</p>
         </div>
 
         <div class="d-flex flex-nowrap px-1">
           <div class="row justify-content-center align-items-center" style="text-align: justify;">
             <div class="col-md-6 order-2 order-md-1 fs-6 pb-4" style="font-weight: 300; line-height: 27px; font-style: normal;">
-              <p class="mx-5">Karangnongko merupakan salah satu desa yang ada di kecamatan poncokusumo kabupaten malang. Salah satu keunikan desa ini merupakan banyak nya anak anak kecil yang ramah dan suka senyum terhadap teman teman kkn. oleh karena itu, kita sangat nyaman dalam menjalankan program kkn hingga akhir waktu. Salah satu keunikan desa ini merupakan banyak nya anak anak kecil yang ramah dan suka senyum terhadap teman teman kkn. oleh karena itu, kita sangat nyaman dalam menjalankan program kkn hingga akhir waktu. </p>
-              <p class="mx-5">Salah satu keunikan desa ini merupakan banyak nya anak anak kecil yang ramah dan suka senyum terhadap teman teman kkn. oleh karena itu, kita sangat nyaman dalam menjalankan program kkn hingga akhir waktu. Salah satu keunikan desa ini merupakan banyak nya anak anak kecil yang ramah dan suka senyum terhadap teman teman kkn. oleh karena itu, kita sangat nyaman dalam menjalankan program kkn hingga akhir waktu. </p>
+              <p class="mx-5">Berdasarkan data Administrasi Pemerintah Desa tahun 2014, jumlah penduduk Desa Karanongko adalah 8.233 jiwa, dengan rincian 4100 laki - laki dan 4123 perempuan. Luas wilayah Desa Karanongko adalah 622.525 Ha. Luas lahan yang ada terbagi ke dalam beberapa peruntukan yang dapat dikelompokkan seperti untuk fasilitas umum, pemukiman, pertanian, perkebunan, kegiatan ekonomi, dll. Wilayah Desa Karanongko secara umum mempunyai ciri geologis berupa lahan tanah hitam yang sangat cocok untuk sebagai lahan pertanian dan perkebunan Sejarah nama Karanongko adalah dahulu di desa ini ada sebidang tanah yang ditumbuhi banyak pohon nangka maka desa ini dinamakan Desa Karangnongko.</p>
             </div>
 
             <div class="col-md-6 order-1 order-md-2 d-flex justify-content-center justify-content-md-end">
